@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
-		17178B4E1A6F348A00E67C3A /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4D1A6F348A00E67C3A /* DropViewController.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */; };
 		17178B531A6F348A00E67C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Main.storyboard */; };
 		17178B551A6F348A00E67C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17178B541A6F348A00E67C3A /* Images.xcassets */; };
 		17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
 		17178B641A6F348A00E67C3A /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */; };
+		17178BCA1A6F5A2300E67C3A /* DropTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,6 @@
 		17178B461A6F348A00E67C3A /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B4B1A6F348A00E67C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17178B4D1A6F348A00E67C3A /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
 		17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		17178B521A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17178B541A6F348A00E67C3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		17178B5D1A6F348A00E67C3A /* CSH DrinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSH DrinkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B621A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
+		17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTableViewTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
-				17178B4D1A6F348A00E67C3A /* DropViewController.swift */,
 				17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */,
 				17178B511A6F348A00E67C3A /* Main.storyboard */,
+				17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
 				17178B561A6F348A00E67C3A /* LaunchScreen.xib */,
 				17178B491A6F348A00E67C3A /* Supporting Files */,
@@ -216,8 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17178B501A6F348A00E67C3A /* HistoryViewController.swift in Sources */,
+				17178BCA1A6F5A2300E67C3A /* DropTableViewTableViewController.swift in Sources */,
 				17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */,
-				17178B4E1A6F348A00E67C3A /* DropViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +413,7 @@
 				17178B691A6F348A00E67C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17178B6A1A6F348A00E67C3A /* Build configuration list for PBXNativeTarget "CSH DrinkTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				17178B6C1A6F348A00E67C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
