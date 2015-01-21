@@ -20,7 +20,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="P8n-OQ-FXi" kind="show" identifier="machineDetail" id="IvA-N7-bIv"/>
-                                    <segue destination="P8n-OQ-FXi" kind="show" identifier="machineDetail" trigger="accessoryAction" id="8Yf-Rh-jzs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -68,7 +67,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="XpV-dn-wf8" kind="show" identifier="drinkDetail" id="nSx-0J-fjx"/>
-                                    <segue destination="XpV-dn-wf8" kind="show" identifier="drinkDetail" trigger="accessoryAction" id="bhH-4j-twD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -164,8 +162,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="bhH-4j-twD"/>
-        <segue reference="8Yf-Rh-jzs"/>
-    </inferredMetricsTieBreakers>
 </document>
