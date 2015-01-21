@@ -10,5 +10,5 @@ import Foundation
 
 struct Machine {
     let name: String
-    let drinks: [Drink]
+    let items: [Item]
 }

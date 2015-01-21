@@ -1,5 +1,5 @@
 //
-//  DropTableViewTableViewController.swift
+//  MachineTableViewController.swift
 //  CSH Drink
 //
 //  Created by Stuart Olivera on 1/20/15.
@@ -10,24 +10,24 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class DropTableViewTableViewController: UITableViewController {
+class MachineTableViewController: UITableViewController {
 
     var machines = [Machine]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": ""]).responseJSON { (_, _, data, _) in
+        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": "5a9410f2b27a77fc"]).responseJSON { (_, _, data, _) in
             println(data)
             let json = JSON(data!)
             for (machineId: String, machine: JSON) in json["data"] {
                 println(machineId)
-                var drinks = [Drink]()
-                for (drinkIndex: String, drink: JSON) in machine {
-                    drinks.append(Drink(name: drink["item_name"].stringValue, price: drink["item_price"].intValue))
+                var items = [Item]()
+                for (itemIndex: String, item: JSON) in machine {
+                    items.append(Item(name: item["item_name"].stringValue, price: item["item_price"].intValue))
                 }
-                if drinks.count > 0 {
-                    self.machines.append(Machine(name: machine[0]["display_name"].stringValue, drinks: drinks))
+                if items.count > 0 {
+                    self.machines.append(Machine(name: machine[0]["display_name"].stringValue, items: items))
                 }
             }
             self.tableView.reloadData()
@@ -70,11 +70,11 @@ class DropTableViewTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "machineDetail" {
-            let machineDetailViewController = segue.destinationViewController as DrinkTableViewTableController
+            let machineDetailViewController = segue.destinationViewController as ItemTableViewController
             let indexPath = self.tableView.indexPathForSelectedRow()!
             let destinationTitle = self.machines[indexPath.row].name
             machineDetailViewController.title = destinationTitle
-            machineDetailViewController.drinks = self.machines[indexPath.row].drinks
+            machineDetailViewController.items = self.machines[indexPath.row].items
         }
     }
 

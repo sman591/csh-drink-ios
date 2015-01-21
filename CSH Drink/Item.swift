@@ -1,5 +1,5 @@
 //
-//  Drink.swift
+//  Item.swift
 //  CSH Drink
 //
 //  Created by Stuart Olivera on 1/21/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Drink {
+struct Item {
     let name: String
     let price: Int
 }

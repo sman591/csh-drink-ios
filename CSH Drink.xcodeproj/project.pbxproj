@@ -13,11 +13,11 @@
 		17178B551A6F348A00E67C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17178B541A6F348A00E67C3A /* Images.xcassets */; };
 		17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
 		17178B641A6F348A00E67C3A /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */; };
-		17178BCA1A6F5A2300E67C3A /* DropTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */; };
+		17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */; };
 		17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCB1A6F63B800E67C3A /* Machine.swift */; };
-		17178BD01A6F7C0700E67C3A /* DrinkTableViewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* DrinkTableViewTableController.swift */; };
-		17178BD21A6F7CA900E67C3A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD11A6F7CA900E67C3A /* Drink.swift */; };
-		17178BD41A6F857800E67C3A /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD31A6F857800E67C3A /* DrinkViewController.swift */; };
+		17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */; };
+		17178BD21A6F7CA900E67C3A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD11A6F7CA900E67C3A /* Item.swift */; };
+		17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD31A6F857800E67C3A /* ItemViewController.swift */; };
 		5542362376E5A3EC357FE0A2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FD8381BD10E6CB034B6C14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,11 +44,11 @@
 		17178B5D1A6F348A00E67C3A /* CSH DrinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSH DrinkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B621A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
-		17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTableViewTableViewController.swift; sourceTree = "<group>"; };
+		17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
 		17178BCB1A6F63B800E67C3A /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
-		17178BCF1A6F7C0700E67C3A /* DrinkTableViewTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTableViewTableController.swift; sourceTree = "<group>"; };
-		17178BD11A6F7CA900E67C3A /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
-		17178BD31A6F857800E67C3A /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		17178BD11A6F7CA900E67C3A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		17178BD31A6F857800E67C3A /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		33BDCB5DB97C62369E569945 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,10 +106,10 @@
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
 				17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */,
 				17178B511A6F348A00E67C3A /* Main.storyboard */,
-				17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */,
-				17178BD31A6F857800E67C3A /* DrinkViewController.swift */,
-				17178BCF1A6F7C0700E67C3A /* DrinkTableViewTableController.swift */,
-				17178BD11A6F7CA900E67C3A /* Drink.swift */,
+				17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */,
+				17178BD31A6F857800E67C3A /* ItemViewController.swift */,
+				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
+				17178BD11A6F7CA900E67C3A /* Item.swift */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
 				17178B561A6F348A00E67C3A /* LaunchScreen.xib */,
 				17178B491A6F348A00E67C3A /* Supporting Files */,
@@ -305,10 +305,10 @@
 			files = (
 				17178B501A6F348A00E67C3A /* HistoryViewController.swift in Sources */,
 				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
-				17178BD41A6F857800E67C3A /* DrinkViewController.swift in Sources */,
-				17178BD01A6F7C0700E67C3A /* DrinkTableViewTableController.swift in Sources */,
-				17178BCA1A6F5A2300E67C3A /* DropTableViewTableViewController.swift in Sources */,
-				17178BD21A6F7CA900E67C3A /* Drink.swift in Sources */,
+				17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */,
+				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
+				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,
+				17178BD21A6F7CA900E67C3A /* Item.swift in Sources */,
 				17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  DrinkTableViewTableController.swift
+//  ItemTableViewController.swift
 //  CSH Drink
 //
 //  Created by Stuart Olivera on 1/21/15.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DrinkTableViewTableController: UITableViewController {
+class ItemTableViewController: UITableViewController {
     
-    var drinks: [Drink]!
+    var items: [Item]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +31,14 @@ class DrinkTableViewTableController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.drinks.count
+        return self.items.count
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        let machine = self.drinks[indexPath.row]
+        let machine = self.items[indexPath.row]
         
         cell.textLabel!.text = machine.name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -47,17 +47,17 @@ class DrinkTableViewTableController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("drinkDetail", sender: tableView)
+        self.performSegueWithIdentifier("itemDetail", sender: tableView)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "drinkDetail" {
-            let drinkDetailViewController = segue.destinationViewController as DrinkViewController
+        if segue.identifier == "itemDetail" {
+            let itemDetailViewController = segue.destinationViewController as ItemViewController
             let indexPath = self.tableView.indexPathForSelectedRow()!
-            let drink = self.drinks[indexPath.row]
-            let destinationTitle = drink.name
-            drinkDetailViewController.title = destinationTitle
-            drinkDetailViewController.drink = drink
+            let item = self.items[indexPath.row]
+            let destinationTitle = item.name
+            itemDetailViewController.title = destinationTitle
+            itemDetailViewController.item = item
         }
     }
     

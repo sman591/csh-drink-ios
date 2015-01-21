@@ -7,7 +7,7 @@
         <!--Machines-->
         <scene sceneID="agv-0d-wPX">
             <objects>
-                <tableViewController id="vzG-0s-ZAy" customClass="DropTableViewTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vzG-0s-ZAy" customClass="MachineTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cyy-9A-GAB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="-747"/>
         </scene>
-        <!--Drink Table View Table Controller-->
+        <!--Item Table View Controller-->
         <scene sceneID="9ez-U9-tab">
             <objects>
-                <tableViewController id="P8n-OQ-FXi" customClass="DrinkTableViewTableController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="P8n-OQ-FXi" customClass="ItemTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wdk-pd-2QT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="XpV-dn-wf8" kind="show" identifier="drinkDetail" id="nSx-0J-fjx"/>
+                                    <segue destination="XpV-dn-wf8" kind="show" identifier="itemDetail" id="nSx-0J-fjx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1566" y="0.0"/>
         </scene>
-        <!--Drink View Controller-->
+        <!--Item View Controller-->
         <scene sceneID="KYt-ki-yuh">
             <objects>
-                <viewController id="XpV-dn-wf8" customClass="DrinkViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XpV-dn-wf8" customClass="ItemViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRG-hq-G3H"/>
                         <viewControllerLayoutGuide type="bottom" id="jQ1-Rw-Ha2"/>
