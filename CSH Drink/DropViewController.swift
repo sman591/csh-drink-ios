@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  DropViewController.swift
 //  CSH Drink
 //
 //  Created by Stuart Olivera on 1/20/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class DropViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
