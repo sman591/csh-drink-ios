@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class DropTableViewTableViewController: UITableViewController {
 
@@ -14,10 +16,23 @@ class DropTableViewTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.machines = [Machine(name: "Little Drink", drinks: [Drink(name: "Dr. Pepper", price: 1), Drink(name: "Cherry Coke", price: 1)]),
-            Machine(name: "Big Drink", drinks: [Drink(name: "JOLT Grape", price: 150), Drink(name: "Saranac Root Beer", price: 100)]),
-            Machine(name: "Snack", drinks: [Drink(name: "Kelloggs Nutri Grain", price: 1), Drink(name: "Twizzlers", price: 54)])]
-        self.tableView.reloadData()
+        
+        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": ""]).responseJSON { (_, _, data, _) in
+            println(data)
+            let json = JSON(data!)
+            for (machineId: String, machine: JSON) in json["data"] {
+                println(machineId)
+                var drinks = [Drink]()
+                for (drinkIndex: String, drink: JSON) in machine {
+                    drinks.append(Drink(name: drink["item_name"].stringValue, price: drink["item_price"].intValue))
+                }
+                if drinks.count > 0 {
+                    self.machines.append(Machine(name: machine[0]["display_name"].stringValue, drinks: drinks))
+                }
+            }
+            self.tableView.reloadData()
+            println(json["message"].stringValue)
+        }
     }
 
     override func didReceiveMemoryWarning() {
