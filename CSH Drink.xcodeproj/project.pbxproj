@@ -14,6 +14,9 @@
 		17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
 		17178B641A6F348A00E67C3A /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */; };
 		17178BCA1A6F5A2300E67C3A /* DropTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */; };
+		17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCB1A6F63B800E67C3A /* Machine.swift */; };
+		17178BD01A6F7C0700E67C3A /* DrinkTableViewTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* DrinkTableViewTableController.swift */; };
+		17178BD21A6F7CA900E67C3A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD11A6F7CA900E67C3A /* Drink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		17178B621A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
 		17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTableViewTableViewController.swift; sourceTree = "<group>"; };
+		17178BCB1A6F63B800E67C3A /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		17178BCF1A6F7C0700E67C3A /* DrinkTableViewTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkTableViewTableController.swift; sourceTree = "<group>"; };
+		17178BD11A6F7CA900E67C3A /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,12 @@
 				17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */,
 				17178B511A6F348A00E67C3A /* Main.storyboard */,
 				17178BC91A6F5A2300E67C3A /* DropTableViewTableViewController.swift */,
+				17178BCF1A6F7C0700E67C3A /* DrinkTableViewTableController.swift */,
+				17178BD11A6F7CA900E67C3A /* Drink.swift */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
 				17178B561A6F348A00E67C3A /* LaunchScreen.xib */,
 				17178B491A6F348A00E67C3A /* Supporting Files */,
+				17178BCB1A6F63B800E67C3A /* Machine.swift */,
 			);
 			path = "CSH Drink";
 			sourceTree = "<group>";
@@ -216,7 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17178B501A6F348A00E67C3A /* HistoryViewController.swift in Sources */,
+				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
+				17178BD01A6F7C0700E67C3A /* DrinkTableViewTableController.swift in Sources */,
 				17178BCA1A6F5A2300E67C3A /* DropTableViewTableViewController.swift in Sources */,
+				17178BD21A6F7CA900E67C3A /* Drink.swift in Sources */,
 				17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
