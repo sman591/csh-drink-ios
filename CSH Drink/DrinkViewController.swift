@@ -13,9 +13,22 @@ class DrinkViewController: UIViewController {
     var drink: Drink!
     
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var delaySlider: UISlider!
+    @IBOutlet weak var delayLabel: UILabel!
+    
+    @IBAction func delaySliderChanged(sender: AnyObject) {
+        delayLabel.text = "\(Int(delaySlider.value))"
+    }
     
     @IBAction func dropPressed(sender: AnyObject) {
-        var dropAlert = UIAlertController(title: "Drink Dropped", message: "Your drink has been dropped!", preferredStyle: UIAlertControllerStyle.Alert)
+        var message: String
+        if delaySlider.value > 0 {
+            message = "Your drink will drop in \(Int(delaySlider.value)) seconds"
+        }
+        else {
+            message = "Your drink is being dropped!"
+        }
+        var dropAlert = UIAlertController(title: "Drink Dropped", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         dropAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
         presentViewController(dropAlert, animated: true, completion: nil)
     }

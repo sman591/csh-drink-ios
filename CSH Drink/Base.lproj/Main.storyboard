@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-Xk-F5d">
-                                <rect key="frame" x="220" y="294" width="161" height="56"/>
+                                <rect key="frame" x="220" y="362" width="161" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Drop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,26 +102,50 @@
                                     <action selector="dropPressed:" destination="XpV-dn-wf8" eventType="touchUpInside" id="pxh-d8-Tr0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-MX-vem">
-                                <rect key="frame" x="241" y="249" width="55" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-MX-vem">
+                                <rect key="frame" x="273" y="198" width="55" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Qd-m3n">
-                                <rect key="frame" x="304" y="249" width="55" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Qd-m3n">
+                                <rect key="frame" x="273" y="225" width="55" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Delay:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-4H-wXg">
+                                <rect key="frame" x="273" y="276" width="55" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-5P-sNc">
+                                <rect key="frame" x="173" y="312" width="254" height="31"/>
+                                <connections>
+                                    <action selector="delaySliderChanged:" destination="XpV-dn-wf8" eventType="valueChanged" id="W6s-6C-Z4m"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnN-2z-JPf">
+                                <rect key="frame" x="130" y="316" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="JhI-4H-wXg" secondAttribute="centerX" id="1ah-ra-xLi"/>
                             <constraint firstAttribute="centerX" secondItem="Aww-Xk-F5d" secondAttribute="centerX" id="GJv-ZU-z03"/>
-                            <constraint firstAttribute="centerX" secondItem="FdC-MX-vem" secondAttribute="centerX" constant="31.5" id="lyg-uw-JPg"/>
+                            <constraint firstAttribute="centerX" secondItem="iqE-Qd-m3n" secondAttribute="centerX" id="Kfi-9L-3eF"/>
+                            <constraint firstAttribute="centerX" secondItem="nRD-5P-sNc" secondAttribute="centerX" constant="-15" id="fJZ-Jo-g6o"/>
+                            <constraint firstAttribute="centerX" secondItem="FdC-MX-vem" secondAttribute="centerX" id="lyg-uw-JPg"/>
+                            <constraint firstItem="FnN-2z-JPf" firstAttribute="leading" secondItem="nRD-5P-sNc" secondAttribute="leading" constant="-45" id="tzW-3Y-svK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="delayLabel" destination="FnN-2z-JPf" id="GBz-1w-Mzn"/>
+                        <outlet property="delaySlider" destination="nRD-5P-sNc" id="xQl-xV-sv5"/>
                         <outlet property="priceLabel" destination="iqE-Qd-m3n" id="3Dg-9d-Ngw"/>
                     </connections>
                 </viewController>
