@@ -52,10 +52,12 @@ class DrinkTableViewTableController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "drinkDetail" {
-            let machineDetailViewController = segue.destinationViewController as UIViewController
+            let drinkDetailViewController = segue.destinationViewController as DrinkViewController
             let indexPath = self.tableView.indexPathForSelectedRow()!
-            let destinationTitle = self.drinks[indexPath.row].name
-            machineDetailViewController.title = destinationTitle
+            let drink = self.drinks[indexPath.row]
+            let destinationTitle = drink.name
+            drinkDetailViewController.title = destinationTitle
+            drinkDetailViewController.drink = drink
         }
     }
     

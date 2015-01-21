@@ -14,9 +14,9 @@ class DropTableViewTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.machines = [Machine(name: "Little Drink", drinks: [Drink(name: "Dr. Pepper"), Drink(name: "Cherry Coke")]),
-            Machine(name: "Big Drink", drinks: [Drink(name: "JOLT Grape"), Drink(name: "Saranac Root Beer")]),
-            Machine(name: "Snack", drinks: [Drink(name: "Kelloggs Nutri Grain"), Drink(name: "Twizzlers")])]
+        self.machines = [Machine(name: "Little Drink", drinks: [Drink(name: "Dr. Pepper", price: 1), Drink(name: "Cherry Coke", price: 1)]),
+            Machine(name: "Big Drink", drinks: [Drink(name: "JOLT Grape", price: 150), Drink(name: "Saranac Root Beer", price: 100)]),
+            Machine(name: "Snack", drinks: [Drink(name: "Kelloggs Nutri Grain", price: 1), Drink(name: "Twizzlers", price: 54)])]
         self.tableView.reloadData()
     }
 

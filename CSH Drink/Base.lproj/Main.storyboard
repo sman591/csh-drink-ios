@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1566" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Drink View Controller-->
         <scene sceneID="KYt-ki-yuh">
             <objects>
-                <viewController id="XpV-dn-wf8" sceneMemberID="viewController">
+                <viewController id="XpV-dn-wf8" customClass="DrinkViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pRG-hq-G3H"/>
                         <viewControllerLayoutGuide type="bottom" id="jQ1-Rw-Ha2"/>
@@ -91,8 +91,39 @@
                     <view key="view" contentMode="scaleToFill" id="WSP-MF-stp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-Xk-F5d">
+                                <rect key="frame" x="220" y="294" width="161" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Drop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropPressed:" destination="XpV-dn-wf8" eventType="touchUpInside" id="pxh-d8-Tr0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-MX-vem">
+                                <rect key="frame" x="241" y="249" width="55" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Qd-m3n">
+                                <rect key="frame" x="304" y="249" width="55" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Aww-Xk-F5d" secondAttribute="centerX" id="GJv-ZU-z03"/>
+                            <constraint firstAttribute="centerX" secondItem="FdC-MX-vem" secondAttribute="centerX" constant="31.5" id="lyg-uw-JPg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceLabel" destination="iqE-Qd-m3n" id="3Dg-9d-Ngw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WF1-pg-h3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
