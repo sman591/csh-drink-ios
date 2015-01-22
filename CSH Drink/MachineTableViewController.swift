@@ -18,10 +18,8 @@ class MachineTableViewController: UITableViewController {
         super.viewDidLoad()
         
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": "5a9410f2b27a77fc"]).responseJSON { (_, _, data, _) in
-            println(data)
             let json = JSON(data!)
             for (machineId: String, machine: JSON) in json["data"] {
-                println(machineId)
                 var items = [Item]()
                 for (itemIndex: String, item: JSON) in machine {
                     items.append(Item(name: item["item_name"].stringValue, price: item["item_price"].intValue))
@@ -31,7 +29,6 @@ class MachineTableViewController: UITableViewController {
                 }
             }
             self.tableView.reloadData()
-            println(json["message"].stringValue)
         }
     }
 
