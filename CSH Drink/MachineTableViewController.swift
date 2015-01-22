@@ -51,11 +51,11 @@ class MachineTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as MachineTableViewCell
         
         let machine = self.machines[indexPath.row]
         
-        cell.textLabel!.text = machine.name
+        cell.titleLabel.text = machine.name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell

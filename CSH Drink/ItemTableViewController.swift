@@ -36,11 +36,15 @@ class ItemTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as ItemTableViewCell
         
-        let machine = self.items[indexPath.row]
+        let item = self.items[indexPath.row]
         
-        cell.textLabel!.text = machine.name
+        cell.titleLabel.text = item.name
+        cell.creditsLabel.text = "\(item.price) Credit"
+        if item.price != 1 {
+            cell.creditsLabel.text = cell.creditsLabel.text! + "s"
+        }
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell

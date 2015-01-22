@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
-		17178B501A6F348A00E67C3A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */; };
+		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
 		17178B531A6F348A00E67C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Main.storyboard */; };
 		17178B551A6F348A00E67C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17178B541A6F348A00E67C3A /* Images.xcassets */; };
 		17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
@@ -18,6 +18,43 @@
 		17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */; };
 		17178BD21A6F7CA900E67C3A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD11A6F7CA900E67C3A /* Item.swift */; };
 		17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD31A6F857800E67C3A /* ItemViewController.swift */; };
+		1728EB921A707E4A00339ABE /* Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EB911A707E4A00339ABE /* Drop.swift */; };
+		1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EB931A708CDA00339ABE /* DropTableViewCell.swift */; };
+		1728EBD71A709BD700339ABE /* ToolBarColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EBD61A709BD700339ABE /* ToolBarColorManager.swift */; };
+		1728EC3E1A70A7C300339ABE /* CriqueGrotesk-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1E1A70A7C300339ABE /* CriqueGrotesk-BlackItalic.otf */; };
+		1728EC401A70A7C300339ABE /* CriqueGrotesk-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC201A70A7C300339ABE /* CriqueGrotesk-BoldItalic.otf */; };
+		1728EC411A70A7C300339ABE /* CriqueGrotesk-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC211A70A7C300339ABE /* CriqueGrotesk-Heavy.otf */; };
+		1728EC421A70A7C300339ABE /* CriqueGrotesk-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC221A70A7C300339ABE /* CriqueGrotesk-HeavyItalic.otf */; };
+		1728EC431A70A7C300339ABE /* CriqueGrotesk-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC231A70A7C300339ABE /* CriqueGrotesk-Italic.otf */; };
+		1728EC441A70A7C300339ABE /* CriqueGrotesk-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC241A70A7C300339ABE /* CriqueGrotesk-Light.otf */; };
+		1728EC451A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC251A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf */; };
+		1728EC461A70A7C300339ABE /* CriqueGrotesk-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC261A70A7C300339ABE /* CriqueGrotesk-Medium.otf */; };
+		1728EC471A70A7C300339ABE /* CriqueGrotesk-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC271A70A7C300339ABE /* CriqueGrotesk-MediumItalic.otf */; };
+		1728EC481A70A7C300339ABE /* CriqueGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC281A70A7C300339ABE /* CriqueGrotesk-Regular.otf */; };
+		1728EC491A70A7C300339ABE /* CriqueGrotesk-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC291A70A7C300339ABE /* CriqueGrotesk-Thin.otf */; };
+		1728EC4A1A70A7C300339ABE /* CriqueGrotesk-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC2A1A70A7C300339ABE /* CriqueGrotesk-ThinItalic.otf */; };
+		1728EC4B1A70A7C300339ABE /* CriqueGrotesk-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC2B1A70A7C300339ABE /* CriqueGrotesk-UltraLight.otf */; };
+		1728EC4C1A70A7C300339ABE /* CriqueGrotesk-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC2C1A70A7C300339ABE /* CriqueGrotesk-UltraLightItalic.otf */; };
+		1728EC4D1A70A7C300339ABE /* CriqueGroteskDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC2D1A70A7C300339ABE /* CriqueGroteskDisplay-Black.otf */; };
+		1728EC4E1A70A7C300339ABE /* CriqueGroteskDisplay-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC2E1A70A7C300339ABE /* CriqueGroteskDisplay-BlackItalic.otf */; };
+		1728EC4F1A70A7C300339ABE /* CriqueGroteskDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC2F1A70A7C300339ABE /* CriqueGroteskDisplay-Bold.otf */; };
+		1728EC501A70A7C300339ABE /* CriqueGroteskDisplay-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC301A70A7C300339ABE /* CriqueGroteskDisplay-BoldItalic.otf */; };
+		1728EC511A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC311A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf */; };
+		1728EC521A70A7C300339ABE /* CriqueGroteskDisplay-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC321A70A7C300339ABE /* CriqueGroteskDisplay-HeavyItalic.otf */; };
+		1728EC531A70A7C300339ABE /* CriqueGroteskDisplay-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC331A70A7C300339ABE /* CriqueGroteskDisplay-Italic.otf */; };
+		1728EC541A70A7C300339ABE /* CriqueGroteskDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC341A70A7C300339ABE /* CriqueGroteskDisplay-Light.otf */; };
+		1728EC551A70A7C300339ABE /* CriqueGroteskDisplay-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC351A70A7C300339ABE /* CriqueGroteskDisplay-LightItalic.otf */; };
+		1728EC561A70A7C300339ABE /* CriqueGroteskDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC361A70A7C300339ABE /* CriqueGroteskDisplay-Medium.otf */; };
+		1728EC571A70A7C300339ABE /* CriqueGroteskDisplay-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC371A70A7C300339ABE /* CriqueGroteskDisplay-MediumItalic.otf */; };
+		1728EC581A70A7C300339ABE /* CriqueGroteskDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC381A70A7C300339ABE /* CriqueGroteskDisplay-Regular.otf */; };
+		1728EC591A70A7C300339ABE /* CriqueGroteskDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC391A70A7C300339ABE /* CriqueGroteskDisplay-Thin.otf */; };
+		1728EC5A1A70A7C300339ABE /* CriqueGroteskDisplay-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC3A1A70A7C300339ABE /* CriqueGroteskDisplay-ThinItalic.otf */; };
+		1728EC5B1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC3B1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLight.otf */; };
+		1728EC5C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */; };
+		1728EC5D1A70A7D000339ABE /* CriqueGrotesk-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1D1A70A7C300339ABE /* CriqueGrotesk-Black.otf */; };
+		1728EC5E1A70A7D300339ABE /* CriqueGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */; };
+		1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */; };
+		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
 		5542362376E5A3EC357FE0A2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FD8381BD10E6CB034B6C14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -37,7 +74,7 @@
 		17178B461A6F348A00E67C3A /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B4B1A6F348A00E67C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		17178B521A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17178B541A6F348A00E67C3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17178B571A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -49,6 +86,43 @@
 		17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		17178BD11A6F7CA900E67C3A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		17178BD31A6F857800E67C3A /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		1728EB911A707E4A00339ABE /* Drop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drop.swift; sourceTree = "<group>"; };
+		1728EB931A708CDA00339ABE /* DropTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTableViewCell.swift; sourceTree = "<group>"; };
+		1728EBD61A709BD700339ABE /* ToolBarColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarColorManager.swift; sourceTree = "<group>"; };
+		1728EC1D1A70A7C300339ABE /* CriqueGrotesk-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Black.otf"; sourceTree = "<group>"; };
+		1728EC1E1A70A7C300339ABE /* CriqueGrotesk-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-BlackItalic.otf"; sourceTree = "<group>"; };
+		1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Bold.otf"; sourceTree = "<group>"; };
+		1728EC201A70A7C300339ABE /* CriqueGrotesk-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-BoldItalic.otf"; sourceTree = "<group>"; };
+		1728EC211A70A7C300339ABE /* CriqueGrotesk-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Heavy.otf"; sourceTree = "<group>"; };
+		1728EC221A70A7C300339ABE /* CriqueGrotesk-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-HeavyItalic.otf"; sourceTree = "<group>"; };
+		1728EC231A70A7C300339ABE /* CriqueGrotesk-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Italic.otf"; sourceTree = "<group>"; };
+		1728EC241A70A7C300339ABE /* CriqueGrotesk-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Light.otf"; sourceTree = "<group>"; };
+		1728EC251A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-LightItalic.otf"; sourceTree = "<group>"; };
+		1728EC261A70A7C300339ABE /* CriqueGrotesk-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Medium.otf"; sourceTree = "<group>"; };
+		1728EC271A70A7C300339ABE /* CriqueGrotesk-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-MediumItalic.otf"; sourceTree = "<group>"; };
+		1728EC281A70A7C300339ABE /* CriqueGrotesk-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Regular.otf"; sourceTree = "<group>"; };
+		1728EC291A70A7C300339ABE /* CriqueGrotesk-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-Thin.otf"; sourceTree = "<group>"; };
+		1728EC2A1A70A7C300339ABE /* CriqueGrotesk-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-ThinItalic.otf"; sourceTree = "<group>"; };
+		1728EC2B1A70A7C300339ABE /* CriqueGrotesk-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-UltraLight.otf"; sourceTree = "<group>"; };
+		1728EC2C1A70A7C300339ABE /* CriqueGrotesk-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGrotesk-UltraLightItalic.otf"; sourceTree = "<group>"; };
+		1728EC2D1A70A7C300339ABE /* CriqueGroteskDisplay-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Black.otf"; sourceTree = "<group>"; };
+		1728EC2E1A70A7C300339ABE /* CriqueGroteskDisplay-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-BlackItalic.otf"; sourceTree = "<group>"; };
+		1728EC2F1A70A7C300339ABE /* CriqueGroteskDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Bold.otf"; sourceTree = "<group>"; };
+		1728EC301A70A7C300339ABE /* CriqueGroteskDisplay-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-BoldItalic.otf"; sourceTree = "<group>"; };
+		1728EC311A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		1728EC321A70A7C300339ABE /* CriqueGroteskDisplay-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-HeavyItalic.otf"; sourceTree = "<group>"; };
+		1728EC331A70A7C300339ABE /* CriqueGroteskDisplay-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Italic.otf"; sourceTree = "<group>"; };
+		1728EC341A70A7C300339ABE /* CriqueGroteskDisplay-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Light.otf"; sourceTree = "<group>"; };
+		1728EC351A70A7C300339ABE /* CriqueGroteskDisplay-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-LightItalic.otf"; sourceTree = "<group>"; };
+		1728EC361A70A7C300339ABE /* CriqueGroteskDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Medium.otf"; sourceTree = "<group>"; };
+		1728EC371A70A7C300339ABE /* CriqueGroteskDisplay-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-MediumItalic.otf"; sourceTree = "<group>"; };
+		1728EC381A70A7C300339ABE /* CriqueGroteskDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Regular.otf"; sourceTree = "<group>"; };
+		1728EC391A70A7C300339ABE /* CriqueGroteskDisplay-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-Thin.otf"; sourceTree = "<group>"; };
+		1728EC3A1A70A7C300339ABE /* CriqueGroteskDisplay-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-ThinItalic.otf"; sourceTree = "<group>"; };
+		1728EC3B1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLight.otf"; sourceTree = "<group>"; };
+		1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLightItalic.otf"; sourceTree = "<group>"; };
+		1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
+		1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		33BDCB5DB97C62369E569945 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,16 +178,14 @@
 			isa = PBXGroup;
 			children = (
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
-				17178B4F1A6F348A00E67C3A /* HistoryViewController.swift */,
+				1728EC611A70CDC100339ABE /* History */,
 				17178B511A6F348A00E67C3A /* Main.storyboard */,
-				17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */,
-				17178BD31A6F857800E67C3A /* ItemViewController.swift */,
-				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
-				17178BD11A6F7CA900E67C3A /* Item.swift */,
+				1728EC621A70CDE500339ABE /* Machines */,
+				1728EC631A70CDF300339ABE /* Items */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
 				17178B561A6F348A00E67C3A /* LaunchScreen.xib */,
 				17178B491A6F348A00E67C3A /* Supporting Files */,
-				17178BCB1A6F63B800E67C3A /* Machine.swift */,
+				1728EBD61A709BD700339ABE /* ToolBarColorManager.swift */,
 			);
 			path = "CSH Drink";
 			sourceTree = "<group>";
@@ -121,6 +193,7 @@
 		17178B491A6F348A00E67C3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1728EC1C1A70A7C300339ABE /* Crique Grotesk + Display */,
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -141,6 +214,76 @@
 				17178B621A6F348A00E67C3A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1728EC1C1A70A7C300339ABE /* Crique Grotesk + Display */ = {
+			isa = PBXGroup;
+			children = (
+				1728EC1D1A70A7C300339ABE /* CriqueGrotesk-Black.otf */,
+				1728EC1E1A70A7C300339ABE /* CriqueGrotesk-BlackItalic.otf */,
+				1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */,
+				1728EC201A70A7C300339ABE /* CriqueGrotesk-BoldItalic.otf */,
+				1728EC211A70A7C300339ABE /* CriqueGrotesk-Heavy.otf */,
+				1728EC221A70A7C300339ABE /* CriqueGrotesk-HeavyItalic.otf */,
+				1728EC231A70A7C300339ABE /* CriqueGrotesk-Italic.otf */,
+				1728EC241A70A7C300339ABE /* CriqueGrotesk-Light.otf */,
+				1728EC251A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf */,
+				1728EC261A70A7C300339ABE /* CriqueGrotesk-Medium.otf */,
+				1728EC271A70A7C300339ABE /* CriqueGrotesk-MediumItalic.otf */,
+				1728EC281A70A7C300339ABE /* CriqueGrotesk-Regular.otf */,
+				1728EC291A70A7C300339ABE /* CriqueGrotesk-Thin.otf */,
+				1728EC2A1A70A7C300339ABE /* CriqueGrotesk-ThinItalic.otf */,
+				1728EC2B1A70A7C300339ABE /* CriqueGrotesk-UltraLight.otf */,
+				1728EC2C1A70A7C300339ABE /* CriqueGrotesk-UltraLightItalic.otf */,
+				1728EC2D1A70A7C300339ABE /* CriqueGroteskDisplay-Black.otf */,
+				1728EC2E1A70A7C300339ABE /* CriqueGroteskDisplay-BlackItalic.otf */,
+				1728EC2F1A70A7C300339ABE /* CriqueGroteskDisplay-Bold.otf */,
+				1728EC301A70A7C300339ABE /* CriqueGroteskDisplay-BoldItalic.otf */,
+				1728EC311A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf */,
+				1728EC321A70A7C300339ABE /* CriqueGroteskDisplay-HeavyItalic.otf */,
+				1728EC331A70A7C300339ABE /* CriqueGroteskDisplay-Italic.otf */,
+				1728EC341A70A7C300339ABE /* CriqueGroteskDisplay-Light.otf */,
+				1728EC351A70A7C300339ABE /* CriqueGroteskDisplay-LightItalic.otf */,
+				1728EC361A70A7C300339ABE /* CriqueGroteskDisplay-Medium.otf */,
+				1728EC371A70A7C300339ABE /* CriqueGroteskDisplay-MediumItalic.otf */,
+				1728EC381A70A7C300339ABE /* CriqueGroteskDisplay-Regular.otf */,
+				1728EC391A70A7C300339ABE /* CriqueGroteskDisplay-Thin.otf */,
+				1728EC3A1A70A7C300339ABE /* CriqueGroteskDisplay-ThinItalic.otf */,
+				1728EC3B1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLight.otf */,
+				1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */,
+			);
+			path = "Crique Grotesk + Display";
+			sourceTree = "<group>";
+		};
+		1728EC611A70CDC100339ABE /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1728EB911A707E4A00339ABE /* Drop.swift */,
+				17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */,
+				1728EB931A708CDA00339ABE /* DropTableViewCell.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		1728EC621A70CDE500339ABE /* Machines */ = {
+			isa = PBXGroup;
+			children = (
+				17178BCB1A6F63B800E67C3A /* Machine.swift */,
+				17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */,
+				1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */,
+			);
+			name = Machines;
+			sourceTree = "<group>";
+		};
+		1728EC631A70CDF300339ABE /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				17178BD11A6F7CA900E67C3A /* Item.swift */,
+				17178BD31A6F857800E67C3A /* ItemViewController.swift */,
+				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
+				1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */,
+			);
+			name = Items;
 			sourceTree = "<group>";
 		};
 		2E5430FA84EDF4DE2BD7AF60 /* Frameworks */ = {
@@ -235,9 +378,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1728EC441A70A7C300339ABE /* CriqueGrotesk-Light.otf in Resources */,
+				1728EC5E1A70A7D300339ABE /* CriqueGrotesk-Bold.otf in Resources */,
+				1728EC411A70A7C300339ABE /* CriqueGrotesk-Heavy.otf in Resources */,
+				1728EC4E1A70A7C300339ABE /* CriqueGroteskDisplay-BlackItalic.otf in Resources */,
+				1728EC4B1A70A7C300339ABE /* CriqueGrotesk-UltraLight.otf in Resources */,
+				1728EC571A70A7C300339ABE /* CriqueGroteskDisplay-MediumItalic.otf in Resources */,
+				1728EC5B1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLight.otf in Resources */,
+				1728EC541A70A7C300339ABE /* CriqueGroteskDisplay-Light.otf in Resources */,
+				1728EC501A70A7C300339ABE /* CriqueGroteskDisplay-BoldItalic.otf in Resources */,
+				1728EC471A70A7C300339ABE /* CriqueGrotesk-MediumItalic.otf in Resources */,
+				1728EC551A70A7C300339ABE /* CriqueGroteskDisplay-LightItalic.otf in Resources */,
+				1728EC531A70A7C300339ABE /* CriqueGroteskDisplay-Italic.otf in Resources */,
+				1728EC581A70A7C300339ABE /* CriqueGroteskDisplay-Regular.otf in Resources */,
+				1728EC4D1A70A7C300339ABE /* CriqueGroteskDisplay-Black.otf in Resources */,
+				1728EC401A70A7C300339ABE /* CriqueGrotesk-BoldItalic.otf in Resources */,
+				1728EC521A70A7C300339ABE /* CriqueGroteskDisplay-HeavyItalic.otf in Resources */,
+				1728EC4A1A70A7C300339ABE /* CriqueGrotesk-ThinItalic.otf in Resources */,
+				1728EC491A70A7C300339ABE /* CriqueGrotesk-Thin.otf in Resources */,
+				1728EC421A70A7C300339ABE /* CriqueGrotesk-HeavyItalic.otf in Resources */,
+				1728EC591A70A7C300339ABE /* CriqueGroteskDisplay-Thin.otf in Resources */,
 				17178B531A6F348A00E67C3A /* Main.storyboard in Resources */,
 				17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */,
+				1728EC561A70A7C300339ABE /* CriqueGroteskDisplay-Medium.otf in Resources */,
+				1728EC481A70A7C300339ABE /* CriqueGrotesk-Regular.otf in Resources */,
+				1728EC461A70A7C300339ABE /* CriqueGrotesk-Medium.otf in Resources */,
+				1728EC5C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf in Resources */,
+				1728EC4C1A70A7C300339ABE /* CriqueGrotesk-UltraLightItalic.otf in Resources */,
+				1728EC3E1A70A7C300339ABE /* CriqueGrotesk-BlackItalic.otf in Resources */,
+				1728EC5A1A70A7C300339ABE /* CriqueGroteskDisplay-ThinItalic.otf in Resources */,
+				1728EC4F1A70A7C300339ABE /* CriqueGroteskDisplay-Bold.otf in Resources */,
+				1728EC431A70A7C300339ABE /* CriqueGrotesk-Italic.otf in Resources */,
+				1728EC511A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf in Resources */,
 				17178B551A6F348A00E67C3A /* Images.xcassets in Resources */,
+				1728EC451A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf in Resources */,
+				1728EC5D1A70A7D000339ABE /* CriqueGrotesk-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,11 +478,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17178B501A6F348A00E67C3A /* HistoryViewController.swift in Sources */,
+				17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */,
+				1728EBD71A709BD700339ABE /* ToolBarColorManager.swift in Sources */,
+				1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */,
 				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
+				1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */,
+				1728EB921A707E4A00339ABE /* Drop.swift in Sources */,
 				17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */,
 				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
 				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,
+				1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */,
 				17178BD21A6F7CA900E67C3A /* Item.swift in Sources */,
 				17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */,
 			);

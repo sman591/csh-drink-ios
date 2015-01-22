@@ -2,23 +2,62 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CriqueGrotesk-Bold.otf">
+            <string>CriqueGrotesk-Bold</string>
+            <string>CriqueGrotesk-Bold</string>
+        </mutableArray>
+        <mutableArray key="CriqueGrotesk-Light.otf">
+            <string>CriqueGrotesk-Light</string>
+            <string>CriqueGrotesk-Light</string>
+        </mutableArray>
+        <mutableArray key="CriqueGrotesk-Medium.otf">
+            <string>CriqueGrotesk-Medium</string>
+        </mutableArray>
+        <mutableArray key="CriqueGrotesk-Regular.otf">
+            <string>CriqueGrotesk</string>
+            <string>CriqueGrotesk</string>
+            <string>CriqueGrotesk</string>
+            <string>CriqueGrotesk</string>
+            <string>CriqueGrotesk</string>
+            <string>CriqueGrotesk</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Machines-->
         <scene sceneID="agv-0d-wPX">
             <objects>
                 <tableViewController id="vzG-0s-ZAy" customClass="MachineTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cyy-9A-GAB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="pAH-18-bMq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="pAH-18-bMq" customClass="MachineTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pAH-18-bMq" id="b25-OK-nwy">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smj-gG-CgQ">
+                                            <rect key="frame" x="15" y="1" width="550" height="43"/>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="smj-gG-CgQ" firstAttribute="leading" secondItem="b25-OK-nwy" secondAttribute="leadingMargin" constant="11" id="a6O-J8-zDl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="smj-gG-CgQ" secondAttribute="trailing" constant="-6" id="cDU-9S-cNf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="titleLabel" destination="smj-gG-CgQ" id="oZA-GC-5El"/>
                                     <segue destination="P8n-OQ-FXi" kind="show" identifier="machineDetail" id="IvA-N7-bIv"/>
                                 </connections>
                             </tableViewCell>
@@ -32,16 +71,112 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9iO-HM-NWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="0.0"/>
+            <point key="canvasLocation" x="1380" y="-333"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="1Ux-e3-6k3">
+            <objects>
+                <navigationController id="VZK-WI-0bo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="second" id="spy-EW-jX1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y2j-ga-etS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90588235294117647" green="0.24313725490196078" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HKs-bJ-ORx" kind="relationship" relationship="rootViewController" id="gaA-x0-YaY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqU-T7-q16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="357"/>
+        </scene>
+        <!--Drop History-->
+        <scene sceneID="NcC-me-v1p">
+            <objects>
+                <tableViewController id="HKs-bJ-ORx" customClass="HistoryTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="7Jx-0H-SVo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="7MD-c8-d4R" customClass="DropTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7MD-c8-d4R" id="Kcp-aN-tuj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-cO-iEm">
+                                            <rect key="frame" x="22" y="11" width="432" height="21"/>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Machine name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGt-0T-Bgn">
+                                            <rect key="frame" x="22" y="30" width="432" height="21"/>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Bold" family="Crique Grotesk" pointSize="13"/>
+                                            <color key="textColor" red="0.52614030934343436" green="0.52614030934343436" blue="0.52614030934343436" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="xxx Credits" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-kd-W3R">
+                                            <rect key="frame" x="505" y="32" width="77" height="21"/>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="15"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-bd-aD4">
+                                            <rect key="frame" x="22" y="47" width="432" height="21"/>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Bold" family="Crique Grotesk" pointSize="12"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="2Oy-cO-iEm" secondAttribute="centerY" constant="17" id="31V-xO-XXY"/>
+                                        <constraint firstItem="W9U-kd-W3R" firstAttribute="bottom" secondItem="2Oy-cO-iEm" secondAttribute="bottom" id="FBD-sc-VQD"/>
+                                        <constraint firstAttribute="centerY" secondItem="W9U-kd-W3R" secondAttribute="centerY" id="Gur-wQ-Okb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="W9U-kd-W3R" secondAttribute="trailing" constant="11" id="TSi-9A-xu2"/>
+                                        <constraint firstItem="2Oy-cO-iEm" firstAttribute="leading" secondItem="Kcp-aN-tuj" secondAttribute="leadingMargin" constant="15" id="UDr-nw-3Yc"/>
+                                        <constraint firstAttribute="centerY" secondItem="W9U-kd-W3R" secondAttribute="centerY" id="jq0-tn-bHW"/>
+                                        <constraint firstAttribute="centerY" secondItem="VGt-0T-Bgn" secondAttribute="centerY" constant="-3" id="vLx-pL-D8F"/>
+                                        <constraint firstItem="VGt-0T-Bgn" firstAttribute="leading" secondItem="Kcp-aN-tuj" secondAttribute="leadingMargin" constant="15" id="x5z-ov-6gw"/>
+                                        <constraint firstItem="o8E-bd-aD4" firstAttribute="leading" secondItem="Kcp-aN-tuj" secondAttribute="leadingMargin" constant="15" id="xCA-kJ-qiw"/>
+                                        <constraint firstAttribute="centerY" secondItem="o8E-bd-aD4" secondAttribute="centerY" constant="-21" id="yZK-Fd-V3q"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="FBD-sc-VQD"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="creditsLabel" destination="W9U-kd-W3R" id="H4H-ab-rVR"/>
+                                    <outlet property="itemNameLabel" destination="2Oy-cO-iEm" id="jXK-aK-8OT"/>
+                                    <outlet property="machineNameLabel" destination="VGt-0T-Bgn" id="U1R-f5-R06"/>
+                                    <outlet property="timeLabel" destination="o8E-bd-aD4" id="bGx-3I-dE5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HKs-bJ-ORx" id="rfa-4j-r5p"/>
+                            <outlet property="delegate" destination="HKs-bJ-ORx" id="DFB-uD-Pwv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Drop History" id="CEr-Wk-DCI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUo-U9-gcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="355"/>
         </scene>
         <!--Drop-->
         <scene sceneID="5NQ-QR-vkl">
             <objects>
                 <navigationController id="WrW-JY-xrM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Drop" image="first" id="DLY-1o-OIt"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i1f-DR-GIn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90588235289999997" green="0.24313725489999999" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vzG-0s-ZAy" kind="relationship" relationship="rootViewController" id="pLe-YB-nMd"/>
@@ -49,23 +184,66 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0x-KP-FJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="-747"/>
+            <point key="canvasLocation" x="716" y="-333"/>
         </scene>
         <!--Item Table View Controller-->
         <scene sceneID="9ez-U9-tab">
             <objects>
                 <tableViewController id="P8n-OQ-FXi" customClass="ItemTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wdk-pd-2QT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="QY2-MH-Ome">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="QY2-MH-Ome" customClass="ItemTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QY2-MH-Ome" id="NPK-zy-N18">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" misplaced="YES" text="Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqU-pX-q0e">
+                                            <rect key="frame" x="15" y="2" width="459" height="43"/>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="0.0" height="1"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="xxx Credits" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-6W-sI9">
+                                            <rect key="frame" x="482" y="13" width="77" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8zZ-TZ-tjt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="15"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="KqU-pX-q0e" secondAttribute="centerY" id="FEf-gn-udS"/>
+                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="trailing" secondItem="NPK-zy-N18" secondAttribute="trailingMargin" id="IL5-Q6-266"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KqU-pX-q0e" secondAttribute="trailing" constant="85" id="Kig-UK-Oj3"/>
+                                        <constraint firstItem="KqU-pX-q0e" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="topMargin" constant="6" id="WGm-TV-Tbq"/>
+                                        <constraint firstItem="KqU-pX-q0e" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="topMargin" constant="-6" id="WJv-15-vXy"/>
+                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="trailing" constant="8" id="YH4-D7-ave"/>
+                                        <constraint firstItem="KqU-pX-q0e" firstAttribute="leading" secondItem="NPK-zy-N18" secondAttribute="leadingMargin" constant="11" id="h7a-gw-RCY"/>
+                                        <constraint firstItem="KqU-pX-q0e" firstAttribute="leading" secondItem="NPK-zy-N18" secondAttribute="leadingMargin" constant="11" id="j64-oS-s0a"/>
+                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="trailing" priority="750" constant="8" id="twi-IP-0Rb"/>
+                                        <constraint firstAttribute="centerY" secondItem="KHj-6W-sI9" secondAttribute="centerY" id="veS-zD-wX5"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="WGm-TV-Tbq"/>
+                                            <exclude reference="WJv-15-vXy"/>
+                                            <exclude reference="j64-oS-s0a"/>
+                                            <exclude reference="YH4-D7-ave"/>
+                                            <exclude reference="twi-IP-0Rb"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="creditsLabel" destination="KHj-6W-sI9" id="5tj-CU-Qyi"/>
+                                    <outlet property="titleLabel" destination="KqU-pX-q0e" id="1Px-5q-uyk"/>
                                     <segue destination="XpV-dn-wf8" kind="show" identifier="itemDetail" id="nSx-0J-fjx"/>
                                 </connections>
                             </tableViewCell>
@@ -78,7 +256,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt1-Jq-tLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="0.0"/>
+            <point key="canvasLocation" x="2044" y="-335"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="KYt-ki-yuh">
@@ -89,12 +267,12 @@
                         <viewControllerLayoutGuide type="bottom" id="jQ1-Rw-Ha2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WSP-MF-stp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-Xk-F5d">
-                                <rect key="frame" x="220" y="362" width="161" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-Xk-F5d">
+                                <rect key="frame" x="220" y="314" width="161" height="56"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="30"/>
                                 <state key="normal" title="Drop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -102,46 +280,62 @@
                                     <action selector="dropPressed:" destination="XpV-dn-wf8" eventType="touchUpInside" id="pxh-d8-Tr0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-MX-vem">
-                                <rect key="frame" x="273" y="198" width="55" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-MX-vem">
+                                <rect key="frame" x="273" y="129" width="55" height="28"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="20"/>
+                                <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Qd-m3n">
-                                <rect key="frame" x="273" y="225" width="55" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Qd-m3n">
+                                <rect key="frame" x="273" y="156" width="55" height="28"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="20"/>
+                                <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Delay:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-4H-wXg">
-                                <rect key="frame" x="273" y="276" width="55" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Delay:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-4H-wXg">
+                                <rect key="frame" x="273" y="207" width="55" height="28"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="20"/>
+                                <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-5P-sNc">
-                                <rect key="frame" x="173" y="312" width="254" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-5P-sNc">
+                                <rect key="frame" x="196" y="243" width="254" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="C2f-Pe-aNL"/>
+                                </constraints>
                                 <connections>
                                     <action selector="delaySliderChanged:" destination="XpV-dn-wf8" eventType="valueChanged" id="W6s-6C-Z4m"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnN-2z-JPf">
-                                <rect key="frame" x="130" y="316" width="32" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnN-2z-JPf">
+                                <rect key="frame" x="153" y="247" width="32" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="JhI-4H-wXg" secondAttribute="centerX" id="1ah-ra-xLi"/>
+                            <constraint firstItem="nRD-5P-sNc" firstAttribute="top" secondItem="JhI-4H-wXg" secondAttribute="bottom" constant="8" id="9wi-fe-awt"/>
                             <constraint firstAttribute="centerX" secondItem="Aww-Xk-F5d" secondAttribute="centerX" id="GJv-ZU-z03"/>
+                            <constraint firstItem="JhI-4H-wXg" firstAttribute="top" secondItem="iqE-Qd-m3n" secondAttribute="bottom" constant="23" id="Gwh-ej-t8g"/>
+                            <constraint firstItem="JhI-4H-wXg" firstAttribute="top" secondItem="FdC-MX-vem" secondAttribute="bottom" constant="50" id="JzV-XP-dDZ"/>
+                            <constraint firstItem="nRD-5P-sNc" firstAttribute="leading" secondItem="FnN-2z-JPf" secondAttribute="trailing" constant="13" id="KF0-OW-b9U"/>
                             <constraint firstAttribute="centerX" secondItem="iqE-Qd-m3n" secondAttribute="centerX" id="Kfi-9L-3eF"/>
+                            <constraint firstItem="FnN-2z-JPf" firstAttribute="centerY" secondItem="nRD-5P-sNc" secondAttribute="centerY" id="NLw-CK-Fcr"/>
+                            <constraint firstAttribute="centerY" secondItem="nRD-5P-sNc" secondAttribute="centerY" constant="-14.5" id="cE1-NA-bon"/>
                             <constraint firstAttribute="centerX" secondItem="nRD-5P-sNc" secondAttribute="centerX" constant="-15" id="fJZ-Jo-g6o"/>
                             <constraint firstAttribute="centerX" secondItem="FdC-MX-vem" secondAttribute="centerX" id="lyg-uw-JPg"/>
                             <constraint firstItem="FnN-2z-JPf" firstAttribute="leading" secondItem="nRD-5P-sNc" secondAttribute="leading" constant="-45" id="tzW-3Y-svK"/>
+                            <constraint firstAttribute="centerY" secondItem="FnN-2z-JPf" secondAttribute="centerY" constant="-14" id="uc8-qj-ts3"/>
+                            <constraint firstItem="Aww-Xk-F5d" firstAttribute="top" secondItem="nRD-5P-sNc" secondAttribute="bottom" constant="41" id="yxr-5B-OdJ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tzW-3Y-svK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="delayLabel" destination="FnN-2z-JPf" id="GBz-1w-Mzn"/>
@@ -151,61 +345,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WF1-pg-h3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="0.0"/>
-        </scene>
-        <!--History-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="HistoryViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="History View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="200" y="279" width="200" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by HistoryViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="194" y="329" width="212" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="History" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="888" y="744"/>
+            <point key="canvasLocation" x="2703" y="-333"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.90588235294117647" green="0.24313725490196078" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="WrW-JY-xrM" kind="relationship" relationship="viewControllers" id="Iu2-hS-55I"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="VZK-WI-0bo" kind="relationship" relationship="viewControllers" id="Ady-kT-x3q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
