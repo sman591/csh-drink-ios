@@ -77,7 +77,7 @@
         <scene sceneID="1Ux-e3-6k3">
             <objects>
                 <navigationController id="VZK-WI-0bo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History" image="second" id="spy-EW-jX1"/>
+                    <tabBarItem key="tabBarItem" title="History" image="script" id="spy-EW-jX1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y2j-ga-etS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -172,7 +172,7 @@
         <scene sceneID="5NQ-QR-vkl">
             <objects>
                 <navigationController id="WrW-JY-xrM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drop" image="first" id="DLY-1o-OIt"/>
+                    <tabBarItem key="tabBarItem" title="Drop" image="drink" id="DLY-1o-OIt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -369,7 +369,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="drink" width="31" height="31"/>
+        <image name="script" width="31" height="31"/>
     </resources>
 </document>
