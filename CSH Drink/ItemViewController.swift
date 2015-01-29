@@ -35,7 +35,7 @@ class ItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        priceLabel.text = String(item.price)
+        priceLabel.text = "\(item.price) Credit" + (item.price == 1 ? "" : "s")
     }
 
     override func didReceiveMemoryWarning() {

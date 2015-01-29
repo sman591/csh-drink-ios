@@ -26,8 +26,11 @@ class HistoryTableViewController: UITableViewController {
                     machine_name: drop["display_name"].stringValue,
                     time: drop["time"].stringValue))
             }
-            self.tableView.reloadData()
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
         }
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 55.0
     }
 
     override func didReceiveMemoryWarning() {

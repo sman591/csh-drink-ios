@@ -28,8 +28,11 @@ class MachineTableViewController: UITableViewController {
                     self.machines.append(Machine(name: machine[0]["display_name"].stringValue, items: items))
                 }
             }
-            self.tableView.reloadData()
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
         }
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44.0
     }
 
     override func didReceiveMemoryWarning() {

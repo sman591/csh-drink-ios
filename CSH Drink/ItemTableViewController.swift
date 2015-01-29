@@ -14,6 +14,8 @@ class ItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44.0
 //        self.tableView.reloadData()
     }
     
