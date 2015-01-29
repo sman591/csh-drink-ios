@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
-		17178B531A6F348A00E67C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Main.storyboard */; };
 		17178B551A6F348A00E67C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17178B541A6F348A00E67C3A /* Images.xcassets */; };
-		17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
-		17178B641A6F348A00E67C3A /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */; };
 		17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */; };
 		17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCB1A6F63B800E67C3A /* Machine.swift */; };
 		17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */; };
@@ -55,21 +52,13 @@
 		1728EC5E1A70A7D300339ABE /* CriqueGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */; };
 		1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */; };
 		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
-		5542362376E5A3EC357FE0A2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FD8381BD10E6CB034B6C14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1797B54D1A772B8900F5BB7D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1797B54B1A772B8900F5BB7D /* Alamofire.framework */; };
+		1797B54E1A772B8900F5BB7D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1797B54C1A772B8900F5BB7D /* SwiftyJSON.framework */; };
+		1797B5501A772F1400F5BB7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
+		1797B5511A772F1700F5BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		17178B5E1A6F348A00E67C3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17178B3E1A6F348A00E67C3A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17178B451A6F348A00E67C3A;
-			remoteInfo = "CSH Drink";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0AB9916FF9017262BC1A27C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		11FD8381BD10E6CB034B6C14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B461A6F348A00E67C3A /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,7 +67,6 @@
 		17178B521A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17178B541A6F348A00E67C3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17178B571A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		17178B5D1A6F348A00E67C3A /* CSH DrinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSH DrinkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B621A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
 		17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +111,8 @@
 		1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLightItalic.otf"; sourceTree = "<group>"; };
 		1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
 		1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
-		33BDCB5DB97C62369E569945 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1797B54B1A772B8900F5BB7D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1797B54C1A772B8900F5BB7D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,36 +120,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5542362376E5A3EC357FE0A2 /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17178B5A1A6F348A00E67C3A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1797B54D1A772B8900F5BB7D /* Alamofire.framework in Frameworks */,
+				1797B54E1A772B8900F5BB7D /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D1630E8612CEC4180EC92DD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				33BDCB5DB97C62369E569945 /* Pods.debug.xcconfig */,
-				0AB9916FF9017262BC1A27C2 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		17178B3D1A6F348A00E67C3A = {
 			isa = PBXGroup;
 			children = (
 				17178B481A6F348A00E67C3A /* CSH Drink */,
 				17178B601A6F348A00E67C3A /* CSH DrinkTests */,
 				17178B471A6F348A00E67C3A /* Products */,
-				0D1630E8612CEC4180EC92DD /* Pods */,
 				2E5430FA84EDF4DE2BD7AF60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -169,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				17178B461A6F348A00E67C3A /* CSH Drink.app */,
-				17178B5D1A6F348A00E67C3A /* CSH DrinkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +261,8 @@
 		2E5430FA84EDF4DE2BD7AF60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1797B54B1A772B8900F5BB7D /* Alamofire.framework */,
+				1797B54C1A772B8900F5BB7D /* SwiftyJSON.framework */,
 				11FD8381BD10E6CB034B6C14 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -301,12 +275,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17178B671A6F348A00E67C3A /* Build configuration list for PBXNativeTarget "CSH Drink" */;
 			buildPhases = (
-				32A2679713A1E29B87348F27 /* Check Pods Manifest.lock */,
 				17178B421A6F348A00E67C3A /* Sources */,
 				17178B431A6F348A00E67C3A /* Frameworks */,
 				17178B441A6F348A00E67C3A /* Resources */,
-				3A4D06DBD078EAC01DE090CC /* Embed Pods Frameworks */,
-				92E5E426BADAF49A570E1C44 /* Copy Pods Resources */,
+				1797B54F1A772BA600F5BB7D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -316,24 +288,6 @@
 			productName = "CSH Drink";
 			productReference = 17178B461A6F348A00E67C3A /* CSH Drink.app */;
 			productType = "com.apple.product-type.application";
-		};
-		17178B5C1A6F348A00E67C3A /* CSH DrinkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 17178B6A1A6F348A00E67C3A /* Build configuration list for PBXNativeTarget "CSH DrinkTests" */;
-			buildPhases = (
-				17178B591A6F348A00E67C3A /* Sources */,
-				17178B5A1A6F348A00E67C3A /* Frameworks */,
-				17178B5B1A6F348A00E67C3A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				17178B5F1A6F348A00E67C3A /* PBXTargetDependency */,
-			);
-			name = "CSH DrinkTests";
-			productName = "CSH DrinkTests";
-			productReference = 17178B5D1A6F348A00E67C3A /* CSH DrinkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -347,10 +301,6 @@
 					17178B451A6F348A00E67C3A = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 7R48W84A8H;
-					};
-					17178B5C1A6F348A00E67C3A = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 17178B451A6F348A00E67C3A;
 					};
 				};
 			};
@@ -368,7 +318,6 @@
 			projectRoot = "";
 			targets = (
 				17178B451A6F348A00E67C3A /* CSH Drink */,
-				17178B5C1A6F348A00E67C3A /* CSH DrinkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -398,8 +347,6 @@
 				1728EC491A70A7C300339ABE /* CriqueGrotesk-Thin.otf in Resources */,
 				1728EC421A70A7C300339ABE /* CriqueGrotesk-HeavyItalic.otf in Resources */,
 				1728EC591A70A7C300339ABE /* CriqueGroteskDisplay-Thin.otf in Resources */,
-				17178B531A6F348A00E67C3A /* Main.storyboard in Resources */,
-				17178B581A6F348A00E67C3A /* LaunchScreen.xib in Resources */,
 				1728EC561A70A7C300339ABE /* CriqueGroteskDisplay-Medium.otf in Resources */,
 				1728EC481A70A7C300339ABE /* CriqueGrotesk-Regular.otf in Resources */,
 				1728EC461A70A7C300339ABE /* CriqueGrotesk-Medium.otf in Resources */,
@@ -412,64 +359,29 @@
 				1728EC511A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf in Resources */,
 				17178B551A6F348A00E67C3A /* Images.xcassets in Resources */,
 				1728EC451A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf in Resources */,
+				1797B5511A772F1700F5BB7D /* Main.storyboard in Resources */,
+				1797B5501A772F1400F5BB7D /* LaunchScreen.xib in Resources */,
 				1728EC5D1A70A7D000339ABE /* CriqueGrotesk-Black.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17178B5B1A6F348A00E67C3A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32A2679713A1E29B87348F27 /* Check Pods Manifest.lock */ = {
+		1797B54F1A772BA600F5BB7D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
-			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3A4D06DBD078EAC01DE090CC /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		92E5E426BADAF49A570E1C44 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -493,23 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17178B591A6F348A00E67C3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17178B641A6F348A00E67C3A /* CSH_DrinkTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		17178B5F1A6F348A00E67C3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17178B451A6F348A00E67C3A /* CSH Drink */;
-			targetProxy = 17178B5E1A6F348A00E67C3A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		17178B511A6F348A00E67C3A /* Main.storyboard */ = {
@@ -550,6 +446,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -593,6 +490,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -612,11 +510,14 @@
 		};
 		17178B681A6F348A00E67C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33BDCB5DB97C62369E569945 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,50 +528,19 @@
 		};
 		17178B691A6F348A00E67C3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB9916FF9017262BC1A27C2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		17178B6B1A6F348A00E67C3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CSH DrinkTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSH Drink.app/CSH Drink";
-			};
-			name = Debug;
-		};
-		17178B6C1A6F348A00E67C3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "CSH DrinkTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSH Drink.app/CSH Drink";
 			};
 			name = Release;
 		};
@@ -691,15 +561,6 @@
 			buildConfigurations = (
 				17178B681A6F348A00E67C3A /* Debug */,
 				17178B691A6F348A00E67C3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		17178B6A1A6F348A00E67C3A /* Build configuration list for PBXNativeTarget "CSH DrinkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				17178B6B1A6F348A00E67C3A /* Debug */,
-				17178B6C1A6F348A00E67C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
