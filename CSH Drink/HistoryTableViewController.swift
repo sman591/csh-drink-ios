@@ -16,17 +16,20 @@ class HistoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=users/drops&limit=25&offset=0&uid=stuart", parameters: ["api_key": "53755f6820ff9885"]).responseJSON { (_, _, data, _) in
-            let json = JSON(data!)
-            for (dropIndex: String, drop: JSON) in json["data"] {
-                var items = [Item]()
-                self.drops.append(Drop(
-                    item_name: drop["item_name"].stringValue,
-                    item_price: drop["current_item_price"].intValue,
-                    machine_name: drop["display_name"].stringValue,
-                    time: drop["time"].stringValue))
+        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=users/info", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, userData, _) in
+            let userData = JSON(userData!)
+            Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=users/drops&limit=25&offset=0", parameters: ["api_key": AuthenticationManager.apiKey, "uid": userData["data"]["uid"].stringValue]).responseJSON { (_, _, data, _) in
+                let json = JSON(data!)
+                for (dropIndex: String, drop: JSON) in json["data"] {
+                    var items = [Item]()
+                    self.drops.append(Drop(
+                        item_name: drop["item_name"].stringValue,
+                        item_price: drop["current_item_price"].intValue,
+                        machine_name: drop["display_name"].stringValue,
+                        time: drop["time"].stringValue))
+                }
+                self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
             }
-            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
         }
         
         self.tableView.rowHeight = UITableViewAutomaticDimension

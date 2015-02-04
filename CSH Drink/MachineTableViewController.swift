@@ -17,7 +17,16 @@ class MachineTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": "5a9410f2b27a77fc"]).responseJSON { (_, _, data, _) in
+        println("hello")
+        AuthenticationManager.apiKey = "NULL_API_KEY"
+        println(AuthenticationManager.apiKey)
+        println(AuthenticationManager.keyIsValid())
+        
+        if !AuthenticationManager.keyIsValid() {
+            self.performSegueWithIdentifier("goto_login", sender: self)
+        }
+        
+        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, data, _) in
             let json = JSON(data!)
             for (machineId: String, machine: JSON) in json["data"] {
                 var items = [Item]()
