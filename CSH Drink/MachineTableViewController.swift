@@ -16,6 +16,8 @@ class MachineTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Machines"
 
         if !AuthenticationManager.keyIsValid() {
             self.performSegueWithIdentifier("goto_login", sender: self)
