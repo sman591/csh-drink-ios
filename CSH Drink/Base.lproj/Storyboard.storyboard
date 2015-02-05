@@ -231,7 +231,7 @@
         <scene sceneID="5NQ-QR-vkl">
             <objects>
                 <navigationController id="WrW-JY-xrM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drop" image="Drink" selectedImage="drink" id="DLY-1o-OIt"/>
+                    <tabBarItem key="tabBarItem" title="Drop" image="Drink" id="DLY-1o-OIt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -425,6 +425,5 @@
     </scenes>
     <resources>
         <image name="Drink" width="31" height="31"/>
-        <image name="drink" width="31" height="31"/>
     </resources>
 </document>
