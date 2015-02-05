@@ -29,7 +29,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Machines-->
+        <!--Machine Table View Controller-->
         <scene sceneID="agv-0d-wPX">
             <objects>
                 <tableViewController id="vzG-0s-ZAy" customClass="MachineTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                             <outlet property="delegate" destination="vzG-0s-ZAy" id="6oe-un-9qU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Machines" id="Rhb-5e-zAW"/>
+                    <navigationItem key="navigationItem" id="Rhb-5e-zAW"/>
                     <connections>
                         <segue destination="6c4-fU-qZs" kind="presentation" identifier="goto_login" id="d4Q-Ij-hAc"/>
                     </connections>
@@ -81,11 +81,11 @@
             </objects>
             <point key="canvasLocation" x="1380" y="-333"/>
         </scene>
-        <!--History-->
+        <!--Navigation Controller-->
         <scene sceneID="1Ux-e3-6k3">
             <objects>
                 <navigationController id="VZK-WI-0bo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History" image="script" id="spy-EW-jX1"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="spy-EW-jX1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y2j-ga-etS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -195,7 +195,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12345abc67890" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-ON-imZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abcd1234efgh5678" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-ON-imZ">
                                 <rect key="frame" x="41" y="162" width="518" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -231,7 +231,7 @@
         <scene sceneID="5NQ-QR-vkl">
             <objects>
                 <navigationController id="WrW-JY-xrM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drop" image="drink" id="DLY-1o-OIt"/>
+                    <tabBarItem key="tabBarItem" title="Drop" image="Drink" selectedImage="drink" id="DLY-1o-OIt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -424,7 +424,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Drink" width="31" height="31"/>
         <image name="drink" width="31" height="31"/>
-        <image name="script" width="31" height="31"/>
     </resources>
 </document>

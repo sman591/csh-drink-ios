@@ -54,8 +54,7 @@
 		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
 		177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF2781A82677D00DB417B /* AuthenticationManager.swift */; };
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
-		1797B5501A772F1400F5BB7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17178B561A6F348A00E67C3A /* LaunchScreen.xib */; };
-		1797B5511A772F1700F5BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Main.storyboard */; };
+		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
 		E7EEC54BD0508578CAE786EF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FD8381BD10E6CB034B6C14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -65,9 +64,8 @@
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B4B1A6F348A00E67C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
-		17178B521A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17178B521A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Storyboard.storyboard; sourceTree = "<group>"; };
 		17178B541A6F348A00E67C3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		17178B571A6F348A00E67C3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		17178B621A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
 		17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +133,7 @@
 		17178B3D1A6F348A00E67C3A = {
 			isa = PBXGroup;
 			children = (
+				17178B511A6F348A00E67C3A /* Storyboard.storyboard */,
 				17178B481A6F348A00E67C3A /* CSH Drink */,
 				17178B601A6F348A00E67C3A /* CSH DrinkTests */,
 				17178B471A6F348A00E67C3A /* Products */,
@@ -158,11 +157,9 @@
 				177EF2781A82677D00DB417B /* AuthenticationManager.swift */,
 				177EF27C1A82679C00DB417B /* ApiViewController.swift */,
 				1728EC611A70CDC100339ABE /* History */,
-				17178B511A6F348A00E67C3A /* Main.storyboard */,
 				1728EC621A70CDE500339ABE /* Machines */,
 				1728EC631A70CDF300339ABE /* Items */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
-				17178B561A6F348A00E67C3A /* LaunchScreen.xib */,
 				17178B491A6F348A00E67C3A /* Supporting Files */,
 				1728EBD61A709BD700339ABE /* ToolBarColorManager.swift */,
 			);
@@ -378,8 +375,7 @@
 				1728EC511A70A7C300339ABE /* CriqueGroteskDisplay-Heavy.otf in Resources */,
 				17178B551A6F348A00E67C3A /* Images.xcassets in Resources */,
 				1728EC451A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf in Resources */,
-				1797B5511A772F1700F5BB7D /* Main.storyboard in Resources */,
-				1797B5501A772F1400F5BB7D /* LaunchScreen.xib in Resources */,
+				1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */,
 				1728EC5D1A70A7D000339ABE /* CriqueGrotesk-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,20 +468,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		17178B511A6F348A00E67C3A /* Main.storyboard */ = {
+		17178B511A6F348A00E67C3A /* Storyboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				17178B521A6F348A00E67C3A /* Base */,
 			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		17178B561A6F348A00E67C3A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17178B571A6F348A00E67C3A /* Base */,
-			);
-			name = LaunchScreen.xib;
+			name = Storyboard.storyboard;
+			path = "CSH Drink";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
