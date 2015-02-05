@@ -17,11 +17,8 @@ class MachineTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        println("hello")
         AuthenticationManager.apiKey = "NULL_API_KEY"
-        println(AuthenticationManager.apiKey)
-        println(AuthenticationManager.keyIsValid())
-        
+
         if !AuthenticationManager.keyIsValid() {
             self.performSegueWithIdentifier("goto_login", sender: self)
         }
@@ -31,7 +28,12 @@ class MachineTableViewController: UITableViewController {
             for (machineId: String, machine: JSON) in json["data"] {
                 var items = [Item]()
                 for (itemIndex: String, item: JSON) in machine {
-                    items.append(Item(name: item["item_name"].stringValue, price: item["item_price"].intValue))
+                    items.append(Item(
+                        name: item["item_name"].stringValue,
+                        price: item["item_price"].intValue,
+                        machine_id: item["machine_id"].intValue,
+                        slot_num: item["slot_num"].intValue
+                    ))
                 }
                 if items.count > 0 {
                     self.machines.append(Machine(name: machine[0]["display_name"].stringValue, items: items))

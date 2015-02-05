@@ -14,6 +14,7 @@ import SwiftyJSON
 class ApiViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var apiFieldOutlet: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     }
     
     func submitApiKey() {
+        self.activityIndicator.startAnimating()
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=test/api", parameters: ["api_key": self.apiFieldOutlet.text]).responseJSON { (_, _, data, _) in
             let json = JSON(data!)
             if json["data"] == true {
@@ -35,6 +37,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
             else {
                 self.apiFieldOutlet.becomeFirstResponder()
             }
+            self.activityIndicator.stopAnimating()
         }
     }
     

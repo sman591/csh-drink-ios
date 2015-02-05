@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -200,20 +200,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="US7-Ny-yfZ">
+                                <rect key="frame" x="290" y="217" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6UL-ON-imZ" firstAttribute="top" secondItem="wQA-cK-YsI" secondAttribute="bottom" constant="25" id="3Z8-uQ-vh0"/>
                             <constraint firstItem="rNH-iL-geu" firstAttribute="top" secondItem="JeP-by-Qkd" secondAttribute="bottom" constant="50" id="3db-08-X6q"/>
+                            <constraint firstItem="US7-Ny-yfZ" firstAttribute="top" secondItem="6UL-ON-imZ" secondAttribute="bottom" constant="25" id="AOc-8Q-6fn"/>
                             <constraint firstItem="wQA-cK-YsI" firstAttribute="top" secondItem="rNH-iL-geu" secondAttribute="bottom" constant="10" id="DIl-Jx-Pnc"/>
                             <constraint firstItem="6UL-ON-imZ" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="25" id="GaY-ET-7HT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wQA-cK-YsI" secondAttribute="trailing" constant="10" id="IZe-U6-wxt"/>
+                            <constraint firstAttribute="centerX" secondItem="US7-Ny-yfZ" secondAttribute="centerX" id="agv-UH-Xdm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6UL-ON-imZ" secondAttribute="trailing" constant="25" id="cDo-uK-NS1"/>
                             <constraint firstAttribute="centerX" secondItem="rNH-iL-geu" secondAttribute="centerX" id="luT-zq-orx"/>
                             <constraint firstItem="wQA-cK-YsI" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="10" id="nhV-pE-rx1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="US7-Ny-yfZ" id="I0P-uX-l5R"/>
                         <outlet property="apiFieldOutlet" destination="6UL-ON-imZ" id="0be-vp-Juv"/>
                     </connections>
                 </viewController>
@@ -310,8 +316,8 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNp-vy-I0I">
-                                <rect key="frame" x="178" y="119" width="244" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNp-vy-I0I">
+                                <rect key="frame" x="178" y="94" width="244" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-4H-wXg">
                                         <rect key="frame" x="95" y="110" width="54" height="20"/>
@@ -347,6 +353,9 @@
                                         <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="I2K-DQ-Pyq">
+                                        <rect key="frame" x="180" y="261" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -355,8 +364,10 @@
                                     <constraint firstAttribute="height" constant="300" id="JsS-MH-e2w"/>
                                     <constraint firstAttribute="centerX" secondItem="JhI-4H-wXg" secondAttribute="centerX" id="OGQ-a7-oxw"/>
                                     <constraint firstItem="iqE-Qd-m3n" firstAttribute="top" secondItem="LNp-vy-I0I" secondAttribute="top" constant="60" id="bhx-73-RcW"/>
+                                    <constraint firstItem="I2K-DQ-Pyq" firstAttribute="leading" secondItem="Aww-Xk-F5d" secondAttribute="trailing" constant="25" id="eWv-Zn-M5P"/>
                                     <constraint firstAttribute="bottom" secondItem="Aww-Xk-F5d" secondAttribute="bottom" constant="8" id="mpH-MH-KoZ"/>
                                     <constraint firstAttribute="centerX" secondItem="Aww-Xk-F5d" secondAttribute="centerX" id="nFc-cE-AGp"/>
+                                    <constraint firstItem="I2K-DQ-Pyq" firstAttribute="centerY" secondItem="Aww-Xk-F5d" secondAttribute="centerY" id="nl9-C8-WG4"/>
                                     <constraint firstItem="FnN-2z-JPf" firstAttribute="centerY" secondItem="nRD-5P-sNc" secondAttribute="centerY" id="rr6-EC-STf"/>
                                     <constraint firstItem="JhI-4H-wXg" firstAttribute="top" secondItem="iqE-Qd-m3n" secondAttribute="bottom" constant="30" id="seJ-D6-P2d"/>
                                     <constraint firstAttribute="trailing" secondItem="nRD-5P-sNc" secondAttribute="trailingMargin" constant="25" id="tLx-kd-pHG"/>
@@ -381,6 +392,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="I2K-DQ-Pyq" id="AfH-cH-tgp"/>
                         <outlet property="delayLabel" destination="FnN-2z-JPf" id="GBz-1w-Mzn"/>
                         <outlet property="delaySlider" destination="nRD-5P-sNc" id="xQl-xV-sv5"/>
                         <outlet property="priceLabel" destination="iqE-Qd-m3n" id="3Dg-9d-Ngw"/>

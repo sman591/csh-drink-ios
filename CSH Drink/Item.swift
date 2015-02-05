@@ -11,4 +11,6 @@ import Foundation
 struct Item {
     let name: String
     let price: Int
+    let machine_id: Int
+    let slot_num: Int
 }
