@@ -19,7 +19,6 @@ class AuthenticationManager: NSObject {
     
     class var apiKey: String {
         get {
-            let data = Keychain.load(APIKey)
             if let key = KeychainWrapper.stringForKey(APIKey) {
                 return key
             } else {
