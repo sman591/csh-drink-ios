@@ -16,8 +16,6 @@ class MachineTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        AuthenticationManager.apiKey = "NULL_API_KEY"
 
         if !AuthenticationManager.keyIsValid() {
             self.performSegueWithIdentifier("goto_login", sender: self)
