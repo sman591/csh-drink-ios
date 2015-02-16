@@ -55,10 +55,10 @@
 		174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31171A91B6FC0092CFF6 /* CurrentUser.swift */; };
 		174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31191A91B88D0092CFF6 /* DrinkAPI.swift */; };
 		174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B311B1A91C5C60092CFF6 /* Dynamic.swift */; };
+		1775CD5F1A91E5B700DE32D0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1775CD5E1A91E5B700DE32D0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF2781A82677D00DB417B /* AuthenticationManager.swift */; };
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
 		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
-		E7EEC54BD0508578CAE786EF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FD8381BD10E6CB034B6C14 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +116,7 @@
 		174B31171A91B6FC0092CFF6 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		174B31191A91B88D0092CFF6 /* DrinkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAPI.swift; sourceTree = "<group>"; };
 		174B311B1A91C5C60092CFF6 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		1775CD5E1A91E5B700DE32D0 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7EEC54BD0508578CAE786EF /* Pods.framework in Frameworks */,
+				1775CD5F1A91E5B700DE32D0 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +282,7 @@
 		2E5430FA84EDF4DE2BD7AF60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1775CD5E1A91E5B700DE32D0 /* Pods.framework */,
 				11FD8381BD10E6CB034B6C14 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -562,6 +564,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -577,6 +583,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
