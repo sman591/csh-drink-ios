@@ -21,8 +21,7 @@ class DrinkAPI {
     }
     
     class func getUserInfo(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
-        // TODO: Not rely on a UID. Blocking: https://github.com/bencentra/WebDrink-2.0/issues/55
-        self.makeRequest(.GET, route: "users/info/", parameters: ["uid" : "stuart"], completion: completion, failure: failure)
+        self.makeRequest(.GET, route: "users/info/", completion: completion, failure: failure)
     }
     
     class func makeRequest(method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
