@@ -73,7 +73,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Rhb-5e-zAW">
-                        <barButtonItem key="rightBarButtonItem" title="0 Credits" style="plain" id="x3Z-gv-XFa"/>
+                        <barButtonItem key="rightBarButtonItem" title="0 Credits" id="x3Z-gv-XFa"/>
                     </navigationItem>
                     <connections>
                         <outlet property="creditsOutlet" destination="x3Z-gv-XFa" id="lN7-dC-dVi"/>

@@ -49,6 +49,19 @@ class ItemTableViewController: UITableViewController {
         }
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
+        cell.userInteractionEnabled = item.enabled()
+        
+        var textColor: UIColor
+        
+        if item.enabled() {
+            textColor = UIColor(white: 0.29, alpha: 1)
+        } else {
+            textColor = UIColor(white: 0.29, alpha: 0.25)
+        }
+        
+        cell.titleLabel.textColor = textColor
+        cell.creditsLabel.textColor = textColor
+        
         return cell
     }
     
