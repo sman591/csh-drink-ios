@@ -30,7 +30,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         self.activityIndicator.startAnimating()
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=test/api", parameters: ["api_key": self.apiFieldOutlet.text]).responseJSON { (_, _, data, _) in
             let json = JSON(data!)
-            if json["data"] == true {
+            if json["data"].boolValue == true {
                 AuthenticationManager.apiKey = self.apiFieldOutlet.text;
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
