@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class MachineTableViewController: UITableViewController {
 
+    @IBOutlet weak var creditsOutlet: UIBarButtonItem!
+    
     var machines = [Machine]()
     
     override func viewDidLoad() {
@@ -21,6 +23,12 @@ class MachineTableViewController: UITableViewController {
 
         if !AuthenticationManager.keyIsValid() {
             self.performSegueWithIdentifier("goto_login", sender: self)
+            return
+        }
+        
+        CurrentUser.sharedInstance.credits.bindAndFire {
+            [unowned self] in
+            self.creditsOutlet.title = "\($0) Credits"
         }
         
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, data, _) in

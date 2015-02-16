@@ -52,6 +52,9 @@
 		1728EC5E1A70A7D300339ABE /* CriqueGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */; };
 		1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */; };
 		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
+		174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31171A91B6FC0092CFF6 /* CurrentUser.swift */; };
+		174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31191A91B88D0092CFF6 /* DrinkAPI.swift */; };
+		174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B311B1A91C5C60092CFF6 /* Dynamic.swift */; };
 		177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF2781A82677D00DB417B /* AuthenticationManager.swift */; };
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
 		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
@@ -110,6 +113,9 @@
 		1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLightItalic.otf"; sourceTree = "<group>"; };
 		1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
 		1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		174B31171A91B6FC0092CFF6 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		174B31191A91B88D0092CFF6 /* DrinkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAPI.swift; sourceTree = "<group>"; };
+		174B311B1A91C5C60092CFF6 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,7 +159,9 @@
 			children = (
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
 				177EF2781A82677D00DB417B /* AuthenticationManager.swift */,
+				174B31171A91B6FC0092CFF6 /* CurrentUser.swift */,
 				177EF27C1A82679C00DB417B /* ApiViewController.swift */,
+				174B31191A91B88D0092CFF6 /* DrinkAPI.swift */,
 				1728EC611A70CDC100339ABE /* History */,
 				1728EC621A70CDE500339ABE /* Machines */,
 				1728EC631A70CDF300339ABE /* Items */,
@@ -169,6 +177,7 @@
 			children = (
 				1728EC1C1A70A7C300339ABE /* Crique Grotesk + Display */,
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
+				174B311B1A91C5C60092CFF6 /* Dynamic.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -436,10 +445,13 @@
 				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
 				1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */,
 				1728EB921A707E4A00339ABE /* Drop.swift in Sources */,
+				174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */,
 				17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */,
 				177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */,
 				177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */,
+				174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */,
 				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
+				174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */,
 				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,
 				1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */,
 				17178BD21A6F7CA900E67C3A /* Item.swift in Sources */,
