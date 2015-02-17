@@ -23,7 +23,6 @@ class MachineTableViewController: UITableViewController {
 
         if !AuthenticationManager.keyIsValid() {
             self.performSegueWithIdentifier("goto_login", sender: self)
-            return
         }
         
         CurrentUser.sharedInstance.credits.bindAndFire {
@@ -31,6 +30,27 @@ class MachineTableViewController: UITableViewController {
             self.creditsOutlet.title = "\($0) Credits"
         }
         
+        updateMachines()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44.0
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        CurrentUser.updateUser()
+    }
+    
+    func refresh(sender:AnyObject) {
+        updateMachines()
+    }
+    
+    func updateMachines() {
+        
+        var machines = [Machine]()
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, data, _) in
             let json = JSON(data!)
             for (machineId: String, machine: JSON) in json["data"] {
@@ -42,17 +62,17 @@ class MachineTableViewController: UITableViewController {
                         machine_id: item["machine_id"].intValue,
                         slot_num: item["slot_num"].intValue,
                         available: item["available"].intValue
-                    ))
+                        ))
                 }
                 if items.count > 0 {
-                    self.machines.append(Machine(name: machine[0]["display_name"].stringValue, items: items))
+                    machines.append(Machine(name: machine[0]["display_name"].stringValue, items: items))
                 }
             }
+            self.machines = machines
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+            self.refreshControl?.endRefreshing()
         }
         
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 44.0
     }
 
     override func didReceiveMemoryWarning() {
