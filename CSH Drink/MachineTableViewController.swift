@@ -44,12 +44,11 @@ class MachineTableViewController: UITableViewController {
         CurrentUser.updateUser()
     }
     
-    func refresh(sender:AnyObject) {
+    func refresh(sender: AnyObject) {
         updateMachines()
     }
     
     func updateMachines() {
-        
         var machines = [Machine]()
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, data, _) in
             let json = JSON(data!)
@@ -72,7 +71,6 @@ class MachineTableViewController: UITableViewController {
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
             self.refreshControl?.endRefreshing()
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
