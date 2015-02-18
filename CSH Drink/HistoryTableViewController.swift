@@ -44,9 +44,11 @@ class HistoryTableViewController: UITableViewController {
                         machine_name: drop["display_name"].stringValue,
                         time: drop["time"].stringValue))
                 }
-                self.drops = drops
-                self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
                 self.refreshControl?.endRefreshing()
+                if drops.count > self.drops.count {
+                    self.drops = drops
+                    self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                }
             }
         }
     }

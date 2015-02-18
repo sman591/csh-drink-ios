@@ -69,8 +69,8 @@ class MachineTableViewController: UITableViewController {
                 }
             }
             self.machines = machines
-            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
             self.refreshControl?.endRefreshing()
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
         }
     }
 
