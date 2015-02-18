@@ -14,6 +14,7 @@ struct Item {
     let machine_id: Int
     let slot_num: Int
     let available: Int
+    let item_id: Int
     
     func enabled() -> Bool {
         return available > 0

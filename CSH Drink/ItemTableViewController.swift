@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HanekeSwift
 
 class ItemTableViewController: UITableViewController {
     
@@ -14,9 +15,6 @@ class ItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 44.0
-//        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +59,7 @@ class ItemTableViewController: UITableViewController {
         
         cell.titleLabel.textColor = textColor
         cell.creditsLabel.textColor = textColor
+        cell.itemImage.hnk_setImageFromURL(NSURL(string: "https://csh.rit.edu/~mbillow/drink_icons/\(item.item_id).png")!)
         
         return cell
     }

@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 1
 #define COCOAPODS_VERSION_PATCH_Alamofire 3
 
+// HanekeSwift
+#define COCOAPODS_POD_AVAILABLE_HanekeSwift
+#define COCOAPODS_VERSION_MAJOR_HanekeSwift 0
+#define COCOAPODS_VERSION_MINOR_HanekeSwift 8
+#define COCOAPODS_VERSION_PATCH_HanekeSwift 1
+
 // SwiftKeychainWrapper
 #define COCOAPODS_POD_AVAILABLE_SwiftKeychainWrapper
 #define COCOAPODS_VERSION_MAJOR_SwiftKeychainWrapper 1

@@ -1,0 +1,19 @@
+{
+  "name": "HanekeSwift",
+  "version": "0.8.1",
+  "license": "Apache",
+  "summary": "A lightweight generic cache for iOS written in Swift with extra love for images.",
+  "homepage": "https://github.com/Haneke/HanekeSwift",
+  "authors": {
+    "Hermes Pique": "https://twitter.com/hpique"
+  },
+  "source": {
+    "git": "https://github.com/Haneke/HanekeSwift.git",
+    "tag": "0.8.1"
+  },
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.9"
+  },
+  "source_files": "Haneke/*.swift"
+}
