@@ -45,7 +45,6 @@ class ItemTableViewController: UITableViewController {
         if item.price != 1 {
             cell.creditsLabel.text = cell.creditsLabel.text! + "s"
         }
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         cell.userInteractionEnabled = item.enabled()
         
@@ -59,7 +58,7 @@ class ItemTableViewController: UITableViewController {
         
         cell.titleLabel.textColor = textColor
         cell.creditsLabel.textColor = textColor
-        cell.itemImage.hnk_setImageFromURL(NSURL(string: "https://csh.rit.edu/~mbillow/drink_icons/\(item.item_id).png")!)
+        cell.itemImage.hnk_setImageFromURL(NSURL(string: "https://csh.rit.edu/~mbillow/drink_icons/hdpi/\(item.item_id).png")!)
         
         return cell
     }
