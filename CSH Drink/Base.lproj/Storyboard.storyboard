@@ -4,7 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="CriqueGrotesk-Bold.otf">
@@ -14,14 +13,8 @@
         <mutableArray key="CriqueGrotesk-Light.otf">
             <string>CriqueGrotesk-Light</string>
             <string>CriqueGrotesk-Light</string>
-            <string>CriqueGrotesk-Light</string>
-        </mutableArray>
-        <mutableArray key="CriqueGrotesk-Medium.otf">
-            <string>CriqueGrotesk-Medium</string>
         </mutableArray>
         <mutableArray key="CriqueGrotesk-Regular.otf">
-            <string>CriqueGrotesk</string>
-            <string>CriqueGrotesk</string>
             <string>CriqueGrotesk</string>
             <string>CriqueGrotesk</string>
             <string>CriqueGrotesk</string>
@@ -253,18 +246,50 @@
         <scene sceneID="9ez-U9-tab">
             <objects>
                 <tableViewController id="P8n-OQ-FXi" customClass="ItemTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wdk-pd-2QT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wdk-pd-2QT">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="113" id="QY2-MH-Ome" customClass="ItemTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="90" id="QY2-MH-Ome" customClass="ItemTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QY2-MH-Ome" id="NPK-zy-N18">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="xxx Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-6W-sI9">
+                                            <rect key="frame" x="92" y="43" width="64" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="8zZ-TZ-tjt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="13"/>
+                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1eD-UM-fJn">
+                                            <rect key="frame" x="5" y="5" width="79" height="79"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="1eD-UM-fJn" secondAttribute="height" multiplier="1:1" id="41t-RB-qih"/>
+                                                <constraint firstAttribute="height" priority="999" constant="60" id="Llr-lQ-Opf"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Llr-lQ-Opf"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFI-tK-fB5">
+                                            <rect key="frame" x="526" y="0.0" width="74" height="89"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="QFI-tK-fB5" secondAttribute="height" multiplier="5:6" id="XqM-KF-p78"/>
+                                            </constraints>
+                                            <state key="normal" title="Drop">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqU-pX-q0e">
-                                            <rect key="frame" x="115" y="12" width="396" height="86"/>
+                                            <rect key="frame" x="92" y="28" width="426" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="61" id="IOR-bG-Rmo"/>
                                             </constraints>
@@ -279,70 +304,42 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="xxx Credits" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-6W-sI9">
-                                            <rect key="frame" x="519" y="46" width="73" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="8zZ-TZ-tjt"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="15"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1eD-UM-fJn">
-                                            <rect key="frame" x="5" y="5" width="102" height="102"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="1eD-UM-fJn" secondAttribute="height" multiplier="1:1" id="41t-RB-qih"/>
-                                                <constraint firstAttribute="height" priority="999" constant="60" id="Llr-lQ-Opf"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Llr-lQ-Opf"/>
-                                                </mask>
-                                            </variation>
-                                        </imageView>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jvh-Zc-HW1">
-                                            <rect key="frame" x="169" y="69" width="371" height="31"/>
-                                            <color key="tintColor" red="0.82745098039999998" green="0.0" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        </slider>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uy2-FS-VpD">
-                                            <rect key="frame" x="115" y="75" width="40" height="15"/>
-                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFI-tK-fB5">
-                                            <rect key="frame" x="554" y="69" width="38" height="30"/>
-                                            <state key="normal" title="Drop!">
-                                                <color key="titleColor" red="0.82745098039215681" green="0.0" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QFI-tK-fB5" firstAttribute="leading" secondItem="jvh-Zc-HW1" secondAttribute="trailing" constant="16" id="3mJ-it-Dvh"/>
-                                        <constraint firstItem="jvh-Zc-HW1" firstAttribute="leading" secondItem="Uy2-FS-VpD" secondAttribute="trailing" constant="16" id="4A7-vh-c5p"/>
                                         <constraint firstAttribute="bottom" secondItem="1eD-UM-fJn" secondAttribute="bottom" constant="5" id="9do-pt-6Mm"/>
-                                        <constraint firstItem="jvh-Zc-HW1" firstAttribute="centerY" secondItem="QFI-tK-fB5" secondAttribute="centerY" id="Dcy-2x-fl6"/>
                                         <constraint firstItem="KqU-pX-q0e" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="topMargin" constant="4" id="HBI-Q4-WRo"/>
                                         <constraint firstItem="KHj-6W-sI9" firstAttribute="trailing" secondItem="NPK-zy-N18" secondAttribute="trailingMargin" id="IL5-Q6-266"/>
                                         <constraint firstItem="1eD-UM-fJn" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="top" constant="5" id="S8e-tC-6it"/>
                                         <constraint firstItem="KqU-pX-q0e" firstAttribute="leading" secondItem="1eD-UM-fJn" secondAttribute="trailing" constant="8" id="TFa-rY-RAw"/>
+                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="1eD-UM-fJn" secondAttribute="trailing" constant="8" id="UVU-Wr-vtb"/>
                                         <constraint firstItem="1eD-UM-fJn" firstAttribute="leading" secondItem="NPK-zy-N18" secondAttribute="leading" constant="5" id="cDE-1r-QAJ"/>
                                         <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="trailing" constant="8" id="e5Q-fa-nRq"/>
-                                        <constraint firstItem="Uy2-FS-VpD" firstAttribute="centerY" secondItem="jvh-Zc-HW1" secondAttribute="centerY" constant="-1.5" id="gM5-9N-prH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="jvh-Zc-HW1" secondAttribute="bottom" constant="5" id="gft-kY-Tb8"/>
+                                        <constraint firstAttribute="centerY" secondItem="KqU-pX-q0e" secondAttribute="centerY" constant="7" id="edF-sW-3eG"/>
+                                        <constraint firstItem="QFI-tK-fB5" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="topMargin" constant="-8" id="h9h-YC-Vfm"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="KqU-pX-q0e" secondAttribute="bottom" constant="6" id="hqn-YJ-G6F"/>
-                                        <constraint firstItem="Uy2-FS-VpD" firstAttribute="leading" secondItem="1eD-UM-fJn" secondAttribute="trailing" constant="8" id="ra6-fZ-npj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QFI-tK-fB5" secondAttribute="bottom" constant="-8" id="iaj-PQ-NvL"/>
+                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="top" secondItem="KqU-pX-q0e" secondAttribute="bottom" constant="-3" id="k6n-fy-qyv"/>
+                                        <constraint firstItem="QFI-tK-fB5" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="trailing" constant="8" id="tMz-gb-J22"/>
                                         <constraint firstAttribute="centerY" secondItem="KHj-6W-sI9" secondAttribute="centerY" id="veS-zD-wX5"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="QFI-tK-fB5" secondAttribute="trailing" id="wHI-P2-DL5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QFI-tK-fB5" secondAttribute="trailing" constant="-8" id="wHI-P2-DL5"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="HBI-Q4-WRo"/>
+                                            <exclude reference="hqn-YJ-G6F"/>
+                                            <exclude reference="IL5-Q6-266"/>
+                                            <exclude reference="e5Q-fa-nRq"/>
+                                            <exclude reference="veS-zD-wX5"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="creditsLabel" destination="KHj-6W-sI9" id="5tj-CU-Qyi"/>
+                                    <outlet property="dropButton" destination="QFI-tK-fB5" id="oeS-eZ-U6v"/>
                                     <outlet property="itemImage" destination="1eD-UM-fJn" id="PGh-rp-uwK"/>
                                     <outlet property="titleLabel" destination="KqU-pX-q0e" id="1Px-5q-uyk"/>
-                                    <segue destination="XpV-dn-wf8" kind="show" identifier="itemDetail" id="nSx-0J-fjx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -354,105 +351,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt1-Jq-tLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2044" y="-339"/>
-        </scene>
-        <!--Item View Controller-->
-        <scene sceneID="KYt-ki-yuh">
-            <objects>
-                <viewController id="XpV-dn-wf8" customClass="ItemViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pRG-hq-G3H"/>
-                        <viewControllerLayoutGuide type="bottom" id="jQ1-Rw-Ha2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WSP-MF-stp">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNp-vy-I0I">
-                                <rect key="frame" x="178" y="94" width="244" height="300"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhI-4H-wXg">
-                                        <rect key="frame" x="95" y="110" width="54" height="20"/>
-                                        <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="20"/>
-                                        <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-5P-sNc">
-                                        <rect key="frame" x="48" y="135" width="181" height="31"/>
-                                        <connections>
-                                            <action selector="delaySliderChanged:" destination="XpV-dn-wf8" eventType="valueChanged" id="W6s-6C-Z4m"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnN-2z-JPf">
-                                        <rect key="frame" x="32" y="140" width="10" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aww-Xk-F5d">
-                                        <rect key="frame" x="90" y="250" width="65" height="42"/>
-                                        <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="30"/>
-                                        <state key="normal" title="Drop">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="dropPressed:" destination="XpV-dn-wf8" eventType="touchUpInside" id="pxh-d8-Tr0"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-Qd-m3n">
-                                        <rect key="frame" x="117" y="60" width="10" height="20"/>
-                                        <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="20"/>
-                                        <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="I2K-DQ-Pyq">
-                                        <rect key="frame" x="180" y="261" width="20" height="20"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="nRD-5P-sNc" firstAttribute="leading" secondItem="LNp-vy-I0I" secondAttribute="leading" constant="50" id="1W5-Mc-shL"/>
-                                    <constraint firstAttribute="centerX" secondItem="iqE-Qd-m3n" secondAttribute="centerX" id="JsE-tP-jjw"/>
-                                    <constraint firstAttribute="height" constant="300" id="JsS-MH-e2w"/>
-                                    <constraint firstAttribute="centerX" secondItem="JhI-4H-wXg" secondAttribute="centerX" id="OGQ-a7-oxw"/>
-                                    <constraint firstItem="iqE-Qd-m3n" firstAttribute="top" secondItem="LNp-vy-I0I" secondAttribute="top" constant="60" id="bhx-73-RcW"/>
-                                    <constraint firstItem="I2K-DQ-Pyq" firstAttribute="leading" secondItem="Aww-Xk-F5d" secondAttribute="trailing" constant="25" id="eWv-Zn-M5P"/>
-                                    <constraint firstAttribute="bottom" secondItem="Aww-Xk-F5d" secondAttribute="bottom" constant="8" id="mpH-MH-KoZ"/>
-                                    <constraint firstAttribute="centerX" secondItem="Aww-Xk-F5d" secondAttribute="centerX" id="nFc-cE-AGp"/>
-                                    <constraint firstItem="I2K-DQ-Pyq" firstAttribute="centerY" secondItem="Aww-Xk-F5d" secondAttribute="centerY" id="nl9-C8-WG4"/>
-                                    <constraint firstItem="FnN-2z-JPf" firstAttribute="centerY" secondItem="nRD-5P-sNc" secondAttribute="centerY" id="rr6-EC-STf"/>
-                                    <constraint firstItem="JhI-4H-wXg" firstAttribute="top" secondItem="iqE-Qd-m3n" secondAttribute="bottom" constant="30" id="seJ-D6-P2d"/>
-                                    <constraint firstAttribute="trailing" secondItem="nRD-5P-sNc" secondAttribute="trailingMargin" constant="25" id="tLx-kd-pHG"/>
-                                    <constraint firstAttribute="centerY" secondItem="nRD-5P-sNc" secondAttribute="centerY" id="v9a-Ld-Tb0"/>
-                                    <constraint firstItem="nRD-5P-sNc" firstAttribute="leading" secondItem="FnN-2z-JPf" secondAttribute="trailing" constant="8" id="vAo-3s-gUg"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="LNp-vy-I0I" secondAttribute="centerX" id="DbJ-xW-feM"/>
-                            <constraint firstAttribute="centerY" secondItem="LNp-vy-I0I" secondAttribute="centerY" id="WRA-aU-BWm"/>
-                            <constraint firstItem="LNp-vy-I0I" firstAttribute="width" secondItem="WSP-MF-stp" secondAttribute="height" multiplier="1:1" id="Xgc-E9-ksa"/>
-                            <constraint firstItem="LNp-vy-I0I" firstAttribute="width" secondItem="WSP-MF-stp" secondAttribute="height" multiplier="0.5" id="m5x-9l-vp6"/>
-                            <constraint firstItem="LNp-vy-I0I" firstAttribute="width" secondItem="WSP-MF-stp" secondAttribute="width" multiplier="0.5" id="zRM-X3-jvP"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Xgc-E9-ksa"/>
-                                <exclude reference="zRM-X3-jvP"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="activityIndicator" destination="I2K-DQ-Pyq" id="AfH-cH-tgp"/>
-                        <outlet property="delayLabel" destination="FnN-2z-JPf" id="GBz-1w-Mzn"/>
-                        <outlet property="delaySlider" destination="nRD-5P-sNc" id="xQl-xV-sv5"/>
-                        <outlet property="priceLabel" destination="iqE-Qd-m3n" id="3Dg-9d-Ngw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WF1-pg-h3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2703" y="-333"/>
+            <point key="canvasLocation" x="2044" y="-342"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

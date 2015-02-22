@@ -59,6 +59,9 @@ class ItemTableViewController: UITableViewController {
         cell.titleLabel.textColor = textColor
         cell.creditsLabel.textColor = textColor
         cell.itemImage.hnk_setImageFromURL(NSURL(string: "https://csh.rit.edu/~mbillow/drink_icons/hdpi/\(item.item_id).png")!)
+
+        cell.layoutMargins = UIEdgeInsetsZero
+        cell.preservesSuperviewLayoutMargins = false
         
         return cell
     }
