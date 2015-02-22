@@ -49,16 +49,20 @@ class ItemTableViewController: UITableViewController {
         cell.userInteractionEnabled = item.enabled()
         
         var textColor: UIColor
+        var alpha: CGFloat
         
         if item.enabled() {
-            textColor = UIColor(white: 0.29, alpha: 1)
+            alpha = 1
+            textColor = UIColor(white: 0.29, alpha: alpha)
         } else {
-            textColor = UIColor(white: 0.29, alpha: 0.25)
+            alpha = 0.25
+            textColor = UIColor(white: 0.29, alpha: alpha)
         }
         
         cell.titleLabel.textColor = textColor
         cell.creditsLabel.textColor = textColor
         cell.itemImage.hnk_setImageFromURL(NSURL(string: "https://csh.rit.edu/~mbillow/drink_icons/hdpi/\(item.item_id).png")!)
+        cell.itemImage.alpha = alpha
 
         cell.layoutMargins = UIEdgeInsetsZero
         cell.preservesSuperviewLayoutMargins = false
