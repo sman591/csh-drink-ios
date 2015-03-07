@@ -19,20 +19,13 @@ class ToolBarColorManager: NSObject {
             textColor: tintColor, lightStatus: true, opaque: true)
     }
     
-    /// Sets the toolbars to a green background with
+    /// Sets the toolbars to a purple background with
     /// white text and tints.
-    class func setGreenToolbars() {
-        let barTintColor = UIColor(red: 0.149, green: 0.702, blue: 0.243, alpha: 1.0);
-        let tintColor = UIColor(white: 0.98, alpha: 1.0)
+    class func setPinkAccentToolbars() {
+        let barTintColor = UIColor(white: 0.98, alpha: 0)
+        let tintColor = UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0)
         self.setToolBarColors(tintColor: tintColor, barTintColor: barTintColor,
-            textColor: tintColor, lightStatus: true, opaque: false)
-    }
-    
-    /// Sets the toolbars to a white background with
-    /// black text and blue tints.
-    class func setWhiteToolbars() {
-        let tintColor = UIColor(red:0.041, green:0.375, blue:0.998, alpha:1.000)
-        self.setToolBarColors(tintColor: tintColor, barTintColor: UIColor.whiteColor(), textColor: UIColor.blackColor(), lightStatus: false, opaque: false)
+            textColor: tintColor, lightStatus: false, opaque: false)
     }
     
     /// Sets the system toolbar colors to what your provide.
