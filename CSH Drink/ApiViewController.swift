@@ -16,6 +16,10 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var apiFieldOutlet: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBAction func openWebDrinkAction(sender: UIButton) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/#/settings")!)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         apiFieldOutlet.becomeFirstResponder()

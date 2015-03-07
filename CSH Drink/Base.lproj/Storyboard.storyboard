@@ -193,22 +193,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abcd1234efgh5678" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-ON-imZ">
-                                <rect key="frame" x="41" y="162" width="518" height="30"/>
+                                <rect key="frame" x="41" y="186" width="518" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="US7-Ny-yfZ">
-                                <rect key="frame" x="290" y="217" width="20" height="20"/>
+                                <rect key="frame" x="290" y="241" width="20" height="20"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-Wn-TzY">
+                                <rect key="frame" x="244" y="145" width="113" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Open WebDrink »">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="6CC-5u-x6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6UL-ON-imZ" firstAttribute="top" secondItem="wQA-cK-YsI" secondAttribute="bottom" constant="25" id="3Z8-uQ-vh0"/>
                             <constraint firstItem="rNH-iL-geu" firstAttribute="top" secondItem="JeP-by-Qkd" secondAttribute="bottom" constant="50" id="3db-08-X6q"/>
+                            <constraint firstItem="6UL-ON-imZ" firstAttribute="top" secondItem="ROz-Wn-TzY" secondAttribute="bottom" constant="12" id="4uj-Sb-exV"/>
                             <constraint firstItem="US7-Ny-yfZ" firstAttribute="top" secondItem="6UL-ON-imZ" secondAttribute="bottom" constant="25" id="AOc-8Q-6fn"/>
                             <constraint firstItem="wQA-cK-YsI" firstAttribute="top" secondItem="rNH-iL-geu" secondAttribute="bottom" constant="10" id="DIl-Jx-Pnc"/>
+                            <constraint firstAttribute="centerX" secondItem="ROz-Wn-TzY" secondAttribute="centerX" id="GN8-Y5-Bcr"/>
                             <constraint firstItem="6UL-ON-imZ" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="25" id="GaY-ET-7HT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wQA-cK-YsI" secondAttribute="trailing" constant="10" id="IZe-U6-wxt"/>
+                            <constraint firstItem="ROz-Wn-TzY" firstAttribute="top" secondItem="wQA-cK-YsI" secondAttribute="bottom" constant="8" id="L3r-tQ-LU8"/>
                             <constraint firstAttribute="centerX" secondItem="US7-Ny-yfZ" secondAttribute="centerX" id="agv-UH-Xdm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6UL-ON-imZ" secondAttribute="trailing" constant="25" id="cDo-uK-NS1"/>
                             <constraint firstAttribute="centerX" secondItem="rNH-iL-geu" secondAttribute="centerX" id="luT-zq-orx"/>
