@@ -54,7 +54,6 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="smj-gG-CgQ" secondAttribute="trailing" id="cDU-9S-cNf"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="titleLabel" destination="smj-gG-CgQ" id="oZA-GC-5El"/>
                                     <segue destination="P8n-OQ-FXi" kind="show" identifier="machineDetail" id="IvA-N7-bIv"/>
@@ -83,10 +82,10 @@
             <objects>
                 <navigationController id="VZK-WI-0bo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="spy-EW-jX1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y2j-ga-etS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Y2j-ga-etS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.90588235294117647" green="0.24313725490196078" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="HKs-bJ-ORx" kind="relationship" relationship="rootViewController" id="gaA-x0-YaY"/>
@@ -101,7 +100,7 @@
             <objects>
                 <tableViewController id="HKs-bJ-ORx" customClass="HistoryTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="7Jx-0H-SVo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -148,7 +147,7 @@
                                         <constraint firstItem="o8E-bd-aD4" firstAttribute="leading" secondItem="Kcp-aN-tuj" secondAttribute="leadingMargin" constant="15" id="xCA-kJ-qiw"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="creditsLabel" destination="W9U-kd-W3R" id="H4H-ab-rVR"/>
                                     <outlet property="itemNameLabel" destination="2Oy-cO-iEm" id="jXK-aK-8OT"/>
@@ -244,7 +243,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.90588235289999997" green="0.24313725489999999" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vzG-0s-ZAy" kind="relationship" relationship="rootViewController" id="pLe-YB-nMd"/>
@@ -345,7 +344,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="creditsLabel" destination="KHj-6W-sI9" id="5tj-CU-Qyi"/>
@@ -375,7 +374,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.90588235294117647" green="0.24313725490196078" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="WrW-JY-xrM" kind="relationship" relationship="viewControllers" id="Iu2-hS-55I"/>
