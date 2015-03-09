@@ -70,18 +70,18 @@ class ItemTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("itemDetail", sender: tableView)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "itemDetail" {
-            let itemDetailViewController = segue.destinationViewController as ItemViewController
-            let indexPath = self.tableView.indexPathForSelectedRow()!
-            let item = self.items[indexPath.row]
-            let destinationTitle = item.name
-            itemDetailViewController.title = destinationTitle
-            itemDetailViewController.item = item
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell = self.tableView.cellForRowAtIndexPath(indexPath) as ItemTableViewCell
+        var alertview = JSSAlertView().show(self, title: "Drop Confirmation", text: "Do you want to drop Cherry Coke for 1 credit?", buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+        alertview.setTitleFont("CriqueGrotesk")
+        alertview.setTextFont("CriqueGrotesk")
+        alertview.setButtonFont("CriqueGrotesk")
+        alertview.setTextTheme(.Light)
+        alertview.addAction() {
+            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+        alertview.addCancelAction() {
+            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
     
