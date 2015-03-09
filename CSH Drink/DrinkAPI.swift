@@ -35,7 +35,11 @@ class DrinkAPI {
                     if let error = error {
                         failure?(error, json["message"].string)
                     } else {
-                        completion?(json["data"])
+                        if json["data"].string == "false" {
+                            failure?(NSError(), json["message"].string)
+                        } else {
+                            completion?(json["data"])
+                        }
                     }
                 }
             }
