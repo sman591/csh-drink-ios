@@ -41,10 +41,7 @@ class ItemTableViewController: UITableViewController {
         let item = self.items[indexPath.row]
         
         cell.titleLabel.text = item.name
-        cell.creditsLabel.text = "\(item.price) Credit"
-        if item.price != 1 {
-            cell.creditsLabel.text = cell.creditsLabel.text! + "s"
-        }
+        cell.creditsLabel.text = item.humanPrice()
         
         cell.userInteractionEnabled = item.enabled()
         

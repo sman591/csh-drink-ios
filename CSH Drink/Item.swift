@@ -19,4 +19,12 @@ struct Item {
     func enabled() -> Bool {
         return available > 0
     }
+
+    func humanPrice() -> String {
+        var text = "\(self.price) Credit"
+        if self.price != 1 {
+            text += "s"
+        }
+        return text;
+    }
 }
