@@ -14,7 +14,6 @@
 		17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCB1A6F63B800E67C3A /* Machine.swift */; };
 		17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */; };
 		17178BD21A6F7CA900E67C3A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD11A6F7CA900E67C3A /* Item.swift */; };
-		17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD31A6F857800E67C3A /* ItemViewController.swift */; };
 		1728EB921A707E4A00339ABE /* Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EB911A707E4A00339ABE /* Drop.swift */; };
 		1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EB931A708CDA00339ABE /* DropTableViewCell.swift */; };
 		1728EBD71A709BD700339ABE /* ToolBarColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EBD61A709BD700339ABE /* ToolBarColorManager.swift */; };
@@ -55,6 +54,7 @@
 		174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31171A91B6FC0092CFF6 /* CurrentUser.swift */; };
 		174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31191A91B88D0092CFF6 /* DrinkAPI.swift */; };
 		174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B311B1A91C5C60092CFF6 /* Dynamic.swift */; };
+		1770E0521AAD30DF0077FA94 /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */; };
 		1775CD5F1A91E5B700DE32D0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1775CD5E1A91E5B700DE32D0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF2781A82677D00DB417B /* AuthenticationManager.swift */; };
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
@@ -75,7 +75,6 @@
 		17178BCB1A6F63B800E67C3A /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		17178BD11A6F7CA900E67C3A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		17178BD31A6F857800E67C3A /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		1728EB911A707E4A00339ABE /* Drop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drop.swift; sourceTree = "<group>"; };
 		1728EB931A708CDA00339ABE /* DropTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropTableViewCell.swift; sourceTree = "<group>"; };
 		1728EBD61A709BD700339ABE /* ToolBarColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarColorManager.swift; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		174B31171A91B6FC0092CFF6 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		174B31191A91B88D0092CFF6 /* DrinkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAPI.swift; sourceTree = "<group>"; };
 		174B311B1A91C5C60092CFF6 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSSAlertView.swift; sourceTree = "<group>"; };
 		1775CD5E1A91E5B700DE32D0 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +178,7 @@
 			children = (
 				1728EC1C1A70A7C300339ABE /* Crique Grotesk + Display */,
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
+				1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */,
 				174B311B1A91C5C60092CFF6 /* Dynamic.swift */,
 			);
 			name = "Supporting Files";
@@ -263,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				17178BD11A6F7CA900E67C3A /* Item.swift */,
-				17178BD31A6F857800E67C3A /* ItemViewController.swift */,
 				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
 				1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */,
 			);
@@ -447,8 +447,8 @@
 				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
 				1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */,
 				1728EB921A707E4A00339ABE /* Drop.swift in Sources */,
+				1770E0521AAD30DF0077FA94 /* JSSAlertView.swift in Sources */,
 				174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */,
-				17178BD41A6F857800E67C3A /* ItemViewController.swift in Sources */,
 				177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */,
 				177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */,
 				174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */,

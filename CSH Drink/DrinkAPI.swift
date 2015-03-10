@@ -21,7 +21,26 @@ class DrinkAPI {
     }
     
     class func getUserInfo(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
-        self.makeRequest(.GET, route: "users/info/", completion: completion, failure: failure)
+        self.makeRequest(
+            .GET,
+            route: "users/info/",
+            completion: completion,
+            failure: failure
+        )
+    }
+    
+    class func dropItem(item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+        self.makeRequest(
+            .POST,
+            route: "drops/drop/",
+            parameters: [
+                "machine_id": item.machine_id,
+                "slot_num": item.slot_num,
+                "delay": delay
+            ],
+            completion: completion,
+            failure: failure
+        )
     }
     
     class func makeRequest(method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
