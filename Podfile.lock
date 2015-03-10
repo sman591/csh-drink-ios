@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (1.1.3)
+  - Alamofire (1.1.4)
   - HanekeSwift (0.8.1)
   - SwiftKeychainWrapper (1.0.5)
   - SwiftyJSON (2.1.3)
 
 DEPENDENCIES:
-  - Alamofire (= 1.1.3)
+  - Alamofire (= 1.1.4)
   - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`, branch `podspec`)
   - SwiftKeychainWrapper (from `https://github.com/jrendel/SwiftKeychainWrapper.git`, branch `develop`)
   - SwiftyJSON (= 2.1.3)
@@ -27,9 +27,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/jrendel/SwiftKeychainWrapper.git
 
 SPEC CHECKSUMS:
-  Alamofire: 4337b1484a062640f8caf6e96f03a511bf137536
+  Alamofire: 524225da382071ee3e6d0badd0ee4b4dc36740de
   HanekeSwift: 63eac3df5211d91b0023ba8b91e497480bd236cc
   SwiftKeychainWrapper: 1a89e3d70852a2766001c73575f133a2de6954c5
   SwiftyJSON: 48be7490a3989a58a3f511cd54167f0a2b466e76
 
-COCOAPODS: 0.36.0.beta.2
+COCOAPODS: 0.36.0.rc.1

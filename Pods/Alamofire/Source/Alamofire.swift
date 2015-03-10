@@ -1,6 +1,6 @@
 // Alamofire.swift
 //
-// Copyright (c) 2014 Alamofire (http://alamofire.org)
+// Copyright (c) 2014–2015 Alamofire (http://alamofire.org)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -1089,7 +1089,7 @@ extension Manager {
         case ResumeData(NSData)
     }
 
-    private func download(downloadable: Downloadable, destination: (NSURL, NSHTTPURLResponse) -> (NSURL)) -> Request {
+    private func download(downloadable: Downloadable, destination: Request.DownloadFileDestination) -> Request {
         var downloadTask: NSURLSessionDownloadTask!
 
         switch downloadable {
@@ -1126,7 +1126,7 @@ extension Manager {
 
         :returns: The created download request.
     */
-    public func download(URLRequest: URLRequestConvertible, destination: (NSURL, NSHTTPURLResponse) -> (NSURL)) -> Request {
+    public func download(URLRequest: URLRequestConvertible, destination: Request.DownloadFileDestination) -> Request {
         return download(.Request(URLRequest.URLRequest), destination: destination)
     }
 
@@ -1258,6 +1258,9 @@ extension Request: DebugPrintable {
             }
         }
 
+        // Temporarily disabled on OS X due to build failure for CocoaPods
+        // See https://github.com/CocoaPods/swift/issues/24
+        #if !os(OSX)
         if let cookieStorage = session.configuration.HTTPCookieStorage {
             if let cookies = cookieStorage.cookiesForURL(URL) as? [NSHTTPCookie] {
                 if !cookies.isEmpty {
@@ -1266,6 +1269,7 @@ extension Request: DebugPrintable {
                 }
             }
         }
+        #endif
 
         if request.allHTTPHeaderFields != nil {
             for (field, value) in request.allHTTPHeaderFields! {
