@@ -50,4 +50,8 @@ class CurrentUser: NSObject {
         })
     }
 
+    class func canAffordItem(item: Item) -> Bool {
+        return CurrentUser.sharedInstance.credits.value >= item.price
+    }
+
 }
