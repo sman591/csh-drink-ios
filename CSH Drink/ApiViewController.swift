@@ -15,6 +15,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var apiFieldOutlet: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBAction func openWebDrinkAction(sender: UIButton) {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/#/settings")!)
@@ -24,6 +25,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         apiFieldOutlet.becomeFirstResponder()
         apiFieldOutlet.delegate = self
+        addParallax()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,15 +55,34 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         }
         return shouldReturn
     }
+
+    func addParallax() {
+        let relativeAbsoluteValue = 15
+
+        // Set vertical effect
+        var verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
+        verticalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
+
+        // Set horizontal effect
+        var horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
+        horizontalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
+
+        // Create group to combine both
+        var group = UIMotionEffectGroup()
+        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+
+        self.backgroundImage.addMotionEffect(group)
+    }
     
-//    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-//        let acceptableCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-//        let newLength = countElements(textField.text) + countElements(string) - range.length
-//        
-//        
-//        NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:acceptableCharacters] invertedSet];
-//        
-//        return (newLength <= 16) && [string rangeOfCharacterFromSet:cs].location == NSNotFound;
-//    }
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if range.length + range.location > textField.text.utf16Count {
+            return false
+        }
+
+        let newLength = textField.text.utf16Count + string.utf16Count - range.length
+        return newLength <= 16
+    }
     
 }
