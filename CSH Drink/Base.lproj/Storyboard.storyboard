@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -179,8 +179,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Drink API Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-iL-geu">
-                                <rect key="frame" x="135" y="70" width="331" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Drink API Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-iL-geu">
+                                <rect key="frame" x="16" y="70" width="568" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="31"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -220,8 +220,10 @@
                             <constraint firstItem="6UL-ON-imZ" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="25" id="GaY-ET-7HT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wQA-cK-YsI" secondAttribute="trailing" constant="10" id="IZe-U6-wxt"/>
                             <constraint firstItem="ROz-Wn-TzY" firstAttribute="top" secondItem="wQA-cK-YsI" secondAttribute="bottom" constant="8" id="L3r-tQ-LU8"/>
+                            <constraint firstItem="rNH-iL-geu" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" id="Vjz-ug-YIr"/>
                             <constraint firstAttribute="centerX" secondItem="US7-Ny-yfZ" secondAttribute="centerX" id="agv-UH-Xdm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6UL-ON-imZ" secondAttribute="trailing" constant="25" id="cDo-uK-NS1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rNH-iL-geu" secondAttribute="trailing" id="jvr-WB-tlk"/>
                             <constraint firstAttribute="centerX" secondItem="rNH-iL-geu" secondAttribute="centerX" id="luT-zq-orx"/>
                             <constraint firstItem="wQA-cK-YsI" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="10" id="nhV-pE-rx1"/>
                         </constraints>
