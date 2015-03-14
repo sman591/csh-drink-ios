@@ -181,7 +181,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.22500000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy-white-blur" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-8D-tGX">
+                            <imageView userInteractionEnabled="NO" alpha="0.17499999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy-white-blur" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-8D-tGX">
                                 <rect key="frame" x="41" y="0.0" width="543" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wcU-8D-tGX" secondAttribute="height" multiplier="133:200" id="94f-RC-lJS"/>
@@ -192,23 +192,23 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Drink API Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-iL-geu">
-                                <rect key="frame" x="16" y="194" width="568" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enter your Drink API Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-iL-geu">
+                                <rect key="frame" x="16" y="161" width="568" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can't use CSH Drink until you type in your API key. You can find it online in WebDrink Settings." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-cK-YsI">
-                                <rect key="frame" x="26" y="240" width="548" height="26"/>
+                                <rect key="frame" x="26" y="207" width="548" height="26"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="US7-Ny-yfZ">
-                                <rect key="frame" x="282" y="366" width="37" height="37"/>
+                                <rect key="frame" x="282" y="333" width="37" height="37"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-Wn-TzY">
-                                <rect key="frame" x="244" y="274" width="113" height="29"/>
+                                <rect key="frame" x="244" y="241" width="113" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Open WebDrink »">
@@ -219,22 +219,35 @@
                                     <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="6CC-5u-x6g"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="3gU-Yk-BUT">
-                                <rect key="frame" x="279" y="56" width="42" height="103"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abcd1234efgh5678" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-ON-imZ">
-                                <rect key="frame" x="208" y="314" width="184" height="30"/>
+                                <rect key="frame" x="208" y="281" width="184" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.91000000000000003" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Fbv-tM-4bI"/>
                                     <constraint firstAttribute="width" constant="184" id="WpH-ig-q8B"/>
                                 </constraints>
                                 <color key="textColor" red="0.69019607839999997" green="0.098039215690000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="3gU-Yk-BUT">
+                                <rect key="frame" x="279" y="35" width="42" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5sh-SB-ppQ"/>
+                                    <constraint firstAttribute="height" priority="50" constant="103" id="zK3-E4-cyd"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5sh-SB-ppQ"/>
+                                        <exclude reference="zK3-E4-cyd"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.24313725489999999" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="rNH-iL-geu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3gU-Yk-BUT" secondAttribute="bottom" constant="15" id="1YH-Ud-CT9"/>
+                            <constraint firstItem="oJO-rO-Lgm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="US7-Ny-yfZ" secondAttribute="bottom" priority="900" constant="230" id="1z7-25-Lzr"/>
                             <constraint firstItem="6UL-ON-imZ" firstAttribute="top" secondItem="ROz-Wn-TzY" secondAttribute="bottom" constant="11" id="4uj-Sb-exV"/>
                             <constraint firstItem="US7-Ny-yfZ" firstAttribute="top" secondItem="6UL-ON-imZ" secondAttribute="bottom" constant="22" id="AOc-8Q-6fn"/>
                             <constraint firstItem="wQA-cK-YsI" firstAttribute="top" secondItem="rNH-iL-geu" secondAttribute="bottom" constant="15" id="DIl-Jx-Pnc"/>
@@ -242,15 +255,20 @@
                             <constraint firstItem="6UL-ON-imZ" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="20" id="GaY-ET-7HT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wQA-cK-YsI" secondAttribute="trailing" constant="10" id="IZe-U6-wxt"/>
                             <constraint firstItem="ROz-Wn-TzY" firstAttribute="top" secondItem="wQA-cK-YsI" secondAttribute="bottom" constant="8" id="L3r-tQ-LU8"/>
+                            <constraint firstItem="rNH-iL-geu" firstAttribute="top" secondItem="3gU-Yk-BUT" secondAttribute="bottom" priority="740" constant="35" id="Lfa-3a-ubl"/>
+                            <constraint firstItem="wcU-8D-tGX" firstAttribute="top" secondItem="3gU-Yk-BUT" secondAttribute="bottom" constant="-126" id="MZb-6n-F2L"/>
                             <constraint firstAttribute="centerX" secondItem="3gU-Yk-BUT" secondAttribute="centerX" id="QF3-OK-c4w"/>
-                            <constraint firstItem="3gU-Yk-BUT" firstAttribute="top" secondItem="JeP-by-Qkd" secondAttribute="bottom" constant="36" id="UjJ-Hp-gXZ"/>
+                            <constraint firstItem="3gU-Yk-BUT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JeP-by-Qkd" secondAttribute="bottom" constant="15" id="UjJ-Hp-gXZ"/>
                             <constraint firstItem="rNH-iL-geu" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" id="Vjz-ug-YIr"/>
                             <constraint firstAttribute="centerX" secondItem="wcU-8D-tGX" secondAttribute="centerX" id="WZc-jO-bFG"/>
+                            <constraint firstItem="wcU-8D-tGX" firstAttribute="top" secondItem="3gU-Yk-BUT" secondAttribute="bottom" constant="-126" id="WuF-VK-UZ7"/>
                             <constraint firstAttribute="centerX" secondItem="US7-Ny-yfZ" secondAttribute="centerX" id="agv-UH-Xdm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6UL-ON-imZ" secondAttribute="trailing" constant="20" id="cDo-uK-NS1"/>
-                            <constraint firstItem="rNH-iL-geu" firstAttribute="top" secondItem="3gU-Yk-BUT" secondAttribute="bottom" constant="35" id="dLW-li-zcG"/>
+                            <constraint firstItem="rNH-iL-geu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3gU-Yk-BUT" secondAttribute="bottom" constant="15" id="dLW-li-zcG"/>
                             <constraint firstAttribute="centerX" secondItem="6UL-ON-imZ" secondAttribute="centerX" id="dlm-Nr-5Ox"/>
                             <constraint firstItem="wcU-8D-tGX" firstAttribute="top" secondItem="a0p-dz-JQ2" secondAttribute="topMargin" id="fCg-tN-M3I"/>
+                            <constraint firstItem="oJO-rO-Lgm" firstAttribute="top" relation="lessThanOrEqual" secondItem="US7-Ny-yfZ" secondAttribute="bottom" constant="300" id="gnu-fd-8bZ"/>
+                            <constraint firstItem="3gU-Yk-BUT" firstAttribute="top" secondItem="JeP-by-Qkd" secondAttribute="bottom" priority="740" constant="36" id="hBV-Cm-S8h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rNH-iL-geu" secondAttribute="trailing" id="jvr-WB-tlk"/>
                             <constraint firstAttribute="centerX" secondItem="rNH-iL-geu" secondAttribute="centerX" id="luT-zq-orx"/>
                             <constraint firstItem="wQA-cK-YsI" firstAttribute="leading" secondItem="a0p-dz-JQ2" secondAttribute="leadingMargin" constant="10" id="nhV-pE-rx1"/>
@@ -260,7 +278,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="MZb-6n-F2L"/>
                                 <exclude reference="WZc-jO-bFG"/>
+                                <exclude reference="WuF-VK-UZ7"/>
+                                <exclude reference="1YH-Ud-CT9"/>
                                 <exclude reference="GaY-ET-7HT"/>
                                 <exclude reference="cDo-uK-NS1"/>
                             </mask>
@@ -284,7 +305,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.14901960784313725" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vzG-0s-ZAy" kind="relationship" relationship="rootViewController" id="pLe-YB-nMd"/>
