@@ -31,7 +31,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     func submitApiKey() {
         self.activityIndicator.startAnimating()
         Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=test/api", parameters: ["api_key": self.apiFieldOutlet.text]).responseJSON { (_, _, data, _) in
@@ -41,12 +41,20 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
             else {
-                self.apiFieldOutlet.becomeFirstResponder()
+                var alertview = JSSAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+                alertview.setTitleFont("CriqueGrotesk")
+                alertview.setTextFont("CriqueGrotesk")
+                alertview.setButtonFont("CriqueGrotesk")
+                alertview.setTextTheme(.Light)
+                alertview.addAction() {
+                    self.apiFieldOutlet.becomeFirstResponder()
+                    return
+                }
             }
             self.activityIndicator.stopAnimating()
         }
     }
-    
+
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         let shouldReturn = countElements(textField.text) == 16
         if shouldReturn {

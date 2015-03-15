@@ -112,7 +112,7 @@ class ItemTableViewController: UITableViewController {
             text += " in \(delay) seconds"
         }
 
-        var alertview = JSSAlertView().show(self, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+        var alertview = JSSAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
         alertview.setTitleFont("CriqueGrotesk")
         alertview.setTextFont("CriqueGrotesk")
         alertview.setButtonFont("CriqueGrotesk")
@@ -128,7 +128,7 @@ class ItemTableViewController: UITableViewController {
     }
     
     func drop(item: Item, delay: Int,  completion: (() -> (Void))? = nil, failure: (() -> (Void))? = nil) {
-        var droppingView = JSSAlertView().show(self, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+        var droppingView = JSSAlertView().show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
         droppingView.setTitleFont("CriqueGrotesk")
         droppingView.setTextFont("CriqueGrotesk")
         droppingView.setButtonFont("CriqueGrotesk")
