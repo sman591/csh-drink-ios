@@ -50,9 +50,8 @@ class MachineTableViewController: UITableViewController {
     
     func updateMachines() {
         var machines = [Machine]()
-        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=machines/stock", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, data, _) in
-            let json = JSON(data!)
-            for (machineId: String, machine: JSON) in json["data"] {
+        DrinkAPI.getMachinesStock(completion: { json in
+            for (machineId: String, machine: JSON) in json {
                 var items = [Item]()
                 for (itemIndex: String, item: JSON) in machine {
                     items.append(Item(

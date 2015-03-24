@@ -26,9 +26,11 @@ class CurrentUser: NSObject {
     }
     
     var credits: Dynamic<Int>
+    var uid: String
     
-    init(credits: Int = 0) {
+    init(credits: Int = 0, uid: String = "") {
         self.credits = Dynamic(credits)
+        self.uid = uid
         CurrentUser.updateUser()
     }
     
@@ -47,6 +49,7 @@ class CurrentUser: NSObject {
     class func updateUser() {
         DrinkAPI.getUserInfo(completion: { json in
             self.sharedInstance.credits.value = json["credits"].intValue
+            self.sharedInstance.uid = json["uid"].stringValue
         })
     }
 

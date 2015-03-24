@@ -43,6 +43,15 @@ class DrinkAPI {
         )
     }
     
+    class func getMachinesStock(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
+        self.makeRequest(.GET, route: "machines/stock", completion: completion, failure: failure)
+    }
+    
+    class func getDrops(uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
+        var uid = uid ?? CurrentUser.sharedInstance.uid
+        self.makeRequest(.GET, route: "users/drops", parameters: ["uid": uid], completion: completion, failure: failure)
+    }
+    
     class func makeRequest(method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         var fullParameters = parameters ?? [String: AnyObject]()
         fullParameters["api_key"] = AuthenticationManager.apiKey
@@ -60,6 +69,8 @@ class DrinkAPI {
                             completion?(json["data"])
                         }
                     }
+                } else if let error = error {
+                    failure?(error, "")
                 }
             }
     }

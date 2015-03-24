@@ -32,25 +32,21 @@ class HistoryTableViewController: UITableViewController {
     
     func updateHistory() {
         var drops = [Drop]()
-        Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=users/info", parameters: ["api_key": AuthenticationManager.apiKey]).responseJSON { (_, _, userData, _) in
-            let userData = JSON(userData!)
-            Alamofire.request(.GET, "https://webdrink.csh.rit.edu/api/index.php?request=users/drops&limit=25&offset=0", parameters: ["api_key": AuthenticationManager.apiKey, "uid": userData["data"]["uid"].stringValue]).responseJSON { (_, _, data, _) in
-                let json = JSON(data!)
-                for (dropIndex: String, drop: JSON) in json["data"] {
-                    var items = [Item]()
-                    drops.append(Drop(
-                        item_name: drop["item_name"].stringValue,
-                        item_price: drop["current_item_price"].intValue,
-                        machine_name: drop["display_name"].stringValue,
-                        time: drop["time"].stringValue))
-                }
-                self.refreshControl?.endRefreshing()
-                if drops.count > self.drops.count {
-                    self.drops = drops
-                    self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-                }
+        DrinkAPI.getDrops(completion: { json in
+            for (dropIndex: String, drop: JSON) in json {
+                var items = [Item]()
+                drops.append(Drop(
+                    item_name: drop["item_name"].stringValue,
+                    item_price: drop["current_item_price"].intValue,
+                    machine_name: drop["display_name"].stringValue,
+                    time: drop["time"].stringValue))
             }
-        }
+            self.refreshControl?.endRefreshing()
+            if drops.count > self.drops.count {
+                self.drops = drops
+                self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
