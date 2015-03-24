@@ -70,7 +70,14 @@ class MachineTableViewController: UITableViewController {
             self.machines = machines
             self.refreshControl?.endRefreshing()
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-        }
+        }, failure: { error, string in
+            let text = string ?? "Sorry, there was an error accesing the drink database."
+            var alertview = JSSAlertView().show(self, title: "API Error", text: text, buttonText: "OK", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+            alertview.setTitleFont("CriqueGrotesk")
+            alertview.setTextFont("CriqueGrotesk")
+            alertview.setButtonFont("CriqueGrotesk")
+            alertview.setTextTheme(.Light)
+        })
     }
 
     override func didReceiveMemoryWarning() {
