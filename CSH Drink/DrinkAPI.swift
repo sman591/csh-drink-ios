@@ -20,6 +20,18 @@ class DrinkAPI {
         static let baseURL = "https://webdrink.csh.rit.edu/api/index.php"
     }
     
+    class func testApiKey(apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+        self.makeRequest(
+            .GET,
+            route: "test/api",
+            parameters: [
+                "api_key": apiKey
+            ],
+            completion: completion,
+            failure: failure
+        )
+    }
+    
     class func getUserInfo(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
             .GET,
