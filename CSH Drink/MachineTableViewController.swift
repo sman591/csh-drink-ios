@@ -41,17 +41,17 @@ class MachineTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        CurrentUser.updateUser()
     }
     
     func refresh(sender: AnyObject) {
         updateMachines()
+        CurrentUser.updateUser()
     }
     
     func updateMachines() {
         var machines = [Machine]()
-        DrinkAPI.getMachinesStock(completion: { json in
-            for (machineId: String, machine: JSON) in json {
+        DrinkAPI.getMachinesStock(completion: { data in
+            for (machineId: String, machine: JSON) in data {
                 var items = [Item]()
                 for (itemIndex: String, item: JSON) in machine {
                     items.append(Item(

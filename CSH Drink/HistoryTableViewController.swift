@@ -32,8 +32,8 @@ class HistoryTableViewController: UITableViewController {
     
     func updateHistory() {
         var drops = [Drop]()
-        DrinkAPI.getDrops(completion: { json in
-            for (dropIndex: String, drop: JSON) in json {
+        DrinkAPI.getDrops(completion: { data in
+            for (dropIndex: String, drop: JSON) in data {
                 var items = [Item]()
                 drops.append(Drop(
                     item_name: drop["item_name"].stringValue,

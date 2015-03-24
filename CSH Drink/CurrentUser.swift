@@ -47,9 +47,9 @@ class CurrentUser: NSObject {
     }
     
     class func updateUser() {
-        DrinkAPI.getUserInfo(completion: { json in
-            self.sharedInstance.credits.value = json["credits"].intValue
-            self.sharedInstance.uid = json["uid"].stringValue
+        DrinkAPI.getUserInfo(completion: { data in
+            self.sharedInstance.credits.value = data["credits"].intValue
+            self.sharedInstance.uid = data["uid"].stringValue
         })
     }
 
