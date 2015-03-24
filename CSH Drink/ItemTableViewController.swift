@@ -109,7 +109,7 @@ class ItemTableViewController: UITableViewController {
     func confirmDrop(item: Item, delay: Int, dismiss: (() -> (Void))?) {
         var text = "\(item.name) for \(item.humanPrice().lowercaseString)"
         if delay > 0 {
-            text += " in \(delay) seconds"
+            text += " in \(delay) " + ("second".pluralize(count: delay))
         }
 
         var alertview = JSSAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))

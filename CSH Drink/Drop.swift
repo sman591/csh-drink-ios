@@ -13,4 +13,8 @@ struct Drop {
     let item_price: Int
     let machine_name: String
     let time: String
+    
+    func humanPrice() -> String {
+        return "\(item_price) " + ("Credit".pluralize(count: item_price))
+    }
 }

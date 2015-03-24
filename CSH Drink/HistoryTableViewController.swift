@@ -70,10 +70,7 @@ class HistoryTableViewController: UITableViewController {
         cell.itemNameLabel.text = drop.item_name
         cell.machineNameLabel.text = drop.machine_name
         cell.timeLabel.text = drop.time
-        cell.creditsLabel.text = "\(drop.item_price) Credit"
-        if drop.item_price != 1 {
-            cell.creditsLabel.text = cell.creditsLabel.text! + "s"
-        }
+        cell.creditsLabel.text = drop.humanPrice()
         
         return cell
     }

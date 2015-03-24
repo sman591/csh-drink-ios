@@ -27,7 +27,7 @@ class MachineTableViewController: UITableViewController {
         
         CurrentUser.sharedInstance.credits.bindAndFire {
             [unowned self] in
-            self.creditsOutlet.title = "\($0) Credits"
+            self.creditsOutlet.title = "\($0) " + ("credit".pluralize(count: $0))
         }
         
         updateMachines()

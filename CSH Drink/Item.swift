@@ -21,10 +21,6 @@ struct Item {
     }
 
     func humanPrice() -> String {
-        var text = "\(self.price) Credit"
-        if self.price != 1 {
-            text += "s"
-        }
-        return text;
+        return "\(self.price) " + ("Credit".pluralize(count: price))
     }
 }
