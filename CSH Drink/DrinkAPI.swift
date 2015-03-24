@@ -18,6 +18,7 @@ class DrinkAPI {
     private struct Constants {
         static let sharedInstance = DrinkAPI()
         static let baseURL = "https://webdrink.csh.rit.edu/api/index.php"
+        static let imageURL = "https://csh.rit.edu/~mbillow/drink_icons/hdpi/"
     }
     
     class func testApiKey(apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
@@ -75,6 +76,10 @@ class DrinkAPI {
             completion: completion,
             failure: failure
         )
+    }
+    
+    class func imageUrlForItem(item: Item) -> NSURL {
+        return NSURL(string: "\(Constants.imageURL)\(item.item_id).png")!
     }
     
     class func makeRequest(method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {

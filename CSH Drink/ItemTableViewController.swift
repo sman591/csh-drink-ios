@@ -60,7 +60,7 @@ class ItemTableViewController: UITableViewController {
         
         cell.titleLabel.textColor = textColor
         cell.creditsLabel.textColor = textColor
-        cell.itemImage.hnk_setImageFromURL(NSURL(string: "https://csh.rit.edu/~mbillow/drink_icons/hdpi/\(item.item_id).png")!)
+        cell.itemImage.hnk_setImageFromURL(DrinkAPI.imageUrlForItem(item))
         cell.itemImage.alpha = alpha
 
         cell.layoutMargins = UIEdgeInsetsZero
