@@ -9,20 +9,20 @@
 // Alamofire
 #define COCOAPODS_POD_AVAILABLE_Alamofire
 #define COCOAPODS_VERSION_MAJOR_Alamofire 1
-#define COCOAPODS_VERSION_MINOR_Alamofire 1
-#define COCOAPODS_VERSION_PATCH_Alamofire 4
+#define COCOAPODS_VERSION_MINOR_Alamofire 2
+#define COCOAPODS_VERSION_PATCH_Alamofire 0
 
-// HanekeSwift
-#define COCOAPODS_POD_AVAILABLE_HanekeSwift
-#define COCOAPODS_VERSION_MAJOR_HanekeSwift 0
-#define COCOAPODS_VERSION_MINOR_HanekeSwift 8
-#define COCOAPODS_VERSION_PATCH_HanekeSwift 1
+// Haneke
+#define COCOAPODS_POD_AVAILABLE_Haneke
+#define COCOAPODS_VERSION_MAJOR_Haneke 0
+#define COCOAPODS_VERSION_MINOR_Haneke 9
+#define COCOAPODS_VERSION_PATCH_Haneke 0
 
 // SwiftKeychainWrapper
 #define COCOAPODS_POD_AVAILABLE_SwiftKeychainWrapper
 #define COCOAPODS_VERSION_MAJOR_SwiftKeychainWrapper 1
 #define COCOAPODS_VERSION_MINOR_SwiftKeychainWrapper 0
-#define COCOAPODS_VERSION_PATCH_SwiftKeychainWrapper 5
+#define COCOAPODS_VERSION_PATCH_SwiftKeychainWrapper 8
 
 // SwiftyJSON
 #define COCOAPODS_POD_AVAILABLE_SwiftyJSON

@@ -64,14 +64,13 @@ public struct JSON {
     
     :returns: The created JSON
     */
-    /*
     public init(data:NSData, options opt: NSJSONReadingOptions = .AllowFragments, error: NSErrorPointer = nil) {
         if let object: AnyObject = NSJSONSerialization.JSONObjectWithData(data, options: opt, error: error) {
             self.init(object)
         } else {
             self.init(NSNull())
         }
-    }*/
+    }
     
     /**
     Creates a JSON using the object.
