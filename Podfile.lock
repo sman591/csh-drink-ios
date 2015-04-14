@@ -8,13 +8,16 @@ DEPENDENCIES:
   - Alamofire (= 1.2.0)
   - Haneke (from `https://github.com/Haneke/HanekeSwift.git`)
   - SwiftKeychainWrapper (from `https://github.com/jrendel/SwiftKeychainWrapper.git`)
-  - SwiftyJSON (= 2.1.3)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`, branch `xcode6.3`)
 
 EXTERNAL SOURCES:
   Haneke:
     :git: https://github.com/Haneke/HanekeSwift.git
   SwiftKeychainWrapper:
     :git: https://github.com/jrendel/SwiftKeychainWrapper.git
+  SwiftyJSON:
+    :branch: xcode6.3
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   Haneke:
@@ -23,6 +26,9 @@ CHECKOUT OPTIONS:
   SwiftKeychainWrapper:
     :commit: e7eaf17dfcce0357ad0ecc4b9ee94e78cb45f4e6
     :git: https://github.com/jrendel/SwiftKeychainWrapper.git
+  SwiftyJSON:
+    :commit: 008a09d7ea8b13c03fb59b35c01aad339584a5e1
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
