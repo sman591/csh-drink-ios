@@ -40,6 +40,8 @@ class MachineTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        self.tabBarItem.image = UIImage(named: "drink-outline")
+        self.tabBarItem.selectedImage = UIImage(named: "drink")
         super.viewDidAppear(animated)
     }
     
@@ -99,7 +101,7 @@ class MachineTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as MachineTableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MachineTableViewCell
         
         let machine = self.machines[indexPath.row]
         
@@ -115,7 +117,7 @@ class MachineTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "machineDetail" {
-            let machineDetailViewController = segue.destinationViewController as ItemTableViewController
+            let machineDetailViewController = segue.destinationViewController as! ItemTableViewController
             let indexPath = self.tableView.indexPathForSelectedRow()!
             let destinationTitle = self.machines[indexPath.row].name
             machineDetailViewController.title = destinationTitle

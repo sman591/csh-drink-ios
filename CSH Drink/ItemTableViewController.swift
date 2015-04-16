@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import HanekeSwift
+import Haneke
 
 class ItemTableViewController: UITableViewController {
 
@@ -38,7 +38,7 @@ class ItemTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as ItemTableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ItemTableViewCell
         
         let item = self.items[indexPath.row]
         
@@ -74,7 +74,7 @@ class ItemTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
-        var actions = NSMutableArray() // TODO: better swift syntax for this?
+        var actions = [UITableViewRowAction]()
         var saturation : CGFloat = 0.73
         for delay in reverse(delayOptions) {
             var action = UITableViewRowAction(style: .Default, title: "\(delay)s") { (rowAction, indexPath) -> Void in
@@ -89,14 +89,14 @@ class ItemTableViewController: UITableViewController {
                 )
             }
             action.backgroundColor = UIColor(hue: 339.0/359.0, saturation: saturation, brightness: 0.91, alpha: 1.0)
-            actions.addObject(action)
+            actions.append(action)
             saturation -= 0.069
         }
         return actions
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = self.tableView.cellForRowAtIndexPath(indexPath) as ItemTableViewCell
+        var cell = self.tableView.cellForRowAtIndexPath(indexPath) as! ItemTableViewCell
         confirmDrop(
             self.items[indexPath.row],
             delay: 0,
@@ -112,23 +112,23 @@ class ItemTableViewController: UITableViewController {
             text += " in \(delay) " + ("second".pluralize(count: delay))
         }
 
-        var alertview = JSSAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+        var alertview = JSSAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor.drinkPinkColor())
         alertview.setTitleFont("CriqueGrotesk")
         alertview.setTextFont("CriqueGrotesk")
         alertview.setButtonFont("CriqueGrotesk")
         alertview.setTextTheme(.Light)
         alertview.addAction() {
-            self.drop(item, delay: delay, completion: dismiss?, failure: dismiss?)
+            self.drop(item, delay: delay, completion: dismiss, failure: dismiss)
         }
         alertview.addCancelAction() {
-            if let callback = dismiss? {
+            if let callback = dismiss {
                 callback()
             }
         }
     }
     
     func drop(item: Item, delay: Int,  completion: (() -> (Void))? = nil, failure: (() -> (Void))? = nil) {
-        var droppingView = JSSAlertView().show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
+        var droppingView = JSSAlertView().show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore", color: UIColor.drinkPinkColor())
         droppingView.setTitleFont("CriqueGrotesk")
         droppingView.setTextFont("CriqueGrotesk")
         droppingView.setButtonFont("CriqueGrotesk")

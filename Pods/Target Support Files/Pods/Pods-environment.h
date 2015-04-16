@@ -18,11 +18,11 @@
 #define COCOAPODS_VERSION_MINOR_Haneke 9
 #define COCOAPODS_VERSION_PATCH_Haneke 0
 
-// SwiftKeychainWrapper
-#define COCOAPODS_POD_AVAILABLE_SwiftKeychainWrapper
-#define COCOAPODS_VERSION_MAJOR_SwiftKeychainWrapper 1
-#define COCOAPODS_VERSION_MINOR_SwiftKeychainWrapper 0
-#define COCOAPODS_VERSION_PATCH_SwiftKeychainWrapper 8
+// KeychainAccess
+#define COCOAPODS_POD_AVAILABLE_KeychainAccess
+#define COCOAPODS_VERSION_MAJOR_KeychainAccess 1
+#define COCOAPODS_VERSION_MINOR_KeychainAccess 2
+#define COCOAPODS_VERSION_PATCH_KeychainAccess 0
 
 // SwiftyJSON
 #define COCOAPODS_POD_AVAILABLE_SwiftyJSON

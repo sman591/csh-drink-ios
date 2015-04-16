@@ -134,7 +134,7 @@ public class Pluralize {
     }
     
     public class func apply(var word: String) -> String {
-        if contains(sharedInstance.uncountables, word.lowercaseString) || countElements(word) == 0 {
+        if contains(sharedInstance.uncountables, word.lowercaseString) || count(word) == 0 {
             return word
         } else {
             for pair in sharedInstance.rules {
@@ -175,7 +175,7 @@ public class Pluralize {
     
     private class func regexReplace(input: String, pattern: String, template: String) -> String {
         var regex = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: nil)!
-        var range = NSMakeRange(0, countElements(input))
+        var range = NSMakeRange(0, count(input))
         var output = regex.stringByReplacingMatchesInString(input, options: nil, range: range, withTemplate: template)
         return output
     }
@@ -198,10 +198,10 @@ extension String {
         if count == 1 {
             return self
         } else {
-            if countElements(with) != 0 {
-                return with
-            } else {
+            if with.isEmpty {
                 return Pluralize.apply(self)
+            } else {
+                return with
             }
         }
     }

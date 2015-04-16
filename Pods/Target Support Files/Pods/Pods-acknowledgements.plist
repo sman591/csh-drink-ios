@@ -251,7 +251,7 @@ THE SOFTWARE.
 			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
-Copyright (c) 2014 Jason
+Copyright (c) 2014 kishikawa katsumi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -273,7 +273,7 @@ SOFTWARE.
 
 </string>
 			<key>Title</key>
-			<string>SwiftKeychainWrapper</string>
+			<string>KeychainAccess</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

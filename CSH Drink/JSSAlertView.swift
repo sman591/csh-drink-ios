@@ -143,10 +143,6 @@ class JSSAlertView: UIViewController {
         fatalError("NSCoding not supported")
     }
     
-    required override init() {
-        super.init()
-    }
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName:nibNameOrNil, bundle:nibBundleOrNil)
     }
@@ -298,7 +294,7 @@ class JSSAlertView: UIViewController {
         self.containerView.addSubview(titleLabel)
         
         // View text
-        if let text = text? {
+        if let text = text {
             self.textView = UITextView()
             self.textView.userInteractionEnabled = false
             textView.editable = false
@@ -393,7 +389,7 @@ class JSSAlertView: UIViewController {
                     self.view.alpha = 0
                     }, completion: { finished in
                         if withCallback == true {
-                            if let action = self.closeAction? {
+                            if let action = self.closeAction {
                                 action()
                             }
                         }
@@ -406,7 +402,7 @@ class JSSAlertView: UIViewController {
     func removeView() {
         isAlertOpen = false
         self.view.removeFromSuperview()
-        if let action = self.cancelAction? {
+        if let action = self.cancelAction {
             action()
         }
     }

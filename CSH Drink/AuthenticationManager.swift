@@ -8,34 +8,32 @@
 
 import Foundation
 import UIKit
-import SwiftKeychainWrapper
+import KeychainAccess
 import Alamofire
 import SwiftyJSON
 
-private let NullAPIKey = "NULL_API_KEY"
-private let APIKey = "api_key"
-
 class AuthenticationManager: NSObject {
     
-    class var apiKey: String {
+    private struct Constants {
+        static let keychain = Keychain(service: "edu.csh.rit.csh-drink")
+        static let apiKey = "api_key"
+    }
+    
+    class var apiKey: String? {
         get {
-            if let key = KeychainWrapper.stringForKey(APIKey) {
-                return key
-            } else {
-                return NullAPIKey
-            }
+            return Constants.keychain[Constants.apiKey]
         }
         set {
-            let saveSuccessful: Bool = KeychainWrapper.setString(newValue, forKey: APIKey)
+            Constants.keychain[Constants.apiKey] = newValue
         }
     }
     
     class func invalidateKey() {
-        self.apiKey = NullAPIKey
+        self.apiKey = nil
     }
     
     class func keyIsValid() -> Bool {
-        return self.apiKey != NullAPIKey
+        return self.apiKey != nil
     }
     
 }

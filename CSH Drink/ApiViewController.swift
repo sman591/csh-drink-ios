@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftKeychainWrapper
+import KeychainAccess
 import Alamofire
 import SwiftyJSON
 
@@ -35,8 +35,8 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     func submitApiKey() {
         let apiKey = self.apiFieldOutlet.text
         self.activityIndicator.startAnimating()
-        DrinkAPI.testApiKey(apiKey) { data in
-            if data.boolValue == true {
+        DrinkAPI.testApiKey(apiKey, completion: { data in
+            if data.boolValue {
                 AuthenticationManager.apiKey = apiKey
                 CurrentUser.updateUser()
                 self.dismissViewControllerAnimated(true, completion: nil)
@@ -53,11 +53,11 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             self.activityIndicator.stopAnimating()
-        }
+        })
     }
 
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        let shouldReturn = countElements(textField.text) == 16
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let shouldReturn = count(textField.text) == 16
         if shouldReturn {
             textField.resignFirstResponder()
             submitApiKey()
@@ -86,11 +86,11 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if range.length + range.location > textField.text.utf16Count {
+        if range.length + range.location > count(textField.text.utf16) {
             return false
         }
 
-        let newLength = textField.text.utf16Count + string.utf16Count - range.length
+        let newLength = count(textField.text) + count(string) - range.length
         return newLength <= 16
     }
     

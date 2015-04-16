@@ -63,7 +63,7 @@ class HistoryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as DropTableViewCell
+        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DropTableViewCell
         
         var drop = self.drops[indexPath.row]
         
