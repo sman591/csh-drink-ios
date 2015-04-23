@@ -62,7 +62,8 @@ class MachineTableViewController: UITableViewController {
                         machine_id: item["machine_id"].intValue,
                         slot_num: item["slot_num"].intValue,
                         available: item["available"].intValue,
-                        item_id: item["item_id"].intValue
+                        item_id: item["item_id"].intValue,
+                        status: item["status"].stringValue
                     ))
                 }
                 if items.count > 0 {

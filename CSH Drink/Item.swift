@@ -15,9 +15,10 @@ struct Item {
     let slot_num: Int
     let available: Int
     let item_id: Int
+    let status: String
     
     func enabled() -> Bool {
-        return available > 0
+        return status == "enabled" && available > 0
     }
 
     func humanPrice() -> String {
