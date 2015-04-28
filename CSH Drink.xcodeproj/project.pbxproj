@@ -166,7 +166,6 @@
 		17178B481A6F348A00E67C3A /* CSH Drink */ = {
 			isa = PBXGroup;
 			children = (
-				17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */,
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
 				177EF2781A82677D00DB417B /* AuthenticationManager.swift */,
 				174B31171A91B6FC0092CFF6 /* CurrentUser.swift */,
@@ -187,8 +186,8 @@
 			children = (
 				1728EC1C1A70A7C300339ABE /* Crique Grotesk + Display */,
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
-				1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */,
 				174B311B1A91C5C60092CFF6 /* Dynamic.swift */,
+				1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */,
 				17A5506B1AC229E80010732C /* Pluralize.swift */,
 			);
 			name = "Supporting Files";
@@ -253,10 +252,10 @@
 		1728EC611A70CDC100339ABE /* History */ = {
 			isa = PBXGroup;
 			children = (
-				170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */,
 				1728EB911A707E4A00339ABE /* Drop.swift */,
-				17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */,
 				1728EB931A708CDA00339ABE /* DropTableViewCell.swift */,
+				170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */,
+				17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */,
 			);
 			name = History;
 			sourceTree = "<group>";
@@ -264,9 +263,10 @@
 		1728EC621A70CDE500339ABE /* Machines */ = {
 			isa = PBXGroup;
 			children = (
+				17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */,
 				17178BCB1A6F63B800E67C3A /* Machine.swift */,
-				17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */,
 				1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */,
+				17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */,
 			);
 			name = Machines;
 			sourceTree = "<group>";
@@ -275,9 +275,9 @@
 			isa = PBXGroup;
 			children = (
 				17178BD11A6F7CA900E67C3A /* Item.swift */,
+				1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */,
 				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
 				175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */,
-				1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
