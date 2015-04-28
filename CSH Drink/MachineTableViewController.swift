@@ -39,6 +39,13 @@ class MachineTableViewController: UITableViewController {
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow() {
+            self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: animated)
+        }
+    }
+    
     override func viewDidAppear(animated: Bool) {
         self.tabBarItem.image = UIImage(named: "drink-outline")
         self.tabBarItem.selectedImage = UIImage(named: "drink")
