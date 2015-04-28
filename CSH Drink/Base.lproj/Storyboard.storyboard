@@ -79,11 +79,11 @@
             </objects>
             <point key="canvasLocation" x="1380" y="-333"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--History-->
         <scene sceneID="1Ux-e3-6k3">
             <objects>
-                <navigationController id="VZK-WI-0bo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" systemItem="history" id="spy-EW-jX1"/>
+                <navigationController id="VZK-WI-0bo" customClass="HistoryNavigationController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="History" image="history-tab-bar-empty" id="spy-EW-jX1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Y2j-ga-etS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -440,5 +440,6 @@
         <image name="csh-drink-white" width="42" height="103"/>
         <image name="drink" width="25" height="25"/>
         <image name="energy-white-blur" width="1080" height="1566"/>
+        <image name="history-tab-bar-empty" width="25" height="25"/>
     </resources>
 </document>

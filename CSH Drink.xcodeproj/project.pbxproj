@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170799C61AEF179A00E6CF4C /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */; };
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
 		17178B551A6F348A00E67C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17178B541A6F348A00E67C3A /* Images.xcassets */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		11FD8381BD10E6CB034B6C14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 		17178B461A6F348A00E67C3A /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B4B1A6F348A00E67C3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		1728EC611A70CDC100339ABE /* History */ = {
 			isa = PBXGroup;
 			children = (
+				170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */,
 				1728EB911A707E4A00339ABE /* Drop.swift */,
 				17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */,
 				1728EB931A708CDA00339ABE /* DropTableViewCell.swift */,
@@ -458,6 +461,7 @@
 				1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */,
 				17A5506C1AC229E80010732C /* Pluralize.swift in Sources */,
 				175022F41ADF5EB700F1F33C /* UIColor+Drink.swift in Sources */,
+				170799C61AEF179A00E6CF4C /* HistoryNavigationController.swift in Sources */,
 				1728EB921A707E4A00339ABE /* Drop.swift in Sources */,
 				1770E0521AAD30DF0077FA94 /* JSSAlertView.swift in Sources */,
 				174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */,
