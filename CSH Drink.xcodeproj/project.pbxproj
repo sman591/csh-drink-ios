@@ -191,6 +191,7 @@
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
 				174B311B1A91C5C60092CFF6 /* Dynamic.swift */,
 				1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */,
+				175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */,
 				17A5506B1AC229E80010732C /* Pluralize.swift */,
 			);
 			name = "Supporting Files";
@@ -280,7 +281,6 @@
 				17178BD11A6F7CA900E67C3A /* Item.swift */,
 				1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */,
 				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
-				175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
