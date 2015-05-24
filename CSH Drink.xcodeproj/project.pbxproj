@@ -52,6 +52,7 @@
 		1728EC5E1A70A7D300339ABE /* CriqueGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */; };
 		1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */; };
 		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
+		172F8EB41B128BCB0010CA60 /* DrinkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */; };
 		17374AF01ADF89D400B3F1C2 /* DropNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */; };
 		174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31171A91B6FC0092CFF6 /* CurrentUser.swift */; };
 		174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31191A91B88D0092CFF6 /* DrinkAPI.swift */; };
@@ -117,6 +118,7 @@
 		1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLightItalic.otf"; sourceTree = "<group>"; };
 		1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
 		1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAlertView.swift; sourceTree = "<group>"; };
 		17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropNavigationController.swift; sourceTree = "<group>"; };
 		174B31171A91B6FC0092CFF6 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		174B31191A91B88D0092CFF6 /* DrinkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAPI.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		17178B481A6F348A00E67C3A /* CSH Drink */ = {
 			isa = PBXGroup;
 			children = (
+				172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */,
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
 				177EF2781A82677D00DB417B /* AuthenticationManager.swift */,
 				174B31171A91B6FC0092CFF6 /* CurrentUser.swift */,
@@ -465,6 +468,7 @@
 				1728EB921A707E4A00339ABE /* Drop.swift in Sources */,
 				1770E0521AAD30DF0077FA94 /* JSSAlertView.swift in Sources */,
 				174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */,
+				172F8EB41B128BCB0010CA60 /* DrinkAlertView.swift in Sources */,
 				177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */,
 				177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */,
 				174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */,

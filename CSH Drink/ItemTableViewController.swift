@@ -112,11 +112,7 @@ class ItemTableViewController: UITableViewController {
             text += " in \(delay) " + ("second".pluralize(count: delay))
         }
 
-        var alertview = JSSAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel", color: UIColor.drinkPinkColor())
-        alertview.setTitleFont("CriqueGrotesk")
-        alertview.setTextFont("CriqueGrotesk")
-        alertview.setButtonFont("CriqueGrotesk")
-        alertview.setTextTheme(.Light)
+        var alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel")
         alertview.addAction() {
             self.drop(item, delay: delay, completion: dismiss, failure: dismiss)
         }
@@ -128,11 +124,7 @@ class ItemTableViewController: UITableViewController {
     }
     
     func drop(item: Item, delay: Int,  completion: (() -> (Void))? = nil, failure: (() -> (Void))? = nil) {
-        var droppingView = JSSAlertView().show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore", color: UIColor.drinkPinkColor())
-        droppingView.setTitleFont("CriqueGrotesk")
-        droppingView.setTextFont("CriqueGrotesk")
-        droppingView.setButtonFont("CriqueGrotesk")
-        droppingView.setTextTheme(.Light)
+        var droppingView = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore")
 
         if delay > 0 {
             updateCountdown(droppingView.alertview, time: delay - 1) // TODO: this seems broken, could be refactored

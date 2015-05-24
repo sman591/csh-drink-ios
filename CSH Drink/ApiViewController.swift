@@ -42,10 +42,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
             else {
-                var alertview = JSSAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK", color: UIColor(red: 0.906, green: 0.243, blue: 0.478, alpha: 1.0))
-                alertview.setTitleFont("CriqueGrotesk")
-                alertview.setTextFont("CriqueGrotesk")
-                alertview.setButtonFont("CriqueGrotesk")
+                var alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
                 alertview.setTextTheme(.Light)
                 alertview.addAction() {
                     self.apiFieldOutlet.becomeFirstResponder()
