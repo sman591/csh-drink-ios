@@ -124,7 +124,8 @@ class ItemTableViewController: UITableViewController {
     }
     
     func drop(item: Item, delay: Int,  completion: (() -> (Void))? = nil, failure: (() -> (Void))? = nil) {
-        var droppingView = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore")
+        let alertView = DrinkAlertView()
+        let droppingView = alertView.show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore")
 
         if delay > 0 {
             updateCountdown(droppingView.alertview, time: delay - 1) // TODO: this seems broken, could be refactored
@@ -132,13 +133,15 @@ class ItemTableViewController: UITableViewController {
 
         DrinkAPI.dropItem(item, delay: delay,
             completion: { data in
-                droppingView.alertview.titleLabel.text = "Dropped!"
-                droppingView.alertview.textView.text = "Item successfully dropped"
-                droppingView.alertview.buttonLabel.text = "OK"
+                alertView.closeAction = {
+                    DrinkAlertView().show(self.view.window!.rootViewController!, title: "Dropped!", text: "Item successfully dropped!", buttonText: "OK")
+                }
+                alertView.closeView(true)
             }, failure: { error, message in
-                droppingView.alertview.titleLabel.text = "Drop Failed"
-                droppingView.alertview.textView.text = message ?? "Your item failed to drop"
-                droppingView.alertview.buttonLabel.text = "OK"
+                alertView.closeView(true)
+                alertView.closeAction = {
+                    DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Failed", text: message ?? "Your item failed to drop", buttonText: "OK")
+                }
             }
         )
     }
