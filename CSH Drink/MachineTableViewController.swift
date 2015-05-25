@@ -82,7 +82,7 @@ class MachineTableViewController: UITableViewController {
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
         }, failure: { error, string in
             let text = string ?? "Sorry, there was an error accesing the drink database."
-            var alertview = DrinkAlertView().show(self, title: "API Error", text: text, buttonText: "OK")
+            var alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: "API Error", text: text, buttonText: "OK")
         })
     }
 
