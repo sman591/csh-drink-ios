@@ -46,6 +46,9 @@ class HistoryTableViewController: UITableViewController {
                 self.drops = drops
                 self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
             }
+        }, failure: { (error, message) in
+            self.refreshControl?.endRefreshing()
+            DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)
         })
     }
     

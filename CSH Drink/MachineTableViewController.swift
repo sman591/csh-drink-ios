@@ -80,9 +80,9 @@ class MachineTableViewController: UITableViewController {
             self.machines = machines
             self.refreshControl?.endRefreshing()
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
-        }, failure: { error, string in
-            let text = string ?? "Sorry, there was an error accesing the drink database."
-            var alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: "API Error", text: text, buttonText: "OK")
+        }, failure: { error, message in
+            self.refreshControl?.endRefreshing()
+            DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)
         })
     }
 

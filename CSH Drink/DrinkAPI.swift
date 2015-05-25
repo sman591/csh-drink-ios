@@ -105,9 +105,14 @@ class DrinkAPI {
                         }
                     }
                 } else if let error = error {
-                    failure?(error, "")
+                    failure?(error, nil)
                 }
             }
+    }
+    
+    class func genericApiError(view: UIViewController, message: String? = nil) {
+        let text = message ?? "Could not connect to drink database. Are you connected to the internet?"
+        var alertview = DrinkAlertView().show(view, title: "API Error", text: text, buttonText: "OK")
     }
     
 }
