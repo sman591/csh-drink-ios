@@ -124,8 +124,10 @@ class ItemTableViewController: UITableViewController {
     }
     
     func drop(item: Item, delay: Int,  completion: (() -> (Void))? = nil, failure: (() -> (Void))? = nil) {
+        let text = delay > 0 ? "In \(delay) seconds..." : "Dropping...";
+        
         let alertView = DrinkAlertView()
-        let droppingView = alertView.show(self.view.window!.rootViewController!, title: "Dropping...", text: "In \(delay) seconds...", buttonText: "Ignore")
+        let droppingView = alertView.show(self.view.window!.rootViewController!, title: "Dropping...", text: text, buttonText: "Ignore")
 
         if delay > 0 {
             updateCountdown(droppingView.alertview, time: delay - 1) // TODO: this seems broken, could be refactored
