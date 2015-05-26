@@ -64,6 +64,7 @@
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
 		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
 		17A5506C1AC229E80010732C /* Pluralize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5506B1AC229E80010732C /* Pluralize.swift */; };
+		17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB3B371B141A3400232F6A /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		17A5506B1AC229E80010732C /* Pluralize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pluralize.swift; sourceTree = "<group>"; };
+		17FB3B371B141A3400232F6A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E9CA270F7AA99C4FCD0949C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 			children = (
 				172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */,
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
+				17FB3B371B141A3400232F6A /* AccountViewController.swift */,
 				177EF2781A82677D00DB417B /* AuthenticationManager.swift */,
 				174B31171A91B6FC0092CFF6 /* CurrentUser.swift */,
 				177EF27C1A82679C00DB417B /* ApiViewController.swift */,
@@ -472,6 +475,7 @@
 				177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */,
 				177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */,
 				174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */,
+				17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */,
 				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
 				174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */,
 				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,

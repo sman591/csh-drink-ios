@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -16,8 +17,11 @@
         </mutableArray>
         <mutableArray key="CriqueGrotesk-Medium.otf">
             <string>CriqueGrotesk-Medium</string>
+            <string>CriqueGrotesk-Medium</string>
+            <string>CriqueGrotesk-Medium</string>
         </mutableArray>
         <mutableArray key="CriqueGrotesk-Regular.otf">
+            <string>CriqueGrotesk</string>
             <string>CriqueGrotesk</string>
             <string>CriqueGrotesk</string>
             <string>CriqueGrotesk</string>
@@ -25,6 +29,151 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Account View Controller-->
+        <scene sceneID="xdB-eX-pac">
+            <objects>
+                <viewController id="aum-qc-Y3z" customClass="AccountViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tJs-TX-9mU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mb6-tq-aCZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="auB-TV-rAT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.17499999701976776" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy-white-blur" translatesAutoresizingMaskIntoConstraints="NO" id="wQ8-SP-tkv">
+                                <rect key="frame" x="41" y="0.0" width="543" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wQ8-SP-tkv" secondAttribute="height" multiplier="133:200" id="39y-2h-lc7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="39y-2h-lc7"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="CSH Drink for iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V1i-w9-A0L">
+                                <rect key="frame" x="179" y="227" width="243" height="31"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-1J-e7f">
+                                <rect key="frame" x="237" y="285" width="126" height="31"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hee-Xo-5bJ">
+                                <rect key="frame" x="244" y="343" width="113" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Open WebDrink »">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openWebDrinkAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="7nN-CH-KP0"/>
+                                    <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="gRE-Ei-eje"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="Wll-BH-AyP">
+                                <rect key="frame" x="279" y="89" width="42" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="H3n-OH-cB9"/>
+                                    <constraint firstAttribute="height" priority="50" constant="103" id="bZn-CB-CkP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="H3n-OH-cB9"/>
+                                        <exclude reference="bZn-CB-CkP"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luu-s8-2Z8">
+                                <rect key="frame" x="233" y="375" width="134" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Open GitHub Repo »">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openGitHubAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="rIf-nE-41E"/>
+                                    <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="bQJ-Qh-xos"/>
+                                    <action selector="signOutAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="D5m-1Q-tUJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrf-K0-xbe">
+                                <rect key="frame" x="554" y="28" width="30" height="32"/>
+                                <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="LVX-pQ-GE6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd4-ug-Mbg">
+                                <rect key="frame" x="266" y="407" width="68" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Sign Out »">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="tdA-IP-h6q"/>
+                                    <segue destination="6c4-fU-qZs" kind="presentation" identifier="signOut" id="9uF-eo-fRf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hee-Xo-5bJ" firstAttribute="top" secondItem="TAx-1J-e7f" secondAttribute="bottom" constant="27" id="2k9-lD-LUG"/>
+                            <constraint firstItem="V1i-w9-A0L" firstAttribute="top" secondItem="Wll-BH-AyP" secondAttribute="bottom" priority="740" constant="35" id="6dS-iA-ayz"/>
+                            <constraint firstAttribute="centerX" secondItem="wQ8-SP-tkv" secondAttribute="centerX" constant="-12.5" id="8tG-3D-mVF"/>
+                            <constraint firstAttribute="centerX" secondItem="Wll-BH-AyP" secondAttribute="centerX" id="A2u-DZ-fmm"/>
+                            <constraint firstAttribute="centerX" secondItem="TAx-1J-e7f" secondAttribute="centerX" id="BnM-tU-rwv"/>
+                            <constraint firstItem="Rd4-ug-Mbg" firstAttribute="top" secondItem="Hee-Xo-5bJ" secondAttribute="bottom" constant="1" id="C2T-iH-9k4"/>
+                            <constraint firstItem="V1i-w9-A0L" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wll-BH-AyP" secondAttribute="bottom" constant="15" id="CAr-Vw-lGo"/>
+                            <constraint firstItem="Xrf-K0-xbe" firstAttribute="trailing" secondItem="auB-TV-rAT" secondAttribute="trailingMargin" id="CyH-g0-IMe"/>
+                            <constraint firstAttribute="centerY" secondItem="TAx-1J-e7f" secondAttribute="centerY" constant="59.5" id="Dv3-Zm-UPj"/>
+                            <constraint firstItem="Luu-s8-2Z8" firstAttribute="top" secondItem="Rd4-ug-Mbg" secondAttribute="bottom" constant="1" id="I2T-Mb-LBI"/>
+                            <constraint firstItem="TAx-1J-e7f" firstAttribute="top" secondItem="V1i-w9-A0L" secondAttribute="bottom" constant="27" id="O0a-S2-u6r"/>
+                            <constraint firstItem="Hee-Xo-5bJ" firstAttribute="centerX" secondItem="Rd4-ug-Mbg" secondAttribute="centerX" id="OkZ-1R-F9W"/>
+                            <constraint firstAttribute="centerX" secondItem="Rd4-ug-Mbg" secondAttribute="centerX" id="TjZ-Dq-ibd"/>
+                            <constraint firstItem="Luu-s8-2Z8" firstAttribute="top" secondItem="Hee-Xo-5bJ" secondAttribute="bottom" constant="3" id="Uwy-bc-Ray"/>
+                            <constraint firstItem="Mb6-tq-aCZ" firstAttribute="top" secondItem="wQ8-SP-tkv" secondAttribute="bottom" id="VdC-Zy-zh5"/>
+                            <constraint firstAttribute="centerX" secondItem="Hee-Xo-5bJ" secondAttribute="centerX" id="Wyp-vT-bbx"/>
+                            <constraint firstItem="wQ8-SP-tkv" firstAttribute="trailing" secondItem="auB-TV-rAT" secondAttribute="trailingMargin" id="Zkm-uW-NrT"/>
+                            <constraint firstItem="wQ8-SP-tkv" firstAttribute="leading" secondItem="auB-TV-rAT" secondAttribute="leadingMargin" constant="25" id="cDt-Kn-5P5"/>
+                            <constraint firstItem="Rd4-ug-Mbg" firstAttribute="top" secondItem="Luu-s8-2Z8" secondAttribute="bottom" constant="3" id="fiH-4N-zcY"/>
+                            <constraint firstAttribute="centerX" secondItem="V1i-w9-A0L" secondAttribute="centerX" id="lYf-Wv-c6J"/>
+                            <constraint firstItem="Xrf-K0-xbe" firstAttribute="topMargin" secondItem="tJs-TX-9mU" secondAttribute="bottom" constant="16" id="lwX-W2-3Xu"/>
+                            <constraint firstAttribute="centerY" secondItem="TAx-1J-e7f" secondAttribute="centerY" id="p8Q-sY-LZW"/>
+                            <constraint firstItem="wQ8-SP-tkv" firstAttribute="top" secondItem="auB-TV-rAT" secondAttribute="topMargin" id="tWK-4i-69i"/>
+                            <constraint firstAttribute="centerX" secondItem="Luu-s8-2Z8" secondAttribute="centerX" id="yaC-HL-FNS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dv3-Zm-UPj"/>
+                                <exclude reference="OkZ-1R-F9W"/>
+                                <exclude reference="I2T-Mb-LBI"/>
+                                <exclude reference="C2T-iH-9k4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="wQ8-SP-tkv" id="N7k-Dl-hWS"/>
+                        <outlet property="creditsLabel" destination="TAx-1J-e7f" id="NfX-At-ARU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25j-fo-RRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="-1014"/>
+        </scene>
         <!--Machine Table View Controller-->
         <scene sceneID="agv-0d-wPX">
             <objects>
@@ -68,7 +217,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Rhb-5e-zAW">
-                        <barButtonItem key="rightBarButtonItem" title="0 Credits" id="x3Z-gv-XFa"/>
+                        <barButtonItem key="rightBarButtonItem" title="0 Credits" id="x3Z-gv-XFa">
+                            <connections>
+                                <segue destination="aum-qc-Y3z" kind="presentation" id="dGa-gL-69b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="creditsOutlet" destination="x3Z-gv-XFa" id="lN7-dC-dVi"/>
@@ -412,7 +565,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt1-Jq-tLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2043" y="-350"/>
+            <point key="canvasLocation" x="2041" y="-333"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -439,8 +592,11 @@
     <resources>
         <image name="Unkown Drink" width="43" height="77"/>
         <image name="csh-drink-white" width="42" height="103"/>
-        <image name="drink" width="25" height="25"/>
+        <image name="drink" width="21" height="25"/>
         <image name="energy-white-blur" width="1080" height="1566"/>
         <image name="history-tab-bar-empty" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9uF-eo-fRf"/>
+    </inferredMetricsTieBreakers>
 </document>
