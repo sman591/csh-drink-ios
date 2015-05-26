@@ -135,6 +135,7 @@ class ItemTableViewController: UITableViewController {
 
         DrinkAPI.dropItem(item, delay: delay,
             completion: { data in
+                CurrentUser.updateUser()
                 alertView.closeAction = {
                     DrinkAlertView().show(self.view.window!.rootViewController!, title: "Dropped!", text: "Item successfully dropped!", buttonText: "OK")
                 }

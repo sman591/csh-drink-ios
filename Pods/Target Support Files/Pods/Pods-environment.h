@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_KeychainAccess 2
 #define COCOAPODS_VERSION_PATCH_KeychainAccess 0
 
+// Punctual
+#define COCOAPODS_POD_AVAILABLE_Punctual
+#define COCOAPODS_VERSION_MAJOR_Punctual 0
+#define COCOAPODS_VERSION_MINOR_Punctual 0
+#define COCOAPODS_VERSION_PATCH_Punctual 3
+
 // SwiftyJSON
 #define COCOAPODS_POD_AVAILABLE_SwiftyJSON
 #define COCOAPODS_VERSION_MAJOR_SwiftyJSON 2

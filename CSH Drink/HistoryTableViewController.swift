@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Punctual
 
 class HistoryTableViewController: UITableViewController {
 
     var drops = [Drop]()
+    var updatedAt = NSDate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,15 @@ class HistoryTableViewController: UITableViewController {
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let comparison = CurrentUser.sharedInstance.updatedAt.compare(updatedAt)
+        if comparison == NSComparisonResult.OrderedDescending
+            || comparison == NSComparisonResult.OrderedSame
+            || updatedAt.compare(1.minute.ago!) == NSComparisonResult.OrderedAscending {
+            updateHistory()
+        }
     }
 
     func refresh(sender: AnyObject) {
@@ -46,6 +57,7 @@ class HistoryTableViewController: UITableViewController {
                 self.drops = drops
                 self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
             }
+            self.updatedAt = NSDate()
         }, failure: { (error, message) in
             self.refreshControl?.endRefreshing()
             DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)

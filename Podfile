@@ -6,5 +6,6 @@ pod 'Alamofire', '1.2.0'
 pod 'KeychainAccess'
 # pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git'
 pod 'Haneke', :git => 'https://github.com/Haneke/HanekeSwift.git'
+pod 'Punctual'
 
 use_frameworks!

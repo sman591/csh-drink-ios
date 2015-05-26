@@ -51,11 +51,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'Haneke.framework'
   install_framework 'KeychainAccess.framework'
+  install_framework 'Punctual.framework'
   install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Alamofire.framework'
   install_framework 'Haneke.framework'
   install_framework 'KeychainAccess.framework'
+  install_framework 'Punctual.framework'
   install_framework 'SwiftyJSON.framework'
 fi
