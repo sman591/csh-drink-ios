@@ -41,6 +41,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     func updateApiKey() {
         if (CurrentUser.getApiKey()?.isEmpty == false) {
             apiFieldOutlet.text = CurrentUser.getApiKey()
+            self.view.endEditing(true)
             submitApiKey()
         }
     }
