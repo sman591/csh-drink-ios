@@ -48,22 +48,32 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     func submitApiKey() {
         let apiKey = self.apiFieldOutlet.text
         self.activityIndicator.startAnimating()
-        DrinkAPI.testApiKey(apiKey, completion: { data in
-            if data.boolValue {
-                CurrentUser.setApiKey(apiKey)
-                CurrentUser.updateUser()
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
-            else {
-                var alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
-                alertview.setTextTheme(.Light)
-                alertview.addAction() {
-                    self.apiFieldOutlet.becomeFirstResponder()
-                    return
+        DrinkAPI.testApiKey(apiKey,
+            completion: { data in
+                if data.boolValue {
+                    CurrentUser.setApiKey(apiKey)
+                    CurrentUser.updateUser()
+                    self.dismissViewControllerAnimated(true, completion: nil)
                 }
+                else {
+                    self.notifyInvalidApiKey()
+                }
+                self.activityIndicator.stopAnimating()
+            },
+            failure: { errorData, message in
+                self.notifyInvalidApiKey()
+                self.activityIndicator.stopAnimating()
             }
-            self.activityIndicator.stopAnimating()
-        })
+        )
+    }
+    
+    func notifyInvalidApiKey() {
+        var alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
+        alertview.setTextTheme(.Light)
+        alertview.addAction() {
+            self.apiFieldOutlet.becomeFirstResponder()
+            return
+        }
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
