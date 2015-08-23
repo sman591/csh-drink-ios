@@ -37,7 +37,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         self.activityIndicator.startAnimating()
         DrinkAPI.testApiKey(apiKey, completion: { data in
             if data.boolValue {
-                AuthenticationManager.apiKey = apiKey
+                CurrentUser.setApiKey(apiKey)
                 CurrentUser.updateUser()
                 self.dismissViewControllerAnimated(true, completion: nil)
             }

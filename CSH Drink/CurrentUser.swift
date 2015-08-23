@@ -48,6 +48,14 @@ class CurrentUser: NSObject {
         self.credits = Dynamic(credits)
     }
     
+    class func setApiKey(apiKey: String) {
+        AuthenticationManager.apiKey = apiKey
+    }
+    
+    class func getApiKey() -> String? {
+        return AuthenticationManager.apiKey
+    }
+    
     class func updateUser() {
         DrinkAPI.getUserInfo(completion: { data in
             self.sharedInstance.credits.value = data["credits"].intValue

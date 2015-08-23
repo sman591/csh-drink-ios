@@ -84,7 +84,7 @@ class DrinkAPI {
     
     class func makeRequest(method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         var fullParameters = parameters ?? [String: AnyObject]()
-        if let apiKey = AuthenticationManager.apiKey {
+        if let apiKey = CurrentUser.getApiKey() {
             fullParameters["api_key"] = apiKey
         }
         Alamofire.request(

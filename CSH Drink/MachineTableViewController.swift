@@ -21,7 +21,7 @@ class MachineTableViewController: UITableViewController {
         
         self.navigationItem.title = "Machines"
 
-        if !AuthenticationManager.keyIsValid() {
+        if !CurrentUser.isLoggedIn() {
             self.performSegueWithIdentifier("goto_login", sender: self)
         }
         
