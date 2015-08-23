@@ -10,6 +10,7 @@ import UIKit
 import KeychainAccess
 import Alamofire
 import SwiftyJSON
+import DeepLinkKit
 
 class ApiViewController: UIViewController, UITextFieldDelegate {
 
@@ -18,7 +19,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBAction func openWebDrinkAction(sender: UIButton) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/#/settings")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/mobileapp/index.php")!)
     }
     
     override func viewDidLoad() {
@@ -27,11 +28,23 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         apiFieldOutlet.delegate = self
         addParallax()
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateApiKey", name: UIApplicationDidBecomeActiveNotification, object: UIApplication.sharedApplication())
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    func updateApiKey() {
+        if (CurrentUser.getApiKey()?.isEmpty == false) {
+            apiFieldOutlet.text = CurrentUser.getApiKey()
+            submitApiKey()
+        }
+    }
+    
     func submitApiKey() {
         let apiKey = self.apiFieldOutlet.text
         self.activityIndicator.startAnimating()

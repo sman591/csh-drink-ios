@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -351,8 +351,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can't use CSH Drink until you type in your API key. You can find it online in WebDrink Settings." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-cK-YsI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-cK-YsI">
                                 <rect key="frame" x="26" y="207" width="548" height="26"/>
+                                <string key="text">You can't use CSH Drink until you provide an API key. You can login automatically below, or find the API key manually in WebDrink Settings.</string>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -361,10 +362,10 @@
                                 <rect key="frame" x="282" y="333" width="37" height="37"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-Wn-TzY">
-                                <rect key="frame" x="244" y="241" width="113" height="29"/>
+                                <rect key="frame" x="228" y="241" width="144" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Open WebDrink »">
+                                <state key="normal" title="Login with WebDrink »">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.83591777146464641" green="0.13330812641633621" blue="0.39172677772478243" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -597,6 +598,6 @@
         <image name="history-tab-bar-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9uF-eo-fRf"/>
+        <segue reference="d4Q-Ij-hAc"/>
     </inferredMetricsTieBreakers>
 </document>

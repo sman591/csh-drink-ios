@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (1.2.0)
+  - DeepLinkKit (1.1.0)
   - Haneke (0.9.0)
   - KeychainAccess (1.2.0)
   - Punctual (0.0.3)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 1.2.0)
+  - DeepLinkKit
   - Haneke (from `https://github.com/Haneke/HanekeSwift.git`)
   - KeychainAccess
   - Punctual
@@ -29,9 +31,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: d765c5c1713aa64106b0228aaa600a1e6851f68d
+  DeepLinkKit: 3979713c8a0b6bd3259fb7917e572acf56645a35
   Haneke: 6d0b23dc6603d069c889f0c02e72ddbbc78d2e97
   KeychainAccess: 6ff20bd4990b4840d8bde4e977f8c58e0fe7f3c1
   Punctual: 202fd42f60f1db369ff4f636e251af3ac98ff144
   SwiftyJSON: a561c2a840121085bec8a2dfeac97a360fc66901
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.37.2

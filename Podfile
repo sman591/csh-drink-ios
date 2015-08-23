@@ -7,5 +7,6 @@ pod 'KeychainAccess'
 # pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git'
 pod 'Haneke', :git => 'https://github.com/Haneke/HanekeSwift.git'
 pod 'Punctual'
+pod 'DeepLinkKit'
 
 use_frameworks!

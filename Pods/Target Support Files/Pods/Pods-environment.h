@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Alamofire 2
 #define COCOAPODS_VERSION_PATCH_Alamofire 0
 
+// DeepLinkKit
+#define COCOAPODS_POD_AVAILABLE_DeepLinkKit
+#define COCOAPODS_VERSION_MAJOR_DeepLinkKit 1
+#define COCOAPODS_VERSION_MINOR_DeepLinkKit 1
+#define COCOAPODS_VERSION_PATCH_DeepLinkKit 0
+
 // Haneke
 #define COCOAPODS_POD_AVAILABLE_Haneke
 #define COCOAPODS_VERSION_MAJOR_Haneke 0

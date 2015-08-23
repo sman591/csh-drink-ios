@@ -64,6 +64,7 @@
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
 		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
 		17A5506C1AC229E80010732C /* Pluralize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5506B1AC229E80010732C /* Pluralize.swift */; };
+		17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */; };
 		17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB3B371B141A3400232F6A /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,7 @@
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		17A5506B1AC229E80010732C /* Pluralize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pluralize.swift; sourceTree = "<group>"; };
+		17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLProductRouteHandler.swift; sourceTree = "<group>"; };
 		17FB3B371B141A3400232F6A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E9CA270F7AA99C4FCD0949C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		17178B481A6F348A00E67C3A /* CSH Drink */ = {
 			isa = PBXGroup;
 			children = (
+				17E15A431B88F4DD00FC6714 /* RouteHandlers */,
 				172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */,
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
 				17FB3B371B141A3400232F6A /* AccountViewController.swift */,
@@ -286,6 +289,14 @@
 				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
 			);
 			name = Items;
+			sourceTree = "<group>";
+		};
+		17E15A431B88F4DD00FC6714 /* RouteHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */,
+			);
+			name = RouteHandlers;
 			sourceTree = "<group>";
 		};
 		267E46C1F52D53E62DD260FE /* Pods */ = {
@@ -464,6 +475,7 @@
 				17374AF01ADF89D400B3F1C2 /* DropNavigationController.swift in Sources */,
 				1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */,
 				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
+				17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */,
 				1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */,
 				17A5506C1AC229E80010732C /* Pluralize.swift in Sources */,
 				175022F41ADF5EB700F1F33C /* UIColor+Drink.swift in Sources */,
