@@ -18,7 +18,6 @@
         <mutableArray key="CriqueGrotesk-Medium.otf">
             <string>CriqueGrotesk-Medium</string>
             <string>CriqueGrotesk-Medium</string>
-            <string>CriqueGrotesk-Medium</string>
         </mutableArray>
         <mutableArray key="CriqueGrotesk-Regular.otf">
             <string>CriqueGrotesk</string>
@@ -104,17 +103,6 @@
                                     <action selector="signOutAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="D5m-1Q-tUJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrf-K0-xbe">
-                                <rect key="frame" x="554" y="28" width="30" height="32"/>
-                                <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="20"/>
-                                <state key="normal" title="X">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismissAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="LVX-pQ-GE6"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd4-ug-Mbg">
                                 <rect key="frame" x="266" y="407" width="68" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -126,6 +114,17 @@
                                 <connections>
                                     <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="tdA-IP-h6q"/>
                                     <segue destination="6c4-fU-qZs" kind="presentation" identifier="signOut" id="9uF-eo-fRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrf-K0-xbe">
+                                <rect key="frame" x="547" y="28" width="37" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="LVX-pQ-GE6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -598,6 +597,6 @@
         <image name="history-tab-bar-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d4Q-Ij-hAc"/>
+        <segue reference="9uF-eo-fRf"/>
     </inferredMetricsTieBreakers>
 </document>
