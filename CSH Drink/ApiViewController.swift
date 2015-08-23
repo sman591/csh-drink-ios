@@ -57,18 +57,19 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else {
-                    self.notifyInvalidApiKey()
+                    self.handleInvalidApiKey()
                 }
                 self.activityIndicator.stopAnimating()
             },
             failure: { errorData, message in
-                self.notifyInvalidApiKey()
+                self.handleInvalidApiKey()
                 self.activityIndicator.stopAnimating()
             }
         )
     }
     
-    func notifyInvalidApiKey() {
+    func handleInvalidApiKey() {
+        CurrentUser.logout()
         var alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
         alertview.setTextTheme(.Light)
         alertview.addAction() {
