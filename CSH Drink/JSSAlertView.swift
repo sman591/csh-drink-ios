@@ -139,7 +139,7 @@ class JSSAlertView: UIViewController {
         }
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
     }
     
@@ -159,12 +159,12 @@ class JSSAlertView: UIViewController {
         self.viewHeight = size.height
         
         var yPos:CGFloat = 0.0
-        var contentWidth:CGFloat = self.alertWidth - (self.padding*2)
+        let contentWidth:CGFloat = self.alertWidth - (self.padding*2)
         
         // position the icon image view, if there is one
         if self.iconImageView != nil {
             yPos += iconImageView.frame.height
-            var centerX = (self.alertWidth-self.iconImageView.frame.width)/2
+            let centerX = (self.alertWidth-self.iconImageView.frame.width)/2
             self.iconImageView.frame.origin = CGPoint(x: centerX, y: self.padding)
             yPos += padding
         }
@@ -182,7 +182,7 @@ class JSSAlertView: UIViewController {
         // position text
         if self.textView != nil {
             let textString = textView.text! as NSString
-            let textAttr = [NSFontAttributeName:textView.font]
+            let textAttr = [NSFontAttributeName:textView.font as! AnyObject]
             let textSize = CGSize(width: contentWidth, height: 90)
             let textRect = textString.boundingRectWithSize(textSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: textAttr, context: nil)
             self.textView.frame = CGRect(x: self.padding, y: yPos, width: self.alertWidth - (self.padding*2), height: ceil(textRect.size.height)*2)
@@ -201,7 +201,7 @@ class JSSAlertView: UIViewController {
             }
         }
         
-        var buttonX = buttonWidth == self.alertWidth ? 0 : buttonWidth
+        let buttonX = buttonWidth == self.alertWidth ? 0 : buttonWidth
         self.dismissButton.frame = CGRect(x: buttonX, y: yPos, width: buttonWidth, height: self.buttonHeight)
         if self.buttonLabel != nil {
             self.buttonLabel.frame = CGRect(x: self.padding, y: (self.buttonHeight/2) - 15, width: buttonWidth - (self.padding*2), height: 30)
@@ -227,7 +227,7 @@ class JSSAlertView: UIViewController {
     
     
     func info(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, cancelButtonText: String?=nil) -> JSSAlertViewResponder {
-        var alertview = self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0x3498db, alpha: 1))
+        let alertview = self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0x3498db, alpha: 1))
         alertview.setTextTheme(.Light)
         return alertview
     }
@@ -241,7 +241,7 @@ class JSSAlertView: UIViewController {
     }
     
     func danger(viewController: UIViewController, title: String, text: String?=nil, buttonText: String?=nil, cancelButtonText: String?=nil) -> JSSAlertViewResponder {
-        var alertview = self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0xe74c3c, alpha: 1))
+        let alertview = self.show(viewController, title: title, text: text, buttonText: buttonText, cancelButtonText: cancelButtonText, color: UIColorFromHex(0xe74c3c, alpha: 1))
         alertview.setTextTheme(.Light)
         return alertview
     }
@@ -260,7 +260,7 @@ class JSSAlertView: UIViewController {
         } else {
             baseColor = self.defaultColor
         }
-        var textColor = self.darkTextColor
+        let textColor = self.darkTextColor
         
         let sz = UIScreen.mainScreen().bounds.size
         self.viewWidth = sz.width
@@ -308,8 +308,8 @@ class JSSAlertView: UIViewController {
         
         // Button
         self.dismissButton = UIButton()
-        let buttonColor = UIImage.withColor(adjustBrightness(baseColor!, 0.8))
-        let buttonHighlightColor = UIImage.withColor(adjustBrightness(baseColor!, 0.9))
+        let buttonColor = UIImage.withColor(adjustBrightness(baseColor!, amount: 0.8))
+        let buttonHighlightColor = UIImage.withColor(adjustBrightness(baseColor!, amount: 0.9))
         dismissButton.setBackgroundImage(buttonColor, forState: .Normal)
         dismissButton.setBackgroundImage(buttonHighlightColor, forState: .Highlighted)
         dismissButton.addTarget(self, action: "buttonTap", forControlEvents: .TouchUpInside)
@@ -329,8 +329,8 @@ class JSSAlertView: UIViewController {
         // Second cancel button
         if let btnText = cancelButtonText {
             self.cancelButton = UIButton()
-            let buttonColor = UIImage.withColor(adjustBrightness(baseColor!, 0.8))
-            let buttonHighlightColor = UIImage.withColor(adjustBrightness(baseColor!, 0.9))
+            let buttonColor = UIImage.withColor(adjustBrightness(baseColor!, amount: 0.8))
+            let buttonHighlightColor = UIImage.withColor(adjustBrightness(baseColor!, amount: 0.9))
             cancelButton.setBackgroundImage(buttonColor, forState: .Normal)
             cancelButton.setBackgroundImage(buttonHighlightColor, forState: .Highlighted)
             cancelButton.addTarget(self, action: "cancelButtonTap", forControlEvents: .TouchUpInside)
@@ -355,7 +355,7 @@ class JSSAlertView: UIViewController {
         })
         self.containerView.frame.origin.x = self.rootViewController.view.center.x
         self.containerView.center.y = -500
-        UIView.animateWithDuration(0.5, delay: 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: nil, animations: {
+        UIView.animateWithDuration(0.5, delay: 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: [], animations: {
             self.containerView.center = self.rootViewController.view.center
             }, completion: { finished in
                 
@@ -382,7 +382,7 @@ class JSSAlertView: UIViewController {
     }
     
     func closeView(withCallback:Bool) {
-        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: nil, animations: {
+        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
             self.containerView.center.y = self.rootViewController.view.center.y + self.viewHeight!
             }, completion: { finished in
                 UIView.animateWithDuration(0.1, animations: {

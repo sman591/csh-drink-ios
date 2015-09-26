@@ -10,7 +10,7 @@ import UIKit
 
 class DropNavigationController: UINavigationController {
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.tabBarItem.image = UIImage(named: "drink-outline")
         self.tabBarItem.selectedImage = UIImage(named: "drink")

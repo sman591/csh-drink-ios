@@ -11,6 +11,7 @@ import UIKit
 import KeychainAccess
 import Alamofire
 import SwiftyJSON
+import Mixpanel
 
 class CurrentUser: NSObject {
 
@@ -41,6 +42,7 @@ class CurrentUser: NSObject {
     }
     
     class func logout() {
+        Mixpanel.sharedInstance().track("Logged Out")
         AuthenticationManager.invalidateKey()
     }
     
@@ -57,7 +59,7 @@ class CurrentUser: NSObject {
     }
     
     class func updateUser() {
-        DrinkAPI.getUserInfo(completion: { data in
+        DrinkAPI.getUserInfo({ data in
             self.sharedInstance.credits.value = data["credits"].intValue
             self.sharedInstance.uid = data["uid"].stringValue
             self.sharedInstance.updatedAt = NSDate()

@@ -9,10 +9,11 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+import Mixpanel
 
 class DrinkAPI {
 
-    typealias DrinkAPIFailure = (NSError, String?) -> Void
+    typealias DrinkAPIFailure = (ErrorType, String?) -> Void
     typealias DrinkAPISuccess = JSON -> Void
     
     private struct Constants {
@@ -43,6 +44,7 @@ class DrinkAPI {
     }
     
     class func dropItem(item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+        Mixpanel.sharedInstance().track("Dropped Item")
         self.makeRequest(
             .POST,
             route: "drops/drop/",
@@ -66,7 +68,7 @@ class DrinkAPI {
     }
     
     class func getDrops(uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
-        var uid = uid ?? CurrentUser.sharedInstance.uid
+        let uid = uid ?? CurrentUser.sharedInstance.uid
         self.makeRequest(
             .GET,
             route: "users/drops",
@@ -92,27 +94,29 @@ class DrinkAPI {
             Constants.baseURL + "?request=" + route,
             parameters: fullParameters)
             .validate()
-            .responseJSON { request, response, data, error in
-                if let data: AnyObject = data {
-                    let json = JSON(data)
-                    if let error = error {
-                        failure?(error, json["message"].string)
+            .responseJSON { request, response, result in
+                switch result {
+                case .Success:
+                    let json = JSON(result.value!)
+                    if json["data"].stringValue == "false" {
+                        failure?(NSError(domain: "CSH_DRINK", code: 0, userInfo: NSMutableDictionary() as [NSObject : AnyObject]), json["message"].string)
                     } else {
-                        if json["data"].stringValue == "false" {
-                            failure?(NSError(), json["message"].string)
-                        } else {
-                            completion?(json["data"])
-                        }
+                        completion?(json["data"])
                     }
-                } else if let error = error {
-                    failure?(error, nil)
+                case .Failure(let errorData, let error):
+                    if let errorData = errorData {
+                        let errorJson = JSON(errorData)
+                        failure?(error, errorJson["message"].string)
+                    } else {
+                        failure?(error, nil)
+                    }
                 }
             }
     }
     
     class func genericApiError(view: UIViewController, message: String? = nil) {
         let text = message ?? "Could not connect to drink database. Are you connected to the internet?"
-        var alertview = DrinkAlertView().show(view, title: "API Error", text: text, buttonText: "OK")
+        DrinkAlertView().show(view, title: "API Error", text: text, buttonText: "OK")
     }
     
 }

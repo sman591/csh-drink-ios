@@ -15,6 +15,6 @@ struct Drop {
     let time: String
     
     func humanPrice() -> String {
-        return "\(item_price) " + ("Credit".pluralize(count: item_price))
+        return "\(item_price) " + ("Credit".pluralize(item_price))
     }
 }

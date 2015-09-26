@@ -8,11 +8,13 @@
 
 import Foundation
 import DeepLinkKit
+import Mixpanel
 
 public class DPLProductRouteHandler: DPLRouteHandler {
     public override func shouldHandleDeepLink(deepLink: DPLDeepLink!) -> Bool {
         if let apikey = deepLink.routeParameters["apikey"] as?  String  {
             CurrentUser.setApiKey(apikey)
+            Mixpanel.sharedInstance().track("Got API Key via WebDrink")
             return true
         }
         return false

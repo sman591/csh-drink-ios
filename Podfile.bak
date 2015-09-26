@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+inhibit_all_warnings!
+
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'Alamofire', '2.0.2'
+pod 'KeychainAccess'
+# pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git'
+pod 'HanekeSwift'
+pod 'Punctual', :git => 'https://github.com/harlanhaskins/Punctual.swift.git'
+pod 'DeepLinkKit'
+pod 'Mixpanel'
+

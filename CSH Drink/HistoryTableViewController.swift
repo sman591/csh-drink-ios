@@ -44,8 +44,7 @@ class HistoryTableViewController: UITableViewController {
     func updateHistory() {
         var drops = [Drop]()
         DrinkAPI.getDrops(completion: { data in
-            for (dropIndex: String, drop: JSON) in data {
-                var items = [Item]()
+            for (_, drop): (String, JSON) in data {
                 drops.append(Drop(
                     item_name: drop["item_name"].stringValue,
                     item_price: drop["current_item_price"].intValue,
@@ -78,9 +77,9 @@ class HistoryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DropTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! DropTableViewCell
         
-        var drop = self.drops[indexPath.row]
+        let drop = self.drops[indexPath.row]
         
         cell.itemNameLabel.text = drop.item_name
         cell.machineNameLabel.text = drop.machine_name
