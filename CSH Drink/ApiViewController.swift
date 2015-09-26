@@ -11,6 +11,7 @@ import KeychainAccess
 import Alamofire
 import SwiftyJSON
 import DeepLinkKit
+import Mixpanel
 
 class ApiViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,6 +20,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
     
     @IBAction func openWebDrinkAction(sender: UIButton) {
+        Mixpanel.sharedInstance().track("Opened WebDrink")
         UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/mobileapp/index.php")!)
     }
     
@@ -54,6 +56,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
                 if data.boolValue {
                     CurrentUser.setApiKey(apiKey)
                     CurrentUser.updateUser()
+                    Mixpanel.sharedInstance().track("Logged in")
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else {

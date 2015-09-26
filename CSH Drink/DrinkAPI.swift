@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+import Mixpanel
 
 class DrinkAPI {
 
@@ -43,6 +44,7 @@ class DrinkAPI {
     }
     
     class func dropItem(item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+        Mixpanel.sharedInstance().track("Dropped Item")
         self.makeRequest(
             .POST,
             route: "drops/drop/",

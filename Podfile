@@ -8,5 +8,6 @@ pod 'KeychainAccess'
 pod 'Haneke', :git => 'https://github.com/Haneke/HanekeSwift.git'
 pod 'Punctual'
 pod 'DeepLinkKit'
+pod 'Mixpanel'
 
 use_frameworks!

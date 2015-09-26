@@ -8,16 +8,19 @@
 
 import UIKit
 import DeepLinkKit
+import Mixpanel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     lazy var router: DPLDeepLinkRouter = DPLDeepLinkRouter()
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
+        Mixpanel.sharedInstanceWithToken("64dad077cc0f81caced73f4c4ada8d3d")
+        
         ToolBarColorManager.setPurpleToolbars()
         
         self.router["auth/:apikey"] = DPLProductRouteHandler.self

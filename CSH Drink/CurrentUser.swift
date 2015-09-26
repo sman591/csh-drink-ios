@@ -11,6 +11,7 @@ import UIKit
 import KeychainAccess
 import Alamofire
 import SwiftyJSON
+import Mixpanel
 
 class CurrentUser: NSObject {
 
@@ -41,6 +42,7 @@ class CurrentUser: NSObject {
     }
     
     class func logout() {
+        Mixpanel.sharedInstance().track("Logged Out")
         AuthenticationManager.invalidateKey()
     }
     

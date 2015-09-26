@@ -30,6 +30,18 @@
 #define COCOAPODS_VERSION_MINOR_KeychainAccess 2
 #define COCOAPODS_VERSION_PATCH_KeychainAccess 0
 
+// Mixpanel
+#define COCOAPODS_POD_AVAILABLE_Mixpanel
+#define COCOAPODS_VERSION_MAJOR_Mixpanel 2
+#define COCOAPODS_VERSION_MINOR_Mixpanel 8
+#define COCOAPODS_VERSION_PATCH_Mixpanel 3
+
+// Mixpanel/Mixpanel
+#define COCOAPODS_POD_AVAILABLE_Mixpanel_Mixpanel
+#define COCOAPODS_VERSION_MAJOR_Mixpanel_Mixpanel 2
+#define COCOAPODS_VERSION_MINOR_Mixpanel_Mixpanel 8
+#define COCOAPODS_VERSION_PATCH_Mixpanel_Mixpanel 3
+
 // Punctual
 #define COCOAPODS_POD_AVAILABLE_Punctual
 #define COCOAPODS_VERSION_MAJOR_Punctual 0
