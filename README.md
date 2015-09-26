@@ -2,6 +2,8 @@
 
 An iOS app for easy access to vending machines at [Computer Science House](//csh.rit.edu).
 
+![CSH Drink Screenshot](/CSH-Drink.png?raw=true)
+
 # Getting Started
 
 ```bash
