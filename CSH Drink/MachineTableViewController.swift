@@ -27,7 +27,7 @@ class MachineTableViewController: UITableViewController {
         
         CurrentUser.sharedInstance.credits.bindAndFire {
             [unowned self] in
-            self.creditsOutlet.title = "\($0) " + ("credit".pluralize(count: $0))
+            self.creditsOutlet.title = "\($0) " + ("credit".pluralize($0))
         }
         
         updateMachines()
@@ -41,7 +41,7 @@ class MachineTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        if let selectedIndexPath = self.tableView.indexPathForSelectedRow() {
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
             self.tableView.deselectRowAtIndexPath(selectedIndexPath, animated: animated)
         }
     }
@@ -59,10 +59,10 @@ class MachineTableViewController: UITableViewController {
     
     func updateMachines() {
         var machines = [Machine]()
-        DrinkAPI.getMachinesStock(completion: { data in
-            for (machineId: String, machine: JSON) in data {
+        DrinkAPI.getMachinesStock({ data in
+            for (_, machine): (String, JSON) in data {
                 var items = [Item]()
-                for (itemIndex: String, item: JSON) in machine {
+                for (_, item): (String, JSON) in machine {
                     items.append(Item(
                         name: item["item_name"].stringValue,
                         price: item["item_price"].intValue,
@@ -105,7 +105,7 @@ class MachineTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MachineTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MachineTableViewCell
         
         let machine = self.machines[indexPath.row]
         
@@ -122,7 +122,7 @@ class MachineTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "machineDetail" {
             let machineDetailViewController = segue.destinationViewController as! ItemTableViewController
-            let indexPath = self.tableView.indexPathForSelectedRow()!
+            let indexPath = self.tableView.indexPathForSelectedRow!
             let destinationTitle = self.machines[indexPath.row].name
             machineDetailViewController.title = destinationTitle
             machineDetailViewController.items = self.machines[indexPath.row].items

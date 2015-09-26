@@ -29,7 +29,7 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         addParallax()
         let credits = CurrentUser.sharedInstance.credits.value
-        creditsLabel.text = "\(credits) " + ("credit".pluralize(count: credits))
+        creditsLabel.text = "\(credits) " + ("credit".pluralize(credits))
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,17 +40,17 @@ class AccountViewController: UIViewController {
         let relativeAbsoluteValue = 15
         
         // Set vertical effect
-        var verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
         verticalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         verticalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
         
         // Set horizontal effect
-        var horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
         horizontalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         horizontalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
         
         // Create group to combine both
-        var group = UIMotionEffectGroup()
+        let group = UIMotionEffectGroup()
         group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
         
         self.backgroundImage.addMotionEffect(group)

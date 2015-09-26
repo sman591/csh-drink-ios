@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryNavigationController: UINavigationController {
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.tabBarItem.image = UIImage(named: "history-tab-bar-empty")
         self.tabBarItem.selectedImage = UIImage(named: "history-tab-bar-filled")

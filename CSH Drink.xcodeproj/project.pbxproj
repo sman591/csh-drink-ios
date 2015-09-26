@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05068AD11D6EDFA5F3CCBD2B /* Pods_CSH_Drink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB42272F1EE50D9EF2DAF37F /* Pods_CSH_Drink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		170799C61AEF179A00E6CF4C /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */; };
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
@@ -59,7 +60,6 @@
 		174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B311B1A91C5C60092CFF6 /* Dynamic.swift */; };
 		175022F41ADF5EB700F1F33C /* UIColor+Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */; };
 		1770E0521AAD30DF0077FA94 /* JSSAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */; };
-		1775CD5F1A91E5B700DE32D0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1775CD5E1A91E5B700DE32D0 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF2781A82677D00DB417B /* AuthenticationManager.swift */; };
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
 		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
@@ -69,7 +69,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11FD8381BD10E6CB034B6C14 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 		17178B461A6F348A00E67C3A /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,14 +126,14 @@
 		174B311B1A91C5C60092CFF6 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Drink.swift"; sourceTree = "<group>"; };
 		1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSSAlertView.swift; sourceTree = "<group>"; };
-		1775CD5E1A91E5B700DE32D0 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		17A5506B1AC229E80010732C /* Pluralize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pluralize.swift; sourceTree = "<group>"; };
 		17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLProductRouteHandler.swift; sourceTree = "<group>"; };
 		17FB3B371B141A3400232F6A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		E9CA270F7AA99C4FCD0949C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.debug.xcconfig"; sourceTree = "<group>"; };
+		58165FDF78715024CC69A9CB /* Pods-CSH Drink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.release.xcconfig"; sourceTree = "<group>"; };
+		EB42272F1EE50D9EF2DAF37F /* Pods_CSH_Drink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSH_Drink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1775CD5F1A91E5B700DE32D0 /* Pods.framework in Frameworks */,
+				05068AD11D6EDFA5F3CCBD2B /* Pods_CSH_Drink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +156,7 @@
 				17178B601A6F348A00E67C3A /* CSH DrinkTests */,
 				17178B471A6F348A00E67C3A /* Products */,
 				2E5430FA84EDF4DE2BD7AF60 /* Frameworks */,
-				267E46C1F52D53E62DD260FE /* Pods */,
+				FA2DEB92E6DA762B54B9D655 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,22 +298,21 @@
 			name = RouteHandlers;
 			sourceTree = "<group>";
 		};
-		267E46C1F52D53E62DD260FE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */,
-				E9CA270F7AA99C4FCD0949C5 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		2E5430FA84EDF4DE2BD7AF60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1775CD5E1A91E5B700DE32D0 /* Pods.framework */,
-				11FD8381BD10E6CB034B6C14 /* Pods.framework */,
+				EB42272F1EE50D9EF2DAF37F /* Pods_CSH_Drink.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA2DEB92E6DA762B54B9D655 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */,
+				58165FDF78715024CC69A9CB /* Pods-CSH Drink.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17178B671A6F348A00E67C3A /* Build configuration list for PBXNativeTarget "CSH Drink" */;
 			buildPhases = (
-				9FC93A7FBF7F91CA64BEE349 /* Check Pods Manifest.lock */,
+				13FA4BBD32895D5970FD01AF /* Check Pods Manifest.lock */,
 				17178B421A6F348A00E67C3A /* Sources */,
 				17178B431A6F348A00E67C3A /* Frameworks */,
 				17178B441A6F348A00E67C3A /* Resources */,
-				1560C3CFD5BDB64D2A38FF91 /* Embed Pods Frameworks */,
-				ED647F373B4DCD8971EAB3E1 /* Copy Pods Resources */,
+				99363E2553F1ABE725F0933E /* Embed Pods Frameworks */,
+				BD01361C31C230F9DC36D367 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,7 +344,9 @@
 		17178B3E1A6F348A00E67C3A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Stuart Olivera";
 				TargetAttributes = {
 					17178B451A6F348A00E67C3A = {
@@ -418,22 +418,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1560C3CFD5BDB64D2A38FF91 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9FC93A7FBF7F91CA64BEE349 /* Check Pods Manifest.lock */ = {
+		13FA4BBD32895D5970FD01AF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,7 +433,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		ED647F373B4DCD8971EAB3E1 /* Copy Pods Resources */ = {
+		99363E2553F1ABE725F0933E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD01361C31C230F9DC36D367 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -533,6 +533,7 @@
 				COPY_PHASE_STRIP = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -595,7 +596,7 @@
 		};
 		17178B681A6F348A00E67C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A02F8EDBE13527138CE32313 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -608,14 +609,16 @@
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.csh.Drink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		17178B691A6F348A00E67C3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9CA270F7AA99C4FCD0949C5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 58165FDF78715024CC69A9CB /* Pods-CSH Drink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -628,9 +631,11 @@
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.csh.Drink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

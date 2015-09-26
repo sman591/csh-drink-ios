@@ -1,0 +1,6 @@
+framework module Pods_CSH_Drink {
+  umbrella header "Pods-CSH Drink-umbrella.h"
+
+  export *
+  module * { export * }
+}

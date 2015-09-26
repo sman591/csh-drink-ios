@@ -38,7 +38,7 @@ class ItemTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ItemTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ItemTableViewCell
         
         let item = self.items[indexPath.row]
         
@@ -73,11 +73,11 @@ class ItemTableViewController: UITableViewController {
         // Do nothing, required for table cell edit actions
     }
 
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         var actions = [UITableViewRowAction]()
         var saturation : CGFloat = 0.73
-        for delay in reverse(delayOptions) {
-            var action = UITableViewRowAction(style: .Default, title: "\(delay)s") { (rowAction, indexPath) -> Void in
+        for delay in Array(delayOptions.reverse()) {
+            let action = UITableViewRowAction(style: .Default, title: "\(delay)s") { (rowAction, indexPath) -> Void in
                 self.tableView.setEditing(false, animated: true)
                 self.tableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: .None)
                 self.confirmDrop(
@@ -96,7 +96,6 @@ class ItemTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var cell = self.tableView.cellForRowAtIndexPath(indexPath) as! ItemTableViewCell
         confirmDrop(
             self.items[indexPath.row],
             delay: 0,
@@ -109,10 +108,10 @@ class ItemTableViewController: UITableViewController {
     func confirmDrop(item: Item, delay: Int, dismiss: (() -> (Void))?) {
         var text = "\(item.name) for \(item.humanPrice().lowercaseString)"
         if delay > 0 {
-            text += " in \(delay) " + ("second".pluralize(count: delay))
+            text += " in \(delay) " + ("second".pluralize(delay))
         }
 
-        var alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel")
+        let alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel")
         alertview.addAction() {
             self.drop(item, delay: delay, completion: dismiss, failure: dismiss)
         }

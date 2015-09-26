@@ -30,7 +30,7 @@ class ToolBarColorManager: NSObject {
     
     /// Sets the system toolbar colors to what your provide.
     ///
-    class func setToolBarColors(#tintColor: UIColor, barTintColor: UIColor, textColor: UIColor, lightStatus: Bool, opaque: Bool) {
+    class func setToolBarColors(tintColor tintColor: UIColor, barTintColor: UIColor, textColor: UIColor, lightStatus: Bool, opaque: Bool) {
         var navBarTitleAttributes = [String : AnyObject]()
         navBarTitleAttributes[NSFontAttributeName] = UIFont(name: "CriqueGrotesk-Bold", size: 18.0)
         navBarTitleAttributes[NSForegroundColorAttributeName] = UIColor.whiteColor()

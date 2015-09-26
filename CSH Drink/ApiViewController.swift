@@ -49,7 +49,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     }
     
     func submitApiKey() {
-        let apiKey = self.apiFieldOutlet.text
+        let apiKey = self.apiFieldOutlet.text!
         self.activityIndicator.startAnimating()
         DrinkAPI.testApiKey(apiKey,
             completion: { data in
@@ -73,7 +73,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     
     func handleInvalidApiKey() {
         CurrentUser.logout()
-        var alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
+        let alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
         alertview.setTextTheme(.Light)
         alertview.addAction() {
             self.apiFieldOutlet.becomeFirstResponder()
@@ -82,7 +82,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        let shouldReturn = count(textField.text) == 16
+        let shouldReturn = textField.text!.characters.count == 16
         if shouldReturn {
             textField.resignFirstResponder()
             submitApiKey()
@@ -94,28 +94,28 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         let relativeAbsoluteValue = 15
 
         // Set vertical effect
-        var verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
         verticalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         verticalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
 
         // Set horizontal effect
-        var horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
         horizontalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         horizontalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
 
         // Create group to combine both
-        var group = UIMotionEffectGroup()
+        let group = UIMotionEffectGroup()
         group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
 
         self.backgroundImage.addMotionEffect(group)
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if range.length + range.location > count(textField.text.utf16) {
+        if range.length + range.location > textField.text!.utf16.count {
             return false
         }
 
-        let newLength = count(textField.text) + count(string) - range.length
+        let newLength = textField.text!.characters.count + string.characters.count - range.length
         return newLength <= 16
     }
     
