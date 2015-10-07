@@ -29,11 +29,15 @@ class CurrentUser: NSObject {
     var credits: Dynamic<Int>
     var uid: String
     var updatedAt: NSDate
+    var name: String
+    var admin: Bool
     
-    init(credits: Int = 0, uid: String = "") {
+    init(credits: Int = 0, uid: String = "", name: String = "", admin: Bool = false) {
         self.credits = Dynamic(credits)
         self.uid = uid
         self.updatedAt = NSDate()
+        self.name = name
+        self.admin = admin
         CurrentUser.updateUser()
     }
     
@@ -62,8 +66,23 @@ class CurrentUser: NSObject {
         DrinkAPI.getUserInfo({ data in
             self.sharedInstance.credits.value = data["credits"].intValue
             self.sharedInstance.uid = data["uid"].stringValue
+            self.sharedInstance.name = data["cn"].stringValue
+            self.sharedInstance.admin = data["admin"].boolValue
             self.sharedInstance.updatedAt = NSDate()
+            updateUserAnalytics()
         })
+    }
+    
+    class func updateUserAnalytics() {
+        let mp = Mixpanel.sharedInstance()
+        let user = CurrentUser.sharedInstance
+        mp.identify(user.uid)
+        mp.people.set([
+            "$last_login": NSDate(),
+            "$name": user.name,
+            "credits": user.credits.value,
+            "admin": user.admin
+        ])
     }
 
     class func canAffordItem(item: Item) -> Bool {
