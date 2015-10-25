@@ -8,6 +8,7 @@
 
 import UIKit
 import Haneke
+import Mixpanel
 
 class ItemTableViewController: UITableViewController {
 
@@ -87,6 +88,7 @@ class ItemTableViewController: UITableViewController {
                         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
                     }
                 )
+                Mixpanel.sharedInstance().track("Prompted for delayed drop")
             }
             action.backgroundColor = UIColor(hue: 339.0/359.0, saturation: saturation, brightness: 0.91, alpha: 1.0)
             actions.append(action)
@@ -103,6 +105,7 @@ class ItemTableViewController: UITableViewController {
                 self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
         )
+        Mixpanel.sharedInstance().track("Prompted for immediate drop")
     }
 
     func confirmDrop(item: Item, delay: Int, dismiss: (() -> (Void))?) {

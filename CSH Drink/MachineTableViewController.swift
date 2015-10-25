@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Mixpanel
 
 class MachineTableViewController: UITableViewController {
 
@@ -126,6 +127,7 @@ class MachineTableViewController: UITableViewController {
             let destinationTitle = self.machines[indexPath.row].name
             machineDetailViewController.title = destinationTitle
             machineDetailViewController.items = self.machines[indexPath.row].items
+            Mixpanel.sharedInstance().track("Opened machine item list")
         }
     }
 
