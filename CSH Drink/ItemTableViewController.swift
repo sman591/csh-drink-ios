@@ -46,17 +46,17 @@ class ItemTableViewController: UITableViewController {
         cell.titleLabel.text = item.name
         cell.creditsLabel.text = item.humanPrice()
         
-        cell.userInteractionEnabled = item.enabled() && CurrentUser.canAffordItem(item)
-        
         var textColor: UIColor
         var alpha: CGFloat
         
         if item.enabled() && CurrentUser.canAffordItem(item) {
             alpha = 1
             textColor = UIColor(white: 0.29, alpha: alpha)
+            cell.userInteractionEnabled = true
         } else {
             alpha = 0.25
             textColor = UIColor(white: 0.29, alpha: alpha)
+            cell.userInteractionEnabled = false
         }
         
         cell.titleLabel.textColor = textColor
