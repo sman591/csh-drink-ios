@@ -779,6 +779,7 @@
 				17BF9D191CAAD7E300B67454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
