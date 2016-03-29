@@ -1,0 +1,14 @@
+The official Computer Science House Drink app for iOS.
+
+Need a refreshing soda or energy drink? Need a snack? No fear, just pull out your phone and drop what you want!
+
+Key features:
+• List items in all CSH drink and snack machines
+• Drop any item immediately or after a delay
+• View history of drops
+• Monitor account credits
+
+Note: You must be a member of Computer Science House to use the app.
+
+Questions? Suggestions?
+Submit an issue to https://github.com/sman591/csh-drink-ios/issues

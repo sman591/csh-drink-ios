@@ -1,0 +1,12 @@
+app_identifier "edu.rit.csh.Drink"
+apple_id "sman591+cshdrinkdeploy@gmail.com"
+
+for_platform :ios do
+  for_lane :test do
+    app_identifier "edu.rit.csh.drink.development"
+  end
+
+  for_lane :beta do
+    app_identifier "edu.rit.csh.drink"
+  end
+end
