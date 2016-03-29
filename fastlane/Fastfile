@@ -13,6 +13,10 @@ platform :ios do
     scan(device: "iPhone 6s (9.3)")
   end
 
+  lane :new do
+    testflight
+  end
+
   desc "Submit a new Beta build to Hockey App"
   lane :beta do
 
