@@ -64,9 +64,20 @@
 		177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EF27C1A82679C00DB417B /* ApiViewController.swift */; };
 		1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17178B511A6F348A00E67C3A /* Storyboard.storyboard */; };
 		17A5506C1AC229E80010732C /* Pluralize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5506B1AC229E80010732C /* Pluralize.swift */; };
+		17BF9D141CAAD7E300B67454 /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BF9D131CAAD7E300B67454 /* CSH_DrinkTests.swift */; };
 		17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */; };
 		17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB3B371B141A3400232F6A /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17BF9D161CAAD7E300B67454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17178B3E1A6F348A00E67C3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17178B451A6F348A00E67C3A;
+			remoteInfo = "CSH Drink";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
@@ -129,6 +140,9 @@
 		177EF2781A82677D00DB417B /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		177EF27C1A82679C00DB417B /* ApiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiViewController.swift; sourceTree = "<group>"; };
 		17A5506B1AC229E80010732C /* Pluralize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pluralize.swift; sourceTree = "<group>"; };
+		17BF9D111CAAD7E300B67454 /* CSH DrinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSH DrinkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17BF9D131CAAD7E300B67454 /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
+		17BF9D151CAAD7E300B67454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLProductRouteHandler.swift; sourceTree = "<group>"; };
 		17FB3B371B141A3400232F6A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +159,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BF9D0E1CAAD7E300B67454 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -154,6 +175,7 @@
 				17178B511A6F348A00E67C3A /* Storyboard.storyboard */,
 				17178B481A6F348A00E67C3A /* CSH Drink */,
 				17178B601A6F348A00E67C3A /* CSH DrinkTests */,
+				17BF9D121CAAD7E300B67454 /* CSH DrinkTests */,
 				17178B471A6F348A00E67C3A /* Products */,
 				2E5430FA84EDF4DE2BD7AF60 /* Frameworks */,
 				FA2DEB92E6DA762B54B9D655 /* Pods */,
@@ -164,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				17178B461A6F348A00E67C3A /* CSH Drink.app */,
+				17BF9D111CAAD7E300B67454 /* CSH DrinkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,6 +313,15 @@
 			name = Items;
 			sourceTree = "<group>";
 		};
+		17BF9D121CAAD7E300B67454 /* CSH DrinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				17BF9D131CAAD7E300B67454 /* CSH_DrinkTests.swift */,
+				17BF9D151CAAD7E300B67454 /* Info.plist */,
+			);
+			path = "CSH DrinkTests";
+			sourceTree = "<group>";
+		};
 		17E15A431B88F4DD00FC6714 /* RouteHandlers */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +370,24 @@
 			productReference = 17178B461A6F348A00E67C3A /* CSH Drink.app */;
 			productType = "com.apple.product-type.application";
 		};
+		17BF9D101CAAD7E300B67454 /* CSH DrinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17BF9D1A1CAAD7E300B67454 /* Build configuration list for PBXNativeTarget "CSH DrinkTests" */;
+			buildPhases = (
+				17BF9D0D1CAAD7E300B67454 /* Sources */,
+				17BF9D0E1CAAD7E300B67454 /* Frameworks */,
+				17BF9D0F1CAAD7E300B67454 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17BF9D171CAAD7E300B67454 /* PBXTargetDependency */,
+			);
+			name = "CSH DrinkTests";
+			productName = "CSH DrinkTests";
+			productReference = 17BF9D111CAAD7E300B67454 /* CSH DrinkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,13 +395,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Stuart Olivera";
 				TargetAttributes = {
 					17178B451A6F348A00E67C3A = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 7R48W84A8H;
+					};
+					17BF9D101CAAD7E300B67454 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7R48W84A8H;
+						TestTargetID = 17178B451A6F348A00E67C3A;
 					};
 				};
 			};
@@ -369,6 +424,7 @@
 			projectRoot = "";
 			targets = (
 				17178B451A6F348A00E67C3A /* CSH Drink */,
+				17BF9D101CAAD7E300B67454 /* CSH DrinkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -412,6 +468,13 @@
 				1728EC451A70A7C300339ABE /* CriqueGrotesk-LightItalic.otf in Resources */,
 				1797B5511A772F1700F5BB7D /* Storyboard.storyboard in Resources */,
 				1728EC5D1A70A7D000339ABE /* CriqueGrotesk-Black.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17BF9D0F1CAAD7E300B67454 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +560,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17BF9D0D1CAAD7E300B67454 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BF9D141CAAD7E300B67454 /* CSH_DrinkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17BF9D171CAAD7E300B67454 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17178B451A6F348A00E67C3A /* CSH Drink */;
+			targetProxy = 17BF9D161CAAD7E300B67454 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		17178B511A6F348A00E67C3A /* Storyboard.storyboard */ = {
@@ -639,6 +718,39 @@
 			};
 			name = Release;
 		};
+		17BF9D181CAAD7E300B67454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CSH DrinkTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rit.csh.CSH-DrinkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSH Drink.app/CSH Drink";
+			};
+			name = Debug;
+		};
+		17BF9D191CAAD7E300B67454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "CSH DrinkTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.rit.csh.CSH-DrinkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSH Drink.app/CSH Drink";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -659,6 +771,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		17BF9D1A1CAAD7E300B67454 /* Build configuration list for PBXNativeTarget "CSH DrinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17BF9D181CAAD7E300B67454 /* Debug */,
+				17BF9D191CAAD7E300B67454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
