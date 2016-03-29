@@ -14,7 +14,15 @@ platform :ios do
   end
 
   lane :new do
-    ipa(scheme: "CSH Drink", configuration: "Debug")
+    gym(
+      configuration: "Debug",
+      sdk: "iphoneos9.2",
+      clean: true,
+      include_bitcode: false,
+      include_symbols: true,
+      use_legacy_build_api: true,
+      export_method: "enterprise"
+    )
     testflight
   end
 
