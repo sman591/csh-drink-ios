@@ -16,7 +16,7 @@ platform :ios do
   lane :new do
     gym(
       configuration: "Debug",
-      sdk: "iphoneos9.2",
+      sdk: "iphoneos9.3",
       clean: true,
       include_bitcode: false,
       include_symbols: true,
