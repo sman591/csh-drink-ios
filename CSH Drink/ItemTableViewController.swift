@@ -135,7 +135,7 @@ class ItemTableViewController: UITableViewController {
             updateCountdown(droppingView.alertview, time: delay - 1) // TODO: this seems broken, could be refactored
         }
 
-        DrinkAPI.dropItem(item, delay: delay,
+        DrinkAPI.dropItem(item: item, delay: delay,
             completion: { data in
                 CurrentUser.updateUser()
                 alertView.closeAction = {

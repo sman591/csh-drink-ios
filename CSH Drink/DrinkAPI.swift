@@ -22,9 +22,9 @@ class DrinkAPI {
         static let imageURL = "https://csh.rit.edu/~mbillow/drink_icons/hdpi/"
     }
     
-    class func testApiKey(_ apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func testApiKey(apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
-            .get,
+            method: .get,
             route: "test/api",
             parameters: [
                 "api_key": apiKey
@@ -34,19 +34,19 @@ class DrinkAPI {
         )
     }
     
-    class func getUserInfo(_ completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func getUserInfo(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
-            .get,
+            method: .get,
             route: "users/info/",
             completion: completion,
             failure: failure
         )
     }
     
-    class func dropItem(_ item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func dropItem(item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         Mixpanel.sharedInstance().track("Dropped Item")
         self.makeRequest(
-            .post,
+            method: .post,
             route: "drops/drop/",
             parameters: [
                 "machine_id": item.machine_id,
@@ -58,19 +58,19 @@ class DrinkAPI {
         )
     }
     
-    class func getMachinesStock(_ completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
+    class func getMachinesStock(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
         self.makeRequest(
-            .get,
+            method: .get,
             route: "machines/stock",
             completion: completion,
             failure: failure
         )
     }
     
-    class func getDrops(_ uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
+    class func getDrops(uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
         let uid = uid ?? CurrentUser.sharedInstance.uid
         self.makeRequest(
-            .get,
+            method: .get,
             route: "users/drops",
             parameters: [
                 "uid": uid
@@ -84,7 +84,7 @@ class DrinkAPI {
         return URL(string: "\(Constants.imageURL)\(item.item_id).png")!
     }
     
-    class func makeRequest(_ method: Alamofire.HTTPMethod, route: String, parameters: Parameters? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func makeRequest(method: Alamofire.HTTPMethod, route: String, parameters: Parameters? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         var fullParameters: Parameters = parameters ?? Parameters()
         if let apiKey = CurrentUser.getApiKey() {
             fullParameters["api_key"] = apiKey as AnyObject?

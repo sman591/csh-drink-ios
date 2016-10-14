@@ -60,7 +60,7 @@ class MachineTableViewController: UITableViewController {
     
     func updateMachines() {
         var machines = [Machine]()
-        DrinkAPI.getMachinesStock({ data in
+        DrinkAPI.getMachinesStock(completion: { data in
             for (_, machine): (String, JSON) in data {
                 var items = [Item]()
                 for (_, item): (String, JSON) in machine {

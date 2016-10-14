@@ -51,7 +51,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     func submitApiKey() {
         let apiKey = self.apiFieldOutlet.text!
         self.activityIndicator.startAnimating()
-        DrinkAPI.testApiKey(apiKey,
+        DrinkAPI.testApiKey(apiKey: apiKey,
             completion: { data in
                 if data.boolValue {
                     CurrentUser.setApiKey(apiKey)

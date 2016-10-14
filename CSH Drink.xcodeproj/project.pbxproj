@@ -67,7 +67,7 @@
 		17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */; };
 		17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB3B371B141A3400232F6A /* AccountViewController.swift */; };
 		54FB93D71DB1526100E24CD3 /* Punctual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB93D61DB1526100E24CD3 /* Punctual.swift */; };
-		EBFE2E56E5A0ECEEF509B817 /* Pods_CSH_Drink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */; };
+		91CEB33B41AA01F1167B533B /* Pods_CSH_Drink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFE2E56E5A0ECEEF509B817 /* Pods_CSH_Drink.framework in Frameworks */,
+				91CEB33B41AA01F1167B533B /* Pods_CSH_Drink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
