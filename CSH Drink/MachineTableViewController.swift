@@ -80,7 +80,7 @@ class MachineTableViewController: UITableViewController {
             }
             self.machines = machines
             self.refreshControl?.endRefreshing()
-            self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, withRowAnimation: .Automatic)
+            self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: .automatic)
         }, failure: { error, message in
             self.refreshControl?.endRefreshing()
             DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)

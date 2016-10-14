@@ -24,7 +24,7 @@ class DrinkAPI {
     
     class func testApiKey(_ apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
-            .GET,
+            .get,
             route: "test/api",
             parameters: [
                 "api_key": apiKey
@@ -36,7 +36,7 @@ class DrinkAPI {
     
     class func getUserInfo(_ completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
-            .GET,
+            .get,
             route: "users/info/",
             completion: completion,
             failure: failure
@@ -46,7 +46,7 @@ class DrinkAPI {
     class func dropItem(_ item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         Mixpanel.sharedInstance().track("Dropped Item")
         self.makeRequest(
-            .POST,
+            .post,
             route: "drops/drop/",
             parameters: [
                 "machine_id": item.machine_id,
@@ -60,7 +60,7 @@ class DrinkAPI {
     
     class func getMachinesStock(_ completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
         self.makeRequest(
-            .GET,
+            .get,
             route: "machines/stock",
             completion: completion,
             failure: failure
@@ -70,7 +70,7 @@ class DrinkAPI {
     class func getDrops(_ uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
         let uid = uid ?? CurrentUser.sharedInstance.uid
         self.makeRequest(
-            .GET,
+            .get,
             route: "users/drops",
             parameters: [
                 "uid": uid
@@ -84,32 +84,27 @@ class DrinkAPI {
         return URL(string: "\(Constants.imageURL)\(item.item_id).png")!
     }
     
-    class func makeRequest(_ method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
-        var fullParameters = parameters ?? [String: AnyObject]()
+    class func makeRequest(_ method: Alamofire.HTTPMethod, route: String, parameters: Parameters? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+        var fullParameters: Parameters = parameters ?? Parameters()
         if let apiKey = CurrentUser.getApiKey() {
             fullParameters["api_key"] = apiKey as AnyObject?
         }
         Alamofire.request(
-            method,
             Constants.baseURL + "?request=" + route,
+            method: method,
             parameters: fullParameters)
             .validate()
-            .responseJSON { request, response, result in
-                switch result {
-                case .Success:
-                    let json = JSON(result.value!)
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    let json = JSON(response.result.value!)
                     if json["data"].stringValue == "false" {
-                        failure?(NSError(domain: "CSH_DRINK", code: 0, userInfo: NSMutableDictionary() as [AnyHashable: Any]), json["message"].string)
+                        failure?(NSError(domain: "CSH_DRINK", code: 0), json["message"].string)
                     } else {
                         completion?(json["data"])
                     }
-                case .Failure(let errorData, let error):
-                    if let errorData = errorData {
-                        let errorJson = JSON(errorData)
-                        failure?(error, errorJson["message"].string)
-                    } else {
-                        failure?(error, nil)
-                    }
+                case .failure(let errorData):
+                    failure?(errorData, "There was an error")
                 }
             }
     }
