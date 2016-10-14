@@ -26,7 +26,7 @@ struct Drop {
     
     func relativeTime() -> String {
         if let date = timestamp() {
-            return timeAgoSince(date)
+            return timeAgoSince(date, timestamp: time)
         } else {
             return time
         }

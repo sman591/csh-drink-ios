@@ -5,12 +5,12 @@
 //  Created by Henry Saniuk on 10/14/16.
 //  Copyright © 2016 Stuart Olivera. All rights reserved.
 //
-//  Taken from https://github.com/zemirco/swift-timeago
+//  Based on https://github.com/zemirco/swift-timeago
 //
 
 import Foundation
 
-public func timeAgoSince(_ date: Date) -> String {
+public func timeAgoSince(_ date: Date, timestamp: String) -> String {
     
     let calendar = Calendar.current
     let now = Date()
@@ -18,15 +18,18 @@ public func timeAgoSince(_ date: Date) -> String {
     let components = (calendar as NSCalendar).components(unitFlags, from: date, to: now, options: [])
     
     if let year = components.year, year >= 2 {
-        return "\(year) years ago"
+        // return "\(year) years ago"
+        return timestamp
     }
     
     if let year = components.year, year >= 1 {
-        return "Last year"
+        // return "Last year"
+        return timestamp
     }
     
     if let month = components.month, month >= 2 {
-        return "\(month) months ago"
+        // return "\(month) months ago"
+        return timestamp
     }
     
     if let month = components.month, month >= 1 {
