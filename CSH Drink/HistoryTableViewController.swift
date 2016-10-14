@@ -82,7 +82,7 @@ class HistoryTableViewController: UITableViewController {
         
         cell.itemNameLabel.text = drop.item_name
         cell.machineNameLabel.text = drop.machine_name
-        cell.timeLabel.text = drop.time
+        cell.timeLabel.text = drop.relativeTime()
         cell.creditsLabel.text = drop.humanPrice()
         
         return cell
