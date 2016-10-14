@@ -29,7 +29,7 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         addParallax()
         let credits = CurrentUser.sharedInstance.credits.value
-        creditsLabel.text = "\(credits) " + ("credit".pluralize(credits))
+        creditsLabel.text = "\(credits) " + ("credit".pluralize(count: credits))
     }
     
     override func didReceiveMemoryWarning() {

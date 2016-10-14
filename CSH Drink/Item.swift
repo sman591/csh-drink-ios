@@ -22,6 +22,6 @@ struct Item {
     }
 
     func humanPrice() -> String {
-        return "\(self.price) " + ("Credit".pluralize(price))
+        return "\(self.price) " + ("Credit".pluralize(count: price))
     }
 }

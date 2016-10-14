@@ -28,7 +28,7 @@ class MachineTableViewController: UITableViewController {
         
         CurrentUser.sharedInstance.credits.bindAndFire {
             [unowned self] in
-            self.creditsOutlet.title = "\($0) " + ("credit".pluralize($0))
+            self.creditsOutlet.title = "\($0) " + ("credit".pluralize(count: $0))
         }
         
         updateMachines()
@@ -80,7 +80,7 @@ class MachineTableViewController: UITableViewController {
             }
             self.machines = machines
             self.refreshControl?.endRefreshing()
-            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+            self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, withRowAnimation: .Automatic)
         }, failure: { error, message in
             self.refreshControl?.endRefreshing()
             DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)

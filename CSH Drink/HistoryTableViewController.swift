@@ -53,7 +53,7 @@ class HistoryTableViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
             if drops.count > self.drops.count {
                 self.drops = drops
-                self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, withRowAnimation: .automatic)
+                self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, with: .automatic)
             }
             self.updatedAt = NSDate() as Date
         }, failure: { (error, message) in
