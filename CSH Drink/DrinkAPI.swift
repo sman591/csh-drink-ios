@@ -13,16 +13,16 @@ import Mixpanel
 
 class DrinkAPI {
 
-    typealias DrinkAPIFailure = (ErrorType, String?) -> Void
-    typealias DrinkAPISuccess = JSON -> Void
+    typealias DrinkAPIFailure = (Error, String?) -> Void
+    typealias DrinkAPISuccess = (JSON) -> Void
     
-    private struct Constants {
+    fileprivate struct Constants {
         static let sharedInstance = DrinkAPI()
         static let baseURL = "https://webdrink.csh.rit.edu/api/index.php"
         static let imageURL = "https://csh.rit.edu/~mbillow/drink_icons/hdpi/"
     }
     
-    class func testApiKey(apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func testApiKey(_ apiKey: String, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
             .GET,
             route: "test/api",
@@ -34,7 +34,7 @@ class DrinkAPI {
         )
     }
     
-    class func getUserInfo(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func getUserInfo(_ completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         self.makeRequest(
             .GET,
             route: "users/info/",
@@ -43,7 +43,7 @@ class DrinkAPI {
         )
     }
     
-    class func dropItem(item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func dropItem(_ item: Item, delay: Int, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         Mixpanel.sharedInstance().track("Dropped Item")
         self.makeRequest(
             .POST,
@@ -58,7 +58,7 @@ class DrinkAPI {
         )
     }
     
-    class func getMachinesStock(completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
+    class func getMachinesStock(_ completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
         self.makeRequest(
             .GET,
             route: "machines/stock",
@@ -67,7 +67,7 @@ class DrinkAPI {
         )
     }
     
-    class func getDrops(uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
+    class func getDrops(_ uid: String? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure?  = nil) {
         let uid = uid ?? CurrentUser.sharedInstance.uid
         self.makeRequest(
             .GET,
@@ -80,14 +80,14 @@ class DrinkAPI {
         )
     }
     
-    class func imageUrlForItem(item: Item) -> NSURL {
-        return NSURL(string: "\(Constants.imageURL)\(item.item_id).png")!
+    class func imageUrlForItem(_ item: Item) -> URL {
+        return URL(string: "\(Constants.imageURL)\(item.item_id).png")!
     }
     
-    class func makeRequest(method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
+    class func makeRequest(_ method: Alamofire.Method, route: String, parameters: [String: AnyObject]? = nil, completion: DrinkAPISuccess? = nil, failure: DrinkAPIFailure? = nil) {
         var fullParameters = parameters ?? [String: AnyObject]()
         if let apiKey = CurrentUser.getApiKey() {
-            fullParameters["api_key"] = apiKey
+            fullParameters["api_key"] = apiKey as AnyObject?
         }
         Alamofire.request(
             method,
@@ -99,7 +99,7 @@ class DrinkAPI {
                 case .Success:
                     let json = JSON(result.value!)
                     if json["data"].stringValue == "false" {
-                        failure?(NSError(domain: "CSH_DRINK", code: 0, userInfo: NSMutableDictionary() as [NSObject : AnyObject]), json["message"].string)
+                        failure?(NSError(domain: "CSH_DRINK", code: 0, userInfo: NSMutableDictionary() as [AnyHashable: Any]), json["message"].string)
                     } else {
                         completion?(json["data"])
                     }
@@ -114,7 +114,7 @@ class DrinkAPI {
             }
     }
     
-    class func genericApiError(view: UIViewController, message: String? = nil) {
+    class func genericApiError(_ view: UIViewController, message: String? = nil) {
         let text = message ?? "Could not connect to drink database. Are you connected to the internet?"
         DrinkAlertView().show(view, title: "API Error", text: text, buttonText: "OK")
     }

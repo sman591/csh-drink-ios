@@ -1,6 +1,0 @@
-framework module Punctual {
-  umbrella header "Punctual-umbrella.h"
-
-  export *
-  module * { export * }
-}

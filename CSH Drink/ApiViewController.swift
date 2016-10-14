@@ -19,9 +19,9 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
-    @IBAction func openWebDrinkAction(sender: UIButton) {
+    @IBAction func openWebDrinkAction(_ sender: UIButton) {
         Mixpanel.sharedInstance().track("Opened WebDrink")
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/mobileapp/index.php")!)
+        UIApplication.shared.openURL(URL(string: "https://webdrink.csh.rit.edu/mobileapp/index.php")!)
     }
     
     override func viewDidLoad() {
@@ -31,8 +31,8 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         addParallax()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateApiKey", name: UIApplicationDidBecomeActiveNotification, object: UIApplication.sharedApplication())
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(ApiViewController.updateApiKey), name: NSNotification.Name.UIApplicationDidBecomeActive, object: UIApplication.shared)
     }
     
     
@@ -74,14 +74,14 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     func handleInvalidApiKey() {
         CurrentUser.logout()
         let alertview = DrinkAlertView().show(self, title: "Invalid API Key", text: "Please check your key and try again.", buttonText: "OK")
-        alertview.setTextTheme(.Light)
+        alertview.setTextTheme(.light)
         alertview.addAction() {
             self.apiFieldOutlet.becomeFirstResponder()
             return
         }
     }
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let shouldReturn = textField.text!.characters.count == 16
         if shouldReturn {
             textField.resignFirstResponder()
@@ -94,12 +94,12 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         let relativeAbsoluteValue = 15
 
         // Set vertical effect
-        let verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.tiltAlongVerticalAxis)
         verticalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         verticalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
 
         // Set horizontal effect
-        let horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.tiltAlongVerticalAxis)
         horizontalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         horizontalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
 
@@ -110,7 +110,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
         self.backgroundImage.addMotionEffect(group)
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if range.length + range.location > textField.text!.utf16.count {
             return false
         }

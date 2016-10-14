@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class AuthenticationManager: NSObject {
     
-    private struct Constants {
+    fileprivate struct Constants {
         static let keychain = Keychain(service: "edu.csh.rit.csh-drink")
         static let apiKey = "api_key"
     }

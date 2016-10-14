@@ -34,7 +34,10 @@
 
 import Foundation
 
-public class Pluralize {
+open class Pluralize {
+    private static var __once: () = {
+            Static.instance = Pluralize()
+        }()
     var uncountables:[String] = []
     var rules:[(rule: String, template: String)] = []
     
@@ -133,8 +136,8 @@ public class Pluralize {
         unchanging("species")
     }
     
-    public class func apply(word: String) -> String {
-        if sharedInstance.uncountables.contains(word.lowercaseString) || word.characters.count == 0 {
+    open class func apply(_ word: String) -> String {
+        if sharedInstance.uncountables.contains(word.lowercased()) || word.characters.count == 0 {
             return word
         } else {
             for pair in sharedInstance.rules {
@@ -148,53 +151,51 @@ public class Pluralize {
         return word
     }
     
-    public class func rule(rule: String, with template: String) {
+    open class func rule(_ rule: String, with template: String) {
         sharedInstance.rule(rule, with: template)
     }
     
-    public class func uncountable(word: String) {
+    open class func uncountable(_ word: String) {
         sharedInstance.uncountable(word)
     }
     
-    public class func unchanging(word: String) {
+    open class func unchanging(_ word: String) {
         sharedInstance.unchanging(word)
     }
     
-    public class var sharedInstance : Pluralize {
+    open class var sharedInstance : Pluralize {
         struct Static {
-            static var onceToken : dispatch_once_t = 0
+            static var onceToken : Int = 0
             static var instance : Pluralize? = nil
         }
         
-        dispatch_once(&Static.onceToken) {
-            Static.instance = Pluralize()
-        }
+        _ = Pluralize.__once
         
         return Static.instance!
     }
     
-    private class func regexReplace(input: String, pattern: String, template: String) -> String {
-        let regex = try! NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
+    fileprivate class func regexReplace(_ input: String, pattern: String, template: String) -> String {
+        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         let range = NSMakeRange(0, input.characters.count)
-        let output = regex.stringByReplacingMatchesInString(input, options: [], range: range, withTemplate: template)
+        let output = regex.stringByReplacingMatches(in: input, options: [], range: range, withTemplate: template)
         return output
     }
     
-    private func rule(rule: String, with template: String) {
-        rules.insert((rule: rule, template: template), atIndex: 0)
+    fileprivate func rule(_ rule: String, with template: String) {
+        rules.insert((rule: rule, template: template), at: 0)
     }
     
-    private func uncountable(word: String) {
-        uncountables.insert(word.lowercaseString, atIndex: 0)
+    fileprivate func uncountable(_ word: String) {
+        uncountables.insert(word.lowercased(), at: 0)
     }
     
-    private func unchanging(word: String) {
-        uncountables.insert(word.lowercaseString, atIndex: 0)
+    fileprivate func unchanging(_ word: String) {
+        uncountables.insert(word.lowercased(), at: 0)
     }
 }
 
 extension String {
-    public func pluralize(count: Int = 2, with: String = "") -> String {
+    public func pluralize(_ count: Int = 2, with: String = "") -> String {
         if count == 1 {
             return self
         } else {

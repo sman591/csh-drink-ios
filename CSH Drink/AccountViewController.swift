@@ -15,14 +15,14 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var creditsLabel: UILabel!
     
-    @IBAction func openWebDrinkAction(sender: UIButton) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://webdrink.csh.rit.edu/#/settings")!)
+    @IBAction func openWebDrinkAction(_ sender: UIButton) {
+        UIApplication.shared.openURL(URL(string: "https://webdrink.csh.rit.edu/#/settings")!)
     }
-    @IBAction func openGitHubAction(sender: UIButton) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/sman591/csh-drink-ios")!)
+    @IBAction func openGitHubAction(_ sender: UIButton) {
+        UIApplication.shared.openURL(URL(string: "https://github.com/sman591/csh-drink-ios")!)
     }
-    @IBAction func dismissAction(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismissAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -40,12 +40,12 @@ class AccountViewController: UIViewController {
         let relativeAbsoluteValue = 15
         
         // Set vertical effect
-        let verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let verticalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.y", type: UIInterpolatingMotionEffectType.tiltAlongVerticalAxis)
         verticalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         verticalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
         
         // Set horizontal effect
-        let horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.TiltAlongVerticalAxis)
+        let horizontalMotionEffect =  UIInterpolatingMotionEffect(keyPath: "center.x", type: UIInterpolatingMotionEffectType.tiltAlongVerticalAxis)
         horizontalMotionEffect.minimumRelativeValue = -1 * relativeAbsoluteValue
         horizontalMotionEffect.maximumRelativeValue = relativeAbsoluteValue
         
@@ -56,7 +56,7 @@ class AccountViewController: UIViewController {
         self.backgroundImage.addMotionEffect(group)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "signOut" {
             CurrentUser.logout()
         }

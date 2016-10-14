@@ -1,44 +1,29 @@
 PODS:
-  - Alamofire (2.0.2)
-  - DeepLinkKit (1.1.0)
-  - HanekeSwift (0.10.0)
-  - KeychainAccess (2.0.0)
-  - Mixpanel (2.8.3):
-    - Mixpanel/Mixpanel (= 2.8.3)
-  - Mixpanel/Mixpanel (2.8.3)
-  - Punctual (0.0.3)
-  - SwiftyJSON (2.3.0)
+  - Alamofire (4.0.1)
+  - DeepLinkKit (1.2.1)
+  - Haneke (1.0.2)
+  - KeychainAccess (3.0.0)
+  - Mixpanel (3.0.4):
+    - Mixpanel/Mixpanel (= 3.0.4)
+  - Mixpanel/Mixpanel (3.0.4)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
-  - Alamofire (= 2.0.2)
+  - Alamofire
   - DeepLinkKit
-  - HanekeSwift
+  - Haneke
   - KeychainAccess
   - Mixpanel
-  - Punctual (from `https://github.com/harlanhaskins/Punctual.swift.git`)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-
-EXTERNAL SOURCES:
-  Punctual:
-    :git: https://github.com/harlanhaskins/Punctual.swift.git
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-
-CHECKOUT OPTIONS:
-  Punctual:
-    :commit: be9fcf62e5af688817df52f2a88f5c2e0c809a0d
-    :git: https://github.com/harlanhaskins/Punctual.swift.git
-  SwiftyJSON:
-    :commit: 3b5d0d4e0c19173b1bf0dc823bde25ad870f70c0
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
-  DeepLinkKit: 3979713c8a0b6bd3259fb7917e572acf56645a35
-  HanekeSwift: d6f5bdf9dbdbbc09d59623b2c1d533e46463dd4d
-  KeychainAccess: 1e705665a234b3af69d653aaa3c8f696e4a992f1
-  Mixpanel: fd52e097ae0d27295d0595b2261c60b94d191fda
-  Punctual: 202fd42f60f1db369ff4f636e251af3ac98ff144
-  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  DeepLinkKit: 4c3a713b7ecc6c6e25ba56c87d0c728f6035a9ef
+  Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
+  KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
+  Mixpanel: 4a2330c26556109d2f42b01e36a05eb9e2caf25e
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-COCOAPODS: 0.39.0.beta.4
+PODFILE CHECKSUM: da28e21b4aebe3178abe51f44da2720e20a8603f
+
+COCOAPODS: 1.1.0.rc.2
