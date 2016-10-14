@@ -57,7 +57,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
                     CurrentUser.setApiKey(apiKey)
                     CurrentUser.updateUser()
                     Mixpanel.sharedInstance().track("Logged in")
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
                 else {
                     self.handleInvalidApiKey()

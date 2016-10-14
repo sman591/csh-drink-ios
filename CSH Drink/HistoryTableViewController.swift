@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import Punctual
 
 class HistoryTableViewController: UITableViewController {
 
@@ -32,7 +31,7 @@ class HistoryTableViewController: UITableViewController {
         let comparison = CurrentUser.sharedInstance.updatedAt.compare(updatedAt)
         if comparison == ComparisonResult.orderedDescending
             || comparison == ComparisonResult.orderedSame
-            || updatedAt.compare(1.minute.ago!) == ComparisonResult.OrderedAscending {
+            || updatedAt.compare(1.minute.ago!) == ComparisonResult.orderedAscending {
             updateHistory()
         }
     }
@@ -54,9 +53,9 @@ class HistoryTableViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
             if drops.count > self.drops.count {
                 self.drops = drops
-                self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .Automatic)
+                self.tableView.reloadSections(NSIndexSet(index: 0) as IndexSet, withRowAnimation: .automatic)
             }
-            self.updatedAt = NSDate()
+            self.updatedAt = NSDate() as Date
         }, failure: { (error, message) in
             self.refreshControl?.endRefreshing()
             DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)

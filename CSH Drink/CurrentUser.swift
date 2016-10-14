@@ -68,7 +68,7 @@ class CurrentUser: NSObject {
             self.sharedInstance.uid = data["uid"].stringValue
             self.sharedInstance.name = data["cn"].stringValue
             self.sharedInstance.admin = data["admin"].boolValue
-            self.sharedInstance.updatedAt = NSDate()
+            self.sharedInstance.updatedAt = NSDate() as Date
             updateUserAnalytics()
         })
     }

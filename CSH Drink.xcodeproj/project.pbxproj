@@ -66,6 +66,7 @@
 		17BF9D141CAAD7E300B67454 /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BF9D131CAAD7E300B67454 /* CSH_DrinkTests.swift */; };
 		17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */; };
 		17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB3B371B141A3400232F6A /* AccountViewController.swift */; };
+		54FB93D71DB1526100E24CD3 /* Punctual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB93D61DB1526100E24CD3 /* Punctual.swift */; };
 		EBFE2E56E5A0ECEEF509B817 /* Pods_CSH_Drink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		17BF9D151CAAD7E300B67454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLProductRouteHandler.swift; sourceTree = "<group>"; };
 		17FB3B371B141A3400232F6A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		54FB93D61DB1526100E24CD3 /* Punctual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Punctual.swift; sourceTree = "<group>"; };
 		7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSH_Drink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D5E3363966294E92B889DB /* Pods-CSH Drink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.release.xcconfig"; sourceTree = "<group>"; };
 		E2A215E47E2124ED89163C2E /* Pods-CSH Drink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
 				174B311B1A91C5C60092CFF6 /* Dynamic.swift */,
 				1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */,
+				54FB93D61DB1526100E24CD3 /* Punctual.swift */,
 				175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */,
 				17A5506B1AC229E80010732C /* Pluralize.swift */,
 			);
@@ -556,6 +559,7 @@
 				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
 				174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */,
 				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,
+				54FB93D71DB1526100E24CD3 /* Punctual.swift in Sources */,
 				1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */,
 				17178BD21A6F7CA900E67C3A /* Item.swift in Sources */,
 				17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */,
