@@ -111,7 +111,7 @@ class DrinkAPI {
     
     class func genericApiError(_ view: UIViewController, message: String? = nil) {
         let text = message ?? "Could not connect to drink database. Are you connected to the internet?"
-        DrinkAlertView().show(view, title: "API Error", text: text, buttonText: "OK")
+        _ = DrinkAlertView().show(view, title: "API Error", text: text, buttonText: "OK")
     }
     
 }

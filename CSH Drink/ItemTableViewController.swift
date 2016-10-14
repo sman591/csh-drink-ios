@@ -139,13 +139,13 @@ class ItemTableViewController: UITableViewController {
             completion: { data in
                 CurrentUser.updateUser()
                 alertView.closeAction = {
-                    DrinkAlertView().show(self.view.window!.rootViewController!, title: "Dropped!", text: "Item successfully dropped!", buttonText: "OK")
+                    _ = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Dropped!", text: "Item successfully dropped!", buttonText: "OK")
                 }
                 alertView.closeView(true)
             }, failure: { error, message in
                 alertView.closeView(true)
                 alertView.closeAction = {
-                    DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Failed", text: message ?? "Your item failed to drop", buttonText: "OK")
+                    _ = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Failed", text: message ?? "Your item failed to drop", buttonText: "OK")
                 }
             }
         )
