@@ -109,12 +109,12 @@ class ItemTableViewController: UITableViewController {
     }
 
     func confirmDrop(_ item: Item, delay: Int, dismiss: (() -> (Void))?) {
-        var text = "\(item.name) for \(item.humanPrice().lowercased())"
+        var text = item.humanPrice().lowercased()
         if delay > 0 {
             text += " in \(delay) " + ("second".pluralize(count: delay))
         }
 
-        let alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: "Drop Confirmation", text: text, buttonText: "Drop", cancelButtonText: "Cancel")
+        let alertview = DrinkAlertView().show(self.view.window!.rootViewController!, title: item.name, text: text, buttonText: "Drop", cancelButtonText: "Cancel")
         alertview.addAction() {
             self.drop(item, delay: delay, completion: dismiss, failure: dismiss)
         }
