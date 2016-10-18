@@ -13,6 +13,7 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

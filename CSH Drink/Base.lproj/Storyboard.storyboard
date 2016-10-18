@@ -467,7 +467,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="xxx Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-6W-sI9">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="8zZ-TZ-tjt"/>
+                                                <constraint firstAttribute="height" constant="17" id="8zZ-TZ-tjt"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="13"/>
                                             <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -487,6 +487,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqU-pX-q0e">
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="61" id="IOR-bG-Rmo"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="zIp-0A-Pbj"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
                                             <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -499,31 +500,42 @@
                                                 </mask>
                                             </variation>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Reason you can't drop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stn-PX-mAm">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="HEt-aG-eZS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="13"/>
+                                            <color key="textColor" red="0.87100791929999999" green="0.60970554350999995" blue="0.70453336857665794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="1eD-UM-fJn" secondAttribute="bottom" constant="5" id="9do-pt-6Mm"/>
                                         <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="leading" id="BZQ-Ka-tTE"/>
                                         <constraint firstItem="KqU-pX-q0e" firstAttribute="trailing" secondItem="NPK-zy-N18" secondAttribute="trailingMargin" id="By7-bJ-oKF"/>
+                                        <constraint firstItem="stn-PX-mAm" firstAttribute="top" secondItem="KHj-6W-sI9" secondAttribute="bottom" constant="-1" id="CWc-Uk-uyx"/>
                                         <constraint firstItem="KqU-pX-q0e" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="topMargin" constant="4" id="HBI-Q4-WRo"/>
                                         <constraint firstItem="KHj-6W-sI9" firstAttribute="trailing" secondItem="NPK-zy-N18" secondAttribute="trailingMargin" id="IL5-Q6-266"/>
                                         <constraint firstItem="1eD-UM-fJn" firstAttribute="top" secondItem="NPK-zy-N18" secondAttribute="top" constant="5" id="S8e-tC-6it"/>
                                         <constraint firstItem="KqU-pX-q0e" firstAttribute="leading" secondItem="1eD-UM-fJn" secondAttribute="trailing" constant="10" id="TFa-rY-RAw"/>
+                                        <constraint firstItem="stn-PX-mAm" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="leading" id="ToN-a5-tIU"/>
                                         <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="1eD-UM-fJn" secondAttribute="trailing" constant="8" id="UVU-Wr-vtb"/>
                                         <constraint firstItem="1eD-UM-fJn" firstAttribute="leading" secondItem="NPK-zy-N18" secondAttribute="leading" constant="7" id="cDE-1r-QAJ"/>
                                         <constraint firstItem="KHj-6W-sI9" firstAttribute="leading" secondItem="KqU-pX-q0e" secondAttribute="trailing" constant="8" id="e5Q-fa-nRq"/>
-                                        <constraint firstAttribute="centerY" secondItem="KqU-pX-q0e" secondAttribute="centerY" constant="7" id="edF-sW-3eG"/>
+                                        <constraint firstAttribute="centerY" secondItem="KqU-pX-q0e" secondAttribute="centerY" priority="750" constant="7" id="edF-sW-3eG"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="KqU-pX-q0e" secondAttribute="bottom" constant="6" id="hqn-YJ-G6F"/>
-                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="top" secondItem="KqU-pX-q0e" secondAttribute="bottom" constant="-2" id="k6n-fy-qyv"/>
+                                        <constraint firstItem="KHj-6W-sI9" firstAttribute="top" secondItem="KqU-pX-q0e" secondAttribute="bottom" id="k6n-fy-qyv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="stn-PX-mAm" secondAttribute="bottom" constant="9" id="nhf-0a-KG5"/>
                                         <constraint firstAttribute="centerY" secondItem="KHj-6W-sI9" secondAttribute="centerY" id="veS-zD-wX5"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="HBI-Q4-WRo"/>
+                                            <exclude reference="hqn-YJ-G6F"/>
                                             <exclude reference="IL5-Q6-266"/>
                                             <exclude reference="UVU-Wr-vtb"/>
                                             <exclude reference="e5Q-fa-nRq"/>
                                             <exclude reference="veS-zD-wX5"/>
-                                            <exclude reference="HBI-Q4-WRo"/>
-                                            <exclude reference="hqn-YJ-G6F"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -531,6 +543,7 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="creditsLabel" destination="KHj-6W-sI9" id="5tj-CU-Qyi"/>
+                                    <outlet property="errorLabel" destination="stn-PX-mAm" id="N0s-8u-hFh"/>
                                     <outlet property="itemImage" destination="1eD-UM-fJn" id="PGh-rp-uwK"/>
                                     <outlet property="titleLabel" destination="KqU-pX-q0e" id="1Px-5q-uyk"/>
                                 </connections>
@@ -544,7 +557,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt1-Jq-tLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="-333"/>
+            <point key="canvasLocation" x="2040.8" y="-333.28335832083962"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

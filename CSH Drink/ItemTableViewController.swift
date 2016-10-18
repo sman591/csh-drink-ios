@@ -49,14 +49,26 @@ class ItemTableViewController: UITableViewController {
         var textColor: UIColor
         var alpha: CGFloat
         
-        if item.enabled() && CurrentUser.canAffordItem(item) {
+        var errorText: String?
+        
+        if !item.enabled() {
+            errorText = "Unavailable"
+        } else if !CurrentUser.canAffordItem(item) {
+            errorText = "Insufficient funds"
+        } else {
+            errorText = nil
+        }
+        
+        if errorText == nil {
             alpha = 1
             textColor = UIColor(white: 0.29, alpha: alpha)
             cell.isUserInteractionEnabled = true
+            cell.errorLabel.removeFromSuperview()
         } else {
             alpha = 0.25
             textColor = UIColor(white: 0.29, alpha: alpha)
             cell.isUserInteractionEnabled = false
+            cell.errorLabel.text = errorText
         }
         
         cell.titleLabel.textColor = textColor
