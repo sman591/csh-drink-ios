@@ -409,7 +409,7 @@
 				TargetAttributes = {
 					17178B451A6F348A00E67C3A = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 7R48W84A8H;
+						DevelopmentTeam = YK3F8A59N5;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -706,6 +706,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CSH Drink/CSH Drink.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YK3F8A59N5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
@@ -731,6 +732,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CSH Drink/CSH Drink.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = YK3F8A59N5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
