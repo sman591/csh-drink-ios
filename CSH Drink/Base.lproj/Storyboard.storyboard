@@ -1,31 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="CriqueGrotesk-Bold.otf">
+        <array key="CriqueGrotesk-Bold.otf">
             <string>CriqueGrotesk-Bold</string>
-            <string>CriqueGrotesk-Bold</string>
-        </mutableArray>
-        <mutableArray key="CriqueGrotesk-Light.otf">
+        </array>
+        <array key="CriqueGrotesk-Light.otf">
             <string>CriqueGrotesk-Light</string>
-            <string>CriqueGrotesk-Light</string>
-        </mutableArray>
-        <mutableArray key="CriqueGrotesk-Medium.otf">
+        </array>
+        <array key="CriqueGrotesk-Medium.otf">
             <string>CriqueGrotesk-Medium</string>
-            <string>CriqueGrotesk-Medium</string>
-        </mutableArray>
-        <mutableArray key="CriqueGrotesk-Regular.otf">
+        </array>
+        <array key="CriqueGrotesk-Regular.otf">
             <string>CriqueGrotesk</string>
-            <string>CriqueGrotesk</string>
-            <string>CriqueGrotesk</string>
-            <string>CriqueGrotesk</string>
-            <string>CriqueGrotesk</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Account View Controller-->
@@ -37,11 +31,10 @@
                         <viewControllerLayoutGuide type="bottom" id="Mb6-tq-aCZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="auB-TV-rAT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.17499999701976776" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy-white-blur" translatesAutoresizingMaskIntoConstraints="NO" id="wQ8-SP-tkv">
-                                <rect key="frame" x="41" y="0.0" width="543" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wQ8-SP-tkv" secondAttribute="height" multiplier="133:200" id="39y-2h-lc7"/>
                                 </constraints>
@@ -52,24 +45,21 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="CSH Drink for iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V1i-w9-A0L">
-                                <rect key="frame" x="179" y="227" width="243" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-1J-e7f">
-                                <rect key="frame" x="237" y="285" width="126" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hee-Xo-5bJ">
-                                <rect key="frame" x="244" y="343" width="113" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Open WebDrink »">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="openWebDrinkAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="7nN-CH-KP0"/>
@@ -77,7 +67,6 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="Wll-BH-AyP">
-                                <rect key="frame" x="279" y="89" width="42" height="103"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="H3n-OH-cB9"/>
                                     <constraint firstAttribute="height" priority="50" constant="103" id="bZn-CB-CkP"/>
@@ -90,12 +79,11 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luu-s8-2Z8">
-                                <rect key="frame" x="233" y="375" width="134" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Open GitHub Repo »">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="openGitHubAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="rIf-nE-41E"/>
@@ -104,12 +92,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd4-ug-Mbg">
-                                <rect key="frame" x="266" y="407" width="68" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Sign Out »">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.83591777150000002" green="0.1333081264" blue="0.39172677769999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="tdA-IP-h6q"/>
@@ -117,18 +104,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrf-K0-xbe">
-                                <rect key="frame" x="547" y="28" width="37" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Close">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="LVX-pQ-GE6"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hee-Xo-5bJ" firstAttribute="top" secondItem="TAx-1J-e7f" secondAttribute="bottom" constant="27" id="2k9-lD-LUG"/>
                             <constraint firstItem="V1i-w9-A0L" firstAttribute="top" secondItem="Wll-BH-AyP" secondAttribute="bottom" priority="740" constant="35" id="6dS-iA-ayz"/>
@@ -157,10 +143,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Dv3-Zm-UPj"/>
                                 <exclude reference="OkZ-1R-F9W"/>
                                 <exclude reference="I2T-Mb-LBI"/>
                                 <exclude reference="C2T-iH-9k4"/>
+                                <exclude reference="Dv3-Zm-UPj"/>
                             </mask>
                         </variation>
                     </view>
@@ -178,22 +164,23 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="vzG-0s-ZAy" customClass="MachineTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Cyy-9A-GAB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="pAH-18-bMq" customClass="MachineTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pAH-18-bMq" id="b25-OK-nwy">
+                                    <frame key="frameInset" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smj-gG-CgQ">
-                                            <rect key="frame" x="16" y="14" width="543" height="15"/>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <size key="shadowOffset" width="0.0" height="1"/>
                                         </label>
                                     </subviews>
@@ -236,10 +223,10 @@
             <objects>
                 <navigationController id="VZK-WI-0bo" customClass="HistoryNavigationController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="History" image="history-tab-bar-empty" id="spy-EW-jX1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Y2j-ga-etS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Y2j-ga-etS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="HKs-bJ-ORx" kind="relationship" relationship="rootViewController" id="gaA-x0-YaY"/>
@@ -254,37 +241,38 @@
             <objects>
                 <tableViewController id="HKs-bJ-ORx" customClass="HistoryTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="7Jx-0H-SVo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="7MD-c8-d4R" customClass="DropTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7MD-c8-d4R" id="Kcp-aN-tuj">
+                                    <frame key="frameInset" width="375" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-cO-iEm">
-                                            <rect key="frame" x="23" y="15" width="80" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oy-cO-iEm">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Machine name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGt-0T-Bgn">
-                                            <rect key="frame" x="23" y="37" width="87" height="13"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Machine name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGt-0T-Bgn">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk-Bold" family="Crique Grotesk" pointSize="13"/>
-                                            <color key="textColor" red="0.52614030934343436" green="0.52614030934343436" blue="0.52614030934343436" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.52614030934343436" green="0.52614030934343436" blue="0.52614030934343436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx Credits" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-kd-W3R">
-                                            <rect key="frame" x="508" y="33" width="73" height="15"/>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="15"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-bd-aD4">
-                                            <rect key="frame" x="23" y="56" width="27" height="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-bd-aD4">
+                                            <frame key="frameInset" width="1000" height="1000"/>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk-Bold" family="Crique Grotesk" pointSize="12"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -301,7 +289,7 @@
                                         <constraint firstItem="o8E-bd-aD4" firstAttribute="leading" secondItem="Kcp-aN-tuj" secondAttribute="leadingMargin" constant="15" id="xCA-kJ-qiw"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="creditsLabel" destination="W9U-kd-W3R" id="H4H-ab-rVR"/>
                                     <outlet property="itemNameLabel" destination="2Oy-cO-iEm" id="jXK-aK-8OT"/>
@@ -330,11 +318,10 @@
                         <viewControllerLayoutGuide type="bottom" id="oJO-rO-Lgm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a0p-dz-JQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.17499999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy-white-blur" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-8D-tGX">
-                                <rect key="frame" x="41" y="0.0" width="543" height="500"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wcU-8D-tGX" secondAttribute="height" multiplier="133:200" id="94f-RC-lJS"/>
                                 </constraints>
@@ -345,47 +332,40 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Enter your Drink API Key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-iL-geu">
-                                <rect key="frame" x="16" y="161" width="568" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="31"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQA-cK-YsI">
-                                <rect key="frame" x="26" y="207" width="548" height="26"/>
                                 <string key="text">You can't use CSH Drink until you provide an API key. You can login automatically below, or find the API key manually in WebDrink Settings.</string>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="US7-Ny-yfZ">
-                                <rect key="frame" x="282" y="333" width="37" height="37"/>
-                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="US7-Ny-yfZ"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-Wn-TzY">
-                                <rect key="frame" x="228" y="241" width="144" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Login with WebDrink »">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.83591777146464641" green="0.13330812641633621" blue="0.39172677772478243" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.83591777146464641" green="0.13330812641633621" blue="0.39172677772478243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="6CC-5u-x6g"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abcd1234efgh5678" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-ON-imZ">
-                                <rect key="frame" x="208" y="281" width="184" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.91000000000000003" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.69019607839999997" green="0.098039215690000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.91000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.62006962299346924" green="0.0" blue="0.41875606775283813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Fbv-tM-4bI"/>
                                     <constraint firstAttribute="width" constant="184" id="WpH-ig-q8B"/>
                                 </constraints>
-                                <color key="textColor" red="0.69019607839999997" green="0.098039215690000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.62006962299346924" green="0.0" blue="0.41875606775283813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="3gU-Yk-BUT">
-                                <rect key="frame" x="279" y="35" width="42" height="103"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="3gU-Yk-BUT">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5sh-SB-ppQ"/>
                                     <constraint firstAttribute="height" priority="50" constant="103" id="zK3-E4-cyd"/>
@@ -398,7 +378,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90588235289999997" green="0.24313725489999999" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.87100791931152344" green="0.1375344842672348" blue="0.4037153422832489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rNH-iL-geu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3gU-Yk-BUT" secondAttribute="bottom" constant="15" id="1YH-Ud-CT9"/>
                             <constraint firstItem="oJO-rO-Lgm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="US7-Ny-yfZ" secondAttribute="bottom" priority="900" constant="230" id="1z7-25-Lzr"/>
@@ -432,12 +412,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="GaY-ET-7HT"/>
+                                <exclude reference="cDo-uK-NS1"/>
+                                <exclude reference="1YH-Ud-CT9"/>
                                 <exclude reference="MZb-6n-F2L"/>
                                 <exclude reference="WZc-jO-bFG"/>
                                 <exclude reference="WuF-VK-UZ7"/>
-                                <exclude reference="1YH-Ud-CT9"/>
-                                <exclude reference="GaY-ET-7HT"/>
-                                <exclude reference="cDo-uK-NS1"/>
                             </mask>
                         </variation>
                     </view>
@@ -456,10 +436,10 @@
             <objects>
                 <navigationController id="WrW-JY-xrM" customClass="DropNavigationController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Drop" image="drink" id="DLY-1o-OIt"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="i1f-DR-GIn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="i1f-DR-GIn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vzG-0s-ZAy" kind="relationship" relationship="rootViewController" id="pLe-YB-nMd"/>
@@ -474,26 +454,26 @@
             <objects>
                 <tableViewController id="P8n-OQ-FXi" customClass="ItemTableViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wdk-pd-2QT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="90" id="QY2-MH-Ome" customClass="ItemTableViewCell" customModule="CSH_Drink" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QY2-MH-Ome" id="NPK-zy-N18">
+                                    <frame key="frameInset" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="xxx Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHj-6W-sI9">
-                                            <rect key="frame" x="96" y="45" width="64" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="8zZ-TZ-tjt"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="13"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unkown Drink" translatesAutoresizingMaskIntoConstraints="NO" id="1eD-UM-fJn">
-                                            <rect key="frame" x="7" y="5" width="79" height="79"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="1eD-UM-fJn" secondAttribute="height" multiplier="1:1" id="41t-RB-qih"/>
                                                 <constraint firstAttribute="height" priority="999" constant="60" id="Llr-lQ-Opf"/>
@@ -505,14 +485,13 @@
                                             </variation>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KqU-pX-q0e">
-                                            <rect key="frame" x="96" y="29" width="496" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="61" id="IOR-bG-Rmo"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="17"/>
-                                            <color key="textColor" white="0.28999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <size key="shadowOffset" width="0.0" height="1"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -539,16 +518,16 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="HBI-Q4-WRo"/>
-                                            <exclude reference="hqn-YJ-G6F"/>
                                             <exclude reference="IL5-Q6-266"/>
                                             <exclude reference="UVU-Wr-vtb"/>
                                             <exclude reference="e5Q-fa-nRq"/>
                                             <exclude reference="veS-zD-wX5"/>
+                                            <exclude reference="HBI-Q4-WRo"/>
+                                            <exclude reference="hqn-YJ-G6F"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="creditsLabel" destination="KHj-6W-sI9" id="5tj-CU-Qyi"/>
@@ -575,9 +554,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="WrW-JY-xrM" kind="relationship" relationship="viewControllers" id="Iu2-hS-55I"/>

@@ -8,7 +8,7 @@
         NSString *value = [parameters[key] description];
         key   = [key DPL_stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         value = [value DPL_stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        [query appendFormat:@"%@%@=%@", (idx > 0) ? @"&" : @"", key, value];
+        [query appendFormat:@"%@%@%@%@", (idx > 0) ? @"&" : @"", key, (value.length > 0) ? @"=" : @"", value];
     }];
     return [query copy];
 }
@@ -19,10 +19,16 @@
     NSMutableDictionary *paramsDict = [NSMutableDictionary dictionaryWithCapacity:[params count]];
     for (NSString *param in params) {
         NSArray *pairs = [param componentsSeparatedByString:@"="];
-        if ([pairs count] == 2) {
+        if (pairs.count == 2) {
+            // e.g. ?key=value
             NSString *key   = [pairs[0] DPL_stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             NSString *value = [pairs[1] DPL_stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             paramsDict[key] = value;
+        }
+        else if (pairs.count == 1) {
+            // e.g. ?key
+            NSString *key = [[pairs firstObject] DPL_stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            paramsDict[key] = @"";
         }
     }
     return [paramsDict copy];
@@ -32,19 +38,13 @@
 #pragma mark - URL Encoding/Decoding
 
 - (NSString *)DPL_stringByAddingPercentEscapesUsingEncoding:(NSStringEncoding)encoding {
-    return (__bridge_transfer NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                                 (__bridge CFStringRef)self,
-                                                                                 NULL,
-                                                                                 (__bridge CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                 kCFStringEncodingUTF8);
+    NSCharacterSet *allowedCharactersSet = [NSCharacterSet characterSetWithCharactersInString:@"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.~"];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharactersSet];
 }
 
 
 - (NSString *)DPL_stringByReplacingPercentEscapesUsingEncoding:(NSStringEncoding)encoding {
-    return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
-                                                                                                 (__bridge CFStringRef)self,
-                                                                                                 CFSTR(""),
-                                                                                                 kCFStringEncodingUTF8);
+    return [self stringByRemovingPercentEncoding];
 }
 
 @end

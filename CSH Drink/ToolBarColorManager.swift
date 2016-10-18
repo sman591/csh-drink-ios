@@ -30,30 +30,30 @@ class ToolBarColorManager: NSObject {
     
     /// Sets the system toolbar colors to what your provide.
     ///
-    class func setToolBarColors(tintColor tintColor: UIColor, barTintColor: UIColor, textColor: UIColor, lightStatus: Bool, opaque: Bool) {
+    class func setToolBarColors(tintColor: UIColor, barTintColor: UIColor, textColor: UIColor, lightStatus: Bool, opaque: Bool) {
         var navBarTitleAttributes = [String : AnyObject]()
         navBarTitleAttributes[NSFontAttributeName] = UIFont(name: "CriqueGrotesk-Bold", size: 18.0)
-        navBarTitleAttributes[NSForegroundColorAttributeName] = UIColor.whiteColor()
+        navBarTitleAttributes[NSForegroundColorAttributeName] = UIColor.white
         
         UINavigationBar.appearance().tintColor = tintColor
-        UINavigationBar.appearance().translucent = !opaque;
+        UINavigationBar.appearance().isTranslucent = !opaque;
         
         UINavigationBar.appearance().titleTextAttributes = navBarTitleAttributes
         
         UITabBar.appearance().tintColor = tintColor
-        UITabBar.appearance().opaque = opaque;
+        UITabBar.appearance().isOpaque = opaque;
         
         var tabBarSelectedTitleAttributes = [String : AnyObject]()
         tabBarSelectedTitleAttributes[NSFontAttributeName] = UIFont(name: "CriqueGrotesk-Bold", size: 10.0)
-        tabBarSelectedTitleAttributes[NSForegroundColorAttributeName] = UIColor.whiteColor()
+        tabBarSelectedTitleAttributes[NSForegroundColorAttributeName] = UIColor.white
         
-        UITabBarItem.appearance().setTitleTextAttributes(tabBarSelectedTitleAttributes, forState: .Selected)
+        UITabBarItem.appearance().setTitleTextAttributes(tabBarSelectedTitleAttributes, for: .selected)
         
         var tabBarUnselectedTitleAttributes = [String : AnyObject]()
         tabBarUnselectedTitleAttributes[NSFontAttributeName] = UIFont(name: "CriqueGrotesk", size: 10.0)
         tabBarUnselectedTitleAttributes[NSForegroundColorAttributeName] = UIColor(white: 1.0, alpha: 0.5)
         
-        UITabBarItem.appearance().setTitleTextAttributes(tabBarUnselectedTitleAttributes, forState: .Normal)
-        UIApplication.sharedApplication().statusBarStyle = lightStatus ? .LightContent : .Default
+        UITabBarItem.appearance().setTitleTextAttributes(tabBarUnselectedTitleAttributes, for: UIControlState())
+        UIApplication.shared.statusBarStyle = lightStatus ? .lightContent : .default
     }
 }

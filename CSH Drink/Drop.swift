@@ -15,6 +15,20 @@ struct Drop {
     let time: String
     
     func humanPrice() -> String {
-        return "\(item_price) " + ("Credit".pluralize(item_price))
+        return "\(item_price) " + ("Credit".pluralize(count: item_price))
+    }
+    
+    func timestamp() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-DD HH:mm:ss"
+        return dateFormatter.date(from: time)
+    }
+    
+    func relativeTime() -> String {
+        if let date = timestamp() {
+            return timeAgoSince(date, timestamp: time)
+        } else {
+            return time
+        }
     }
 }

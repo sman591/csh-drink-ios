@@ -1,7 +1,11 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/DeepLinkKit" "$PODS_CONFIGURATION_BUILD_DIR/Haneke" "$PODS_CONFIGURATION_BUILD_DIR/KeychainAccess" "$PODS_CONFIGURATION_BUILD_DIR/Mixpanel" "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Alamofire.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/DeepLinkKit.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Haneke.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KeychainAccess.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Mixpanel.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Punctual.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftyJSON.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "DeepLinkKit" -framework "Haneke" -framework "KeychainAccess" -framework "Mixpanel" -framework "Punctual" -framework "SwiftyJSON"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/DeepLinkKit/DeepLinkKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Haneke/Haneke.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/KeychainAccess/KeychainAccess.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Mixpanel/Mixpanel.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "DeepLinkKit" -framework "Haneke" -framework "KeychainAccess" -framework "Mixpanel" -framework "SwiftyJSON"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-CSH Drink
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

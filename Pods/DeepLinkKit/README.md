@@ -5,8 +5,8 @@
 
 
 <p align="center">
-<a href="https://travis-ci.org/usebutton/DeepLinkKit"><img src="http://img.shields.io/travis/usebutton/DeepLinkKit.svg?style=flat" alt="CI Status" /></a>
-<a href='https://coveralls.io/r/usebutton/DeepLinkKit'><img src='https://coveralls.io/repos/usebutton/DeepLinkKit/badge.svg?branch=master' alt='Coverage Status' /></a>
+<a href="https://travis-ci.org/button/DeepLinkKit"><img src="http://img.shields.io/travis/button/DeepLinkKit.svg?style=flat" alt="CI Status" /></a>
+<a href='https://coveralls.io/github/button/DeepLinkKit?branch=master'><img src='https://coveralls.io/repos/github/button/DeepLinkKit/badge.svg?branch=master' alt='Coverage Status' /></a>
 <a href="http://cocoadocs.org/docsets/DeepLinkKit"><img src="https://img.shields.io/cocoapods/v/DeepLinkKit.svg?style=flat" alt="Version" /></a>
 <a href="http://cocoadocs.org/docsets/DeepLinkKit"><img src="https://img.shields.io/cocoapods/l/DeepLinkKit.svg?style=flat" alt="License" /></a>
 <a href="http://cocoadocs.org/docsets/DeepLinkKit"><img src="https://img.shields.io/cocoapods/p/DeepLinkKit.svg?style=flat" alt="Platform" /></a>
@@ -16,7 +16,9 @@
 
 DeepLink Kit is a splendid route-matching, block-based way to handle your deep links. Rather than decide how to format your URLs, parse them, pass data, and navigate to specific content or perform actions, this library and a few lines of code will get you on your way.
 
-[Full Documentation](http://www.usebutton.com/sdk/deep-links/integration-guide)
+[Full Documentation](https://github.com/button/DeepLinkKit/wiki/DeepLink-Kit-Integration-Guide)
+
+[Guide to add Universal Links to your app](https://www.usebutton.com/developers/universal-links/)
 
 ## Check it out
 
@@ -33,6 +35,7 @@ the library, simply add the following line to your Podfile:
 pod "DeepLinkKit"
 ```
 
+If you don't use CocoaPods, you can include all of the source files from the [DeepLinkKit directory](https://github.com/button/DeepLinkKit/tree/master/DeepLinkKit) in your project.
 
 ## Usage
 Add deep link support to your app in 5 minutes or less following these simple steps.
@@ -98,7 +101,7 @@ _**Note:** If your application supports [Apple's new universal links](https://de
 
 
 
-Learn more about the DeepLinkKit by reading our [Integration Guide](http://www.usebutton.com/sdk/deep-links/integration-guide).
+Learn more about the DeepLinkKit by reading our [Integration Guide](https://github.com/button/DeepLinkKit/wiki/DeepLink-Kit-Integration-Guide).
 
 ## Route Registration Examples
 
@@ -140,6 +143,67 @@ router[@"scheme-one://timeline"] = ^{ … }
 // Does not match the URL.
 router[@"scheme-two://timeline"] = ^{ … }
 ```
+
+### Regex Route Matching
+You can use regex in your route patterns as well to give you maximum flexibility.
+
+**Match any url**
+
+_The following will match all incoming urls_
+```objc
+router[@".*"] ^(DPLDeepLink *link){
+  // This will match all incoming links
+}
+```
+_**Note:** Routes are matched in the order they're registered so registering this route first will prevent all other more specific routes from matching._
+
+**Match any url with a given scheme**
+
+_The following will match all incoming links with the scheme, `myscheme://`_
+```objc
+router[@"myscheme://.*"] ^(DPLDeepLink *link){
+  // matches all urls with a scheme of `myscheme://`
+}
+```
+
+**You can name your regex groups too**
+
+_The following will match any url with a `host` of `trycaviar.com` and hand you `:path` in the route params._
+```objc
+// Given the url ‘https://trycaviar.com/manhattan/nicoletta-297`
+router[@"trycaviar.com/:path(.*)"] ^(DPLDeepLink *link){
+  // `link[@"path"]` => @"manhattan/nicoletta-297"
+}
+```
+
+**Match multiple path components**
+
+_In this example, you'll get `:city` and `:restaurant` in the route params._
+```objc
+// Given the url ‘https://trycaviar.com/manhattan/nicoletta-297`
+router[@"trycaviar.com/:city([a-zA-Z]+)/:restaurant(.*)"] ^(DPLDeepLink *link){
+  // `link[@"city"]` => @"manhattan"
+  // `link[@"restaurant"]` => @"nicoletta-297"
+}
+```
+_If the restaurant ids are numbers, you could limit your matches as follows._
+```objc
+// Given the url ‘https://trycaviar.com/manhattan/297`
+router[@"trycaviar.com/:city([a-zA-Z]+)/:restaurant([0-9])"] ^(DPLDeepLink *link){
+  // `link[@"city"]` => @"manhattan"
+  // `link[@"restaurant"]` => @"297"
+}
+```
+
+**Name some groups and not others**
+```objc
+// Lets say the url is ‘https://trycaviar.com/manhattan/pizza/nicoletta-297`
+router[@"trycaviar.com/:city([a-zA-Z]+)/[a-z]+/:restaurant(.*)"] ^(DPLDeepLink *link){
+  // `link[@"city"]` => @"manhattan"
+  // `link[@"restaurant"]` => @"nicoletta-297"
+}
+```
+_The above would match ‘https://trycaviar.com/manhattan/pizza/nicoletta-297’ but not ‘https://trycaviar.com/manhattan/PIZZA/nicoletta-297’ or ‘https://trycaviar.com/manhattan/pizza-places/nicoletta-297’, etc_
 
 ## AppLinks Support
 
@@ -204,7 +268,7 @@ router[@"categories"] = ^(DPLDeepLink *link) {
 
 ## Authors
 
-[Wes Smith](http://twitter.com/w5mith)<br />
+[Wes Smith](http://twitter.com/ioswes)<br />
 [Chris Maddern](http://twitter.com/chrismaddern)
 
 ## License

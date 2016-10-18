@@ -15,7 +15,7 @@ import Mixpanel
 
 class CurrentUser: NSObject {
 
-    private struct Constants {
+    fileprivate struct Constants {
         static let CreditsKey = "creditsKey"
     }
     
@@ -28,14 +28,14 @@ class CurrentUser: NSObject {
     
     var credits: Dynamic<Int>
     var uid: String
-    var updatedAt: NSDate
+    var updatedAt: Date
     var name: String
     var admin: Bool
     
     init(credits: Int = 0, uid: String = "", name: String = "", admin: Bool = false) {
         self.credits = Dynamic(credits)
         self.uid = uid
-        self.updatedAt = NSDate()
+        self.updatedAt = Date()
         self.name = name
         self.admin = admin
         CurrentUser.updateUser()
@@ -50,11 +50,11 @@ class CurrentUser: NSObject {
         AuthenticationManager.invalidateKey()
     }
     
-    func setCredits(credits: Int) {
+    func setCredits(_ credits: Int) {
         self.credits = Dynamic(credits)
     }
     
-    class func setApiKey(apiKey: String) {
+    class func setApiKey(_ apiKey: String) {
         AuthenticationManager.apiKey = apiKey
     }
     
@@ -63,12 +63,12 @@ class CurrentUser: NSObject {
     }
     
     class func updateUser() {
-        DrinkAPI.getUserInfo({ data in
+        DrinkAPI.getUserInfo(completion: { data in
             self.sharedInstance.credits.value = data["credits"].intValue
             self.sharedInstance.uid = data["uid"].stringValue
             self.sharedInstance.name = data["cn"].stringValue
             self.sharedInstance.admin = data["admin"].boolValue
-            self.sharedInstance.updatedAt = NSDate()
+            self.sharedInstance.updatedAt = NSDate() as Date
             updateUserAnalytics()
         })
     }
@@ -78,14 +78,14 @@ class CurrentUser: NSObject {
         let user = CurrentUser.sharedInstance
         mp.identify(user.uid)
         mp.people.set([
-            "$last_login": NSDate(),
+            "$last_login": Date(),
             "$name": user.name,
             "credits": user.credits.value,
             "admin": user.admin
         ])
     }
 
-    class func canAffordItem(item: Item) -> Bool {
+    class func canAffordItem(_ item: Item) -> Bool {
         return CurrentUser.sharedInstance.credits.value >= item.price
     }
 

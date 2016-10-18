@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05068AD11D6EDFA5F3CCBD2B /* Pods_CSH_Drink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB42272F1EE50D9EF2DAF37F /* Pods_CSH_Drink.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		170799C61AEF179A00E6CF4C /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */; };
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
@@ -67,6 +66,9 @@
 		17BF9D141CAAD7E300B67454 /* CSH_DrinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BF9D131CAAD7E300B67454 /* CSH_DrinkTests.swift */; };
 		17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */; };
 		17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FB3B371B141A3400232F6A /* AccountViewController.swift */; };
+		54FB93D71DB1526100E24CD3 /* Punctual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB93D61DB1526100E24CD3 /* Punctual.swift */; };
+		54FB93DA1DB18B7E00E24CD3 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB93D91DB18B7E00E24CD3 /* TimeAgo.swift */; };
+		91CEB33B41AA01F1167B533B /* Pods_CSH_Drink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,9 +147,12 @@
 		17BF9D151CAAD7E300B67454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17E15A441B88F4F800FC6714 /* DPLProductRouteHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPLProductRouteHandler.swift; sourceTree = "<group>"; };
 		17FB3B371B141A3400232F6A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.debug.xcconfig"; sourceTree = "<group>"; };
-		58165FDF78715024CC69A9CB /* Pods-CSH Drink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.release.xcconfig"; sourceTree = "<group>"; };
-		EB42272F1EE50D9EF2DAF37F /* Pods_CSH_Drink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSH_Drink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54FB93D61DB1526100E24CD3 /* Punctual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Punctual.swift; sourceTree = "<group>"; };
+		54FB93D81DB17E7F00E24CD3 /* CSH Drink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CSH Drink.entitlements"; sourceTree = "<group>"; };
+		54FB93D91DB18B7E00E24CD3 /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
+		7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSH_Drink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D5E3363966294E92B889DB /* Pods-CSH Drink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.release.xcconfig"; sourceTree = "<group>"; };
+		E2A215E47E2124ED89163C2E /* Pods-CSH Drink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSH Drink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05068AD11D6EDFA5F3CCBD2B /* Pods_CSH_Drink.framework in Frameworks */,
+				91CEB33B41AA01F1167B533B /* Pods_CSH_Drink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +182,8 @@
 				17178B601A6F348A00E67C3A /* CSH DrinkTests */,
 				17BF9D121CAAD7E300B67454 /* CSH DrinkTests */,
 				17178B471A6F348A00E67C3A /* Products */,
-				2E5430FA84EDF4DE2BD7AF60 /* Frameworks */,
-				FA2DEB92E6DA762B54B9D655 /* Pods */,
+				A8BB53F483F607ECA4367B9E /* Pods */,
+				42F05247DEFF22D06660EC43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +199,7 @@
 		17178B481A6F348A00E67C3A /* CSH Drink */ = {
 			isa = PBXGroup;
 			children = (
+				54FB93D81DB17E7F00E24CD3 /* CSH Drink.entitlements */,
 				17E15A431B88F4DD00FC6714 /* RouteHandlers */,
 				172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */,
 				17178B4B1A6F348A00E67C3A /* AppDelegate.swift */,
@@ -219,6 +225,8 @@
 				17178B4A1A6F348A00E67C3A /* Info.plist */,
 				174B311B1A91C5C60092CFF6 /* Dynamic.swift */,
 				1770E0511AAD30DF0077FA94 /* JSSAlertView.swift */,
+				54FB93D91DB18B7E00E24CD3 /* TimeAgo.swift */,
+				54FB93D61DB1526100E24CD3 /* Punctual.swift */,
 				175022F31ADF5EB700F1F33C /* UIColor+Drink.swift */,
 				17A5506B1AC229E80010732C /* Pluralize.swift */,
 			);
@@ -330,19 +338,19 @@
 			name = RouteHandlers;
 			sourceTree = "<group>";
 		};
-		2E5430FA84EDF4DE2BD7AF60 /* Frameworks */ = {
+		42F05247DEFF22D06660EC43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB42272F1EE50D9EF2DAF37F /* Pods_CSH_Drink.framework */,
+				7BF8B0177D68B1A6E343ED60 /* Pods_CSH_Drink.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA2DEB92E6DA762B54B9D655 /* Pods */ = {
+		A8BB53F483F607ECA4367B9E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */,
-				58165FDF78715024CC69A9CB /* Pods-CSH Drink.release.xcconfig */,
+				E2A215E47E2124ED89163C2E /* Pods-CSH Drink.debug.xcconfig */,
+				A9D5E3363966294E92B889DB /* Pods-CSH Drink.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -354,12 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17178B671A6F348A00E67C3A /* Build configuration list for PBXNativeTarget "CSH Drink" */;
 			buildPhases = (
-				13FA4BBD32895D5970FD01AF /* Check Pods Manifest.lock */,
+				3DB0C870EE49DE198C7020B4 /* [CP] Check Pods Manifest.lock */,
 				17178B421A6F348A00E67C3A /* Sources */,
 				17178B431A6F348A00E67C3A /* Frameworks */,
 				17178B441A6F348A00E67C3A /* Resources */,
-				99363E2553F1ABE725F0933E /* Embed Pods Frameworks */,
-				BD01361C31C230F9DC36D367 /* Copy Pods Resources */,
+				77B33E81C26B80B529A71060 /* [CP] Embed Pods Frameworks */,
+				6C6C2237B4CB9D78A76080AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -396,16 +404,23 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Stuart Olivera";
 				TargetAttributes = {
 					17178B451A6F348A00E67C3A = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 7R48W84A8H;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					17BF9D101CAAD7E300B67454 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7R48W84A8H;
+						LastSwiftMigration = 0800;
 						TestTargetID = 17178B451A6F348A00E67C3A;
 					};
 				};
@@ -481,49 +496,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13FA4BBD32895D5970FD01AF /* Check Pods Manifest.lock */ = {
+		3DB0C870EE49DE198C7020B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		99363E2553F1ABE725F0933E /* Embed Pods Frameworks */ = {
+		6C6C2237B4CB9D78A76080AA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD01361C31C230F9DC36D367 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77B33E81C26B80B529A71060 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CSH Drink/Pods-CSH Drink-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -554,6 +569,8 @@
 				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
 				174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */,
 				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,
+				54FB93D71DB1526100E24CD3 /* Punctual.swift in Sources */,
+				54FB93DA1DB18B7E00E24CD3 /* TimeAgo.swift in Sources */,
 				1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */,
 				17178BD21A6F7CA900E67C3A /* Item.swift in Sources */,
 				17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */,
@@ -594,6 +611,7 @@
 		17178B651A6F348A00E67C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -604,17 +622,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -627,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -639,6 +659,7 @@
 		17178B661A6F348A00E67C3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -649,25 +670,28 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -675,9 +699,11 @@
 		};
 		17178B681A6F348A00E67C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44CC46333620CB3A95680EEC /* Pods-CSH Drink.debug.xcconfig */;
+			baseConfigurationReference = E2A215E47E2124ED89163C2E /* Pods-CSH Drink.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CSH Drink/CSH Drink.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -686,20 +712,23 @@
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.csh.Drink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		17178B691A6F348A00E67C3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58165FDF78715024CC69A9CB /* Pods-CSH Drink.release.xcconfig */;
+			baseConfigurationReference = A9D5E3363966294E92B889DB /* Pods-CSH Drink.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "CSH Drink/CSH Drink.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -708,12 +737,13 @@
 				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "CSH Drink/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.csh.Drink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -730,6 +760,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rit.csh.CSH-DrinkTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSH Drink.app/CSH Drink";
 			};
 			name = Debug;
@@ -747,6 +778,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rit.csh.CSH-DrinkTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CSH Drink.app/CSH Drink";
 			};
 			name = Release;
@@ -779,6 +811,7 @@
 				17BF9D191CAAD7E300B67454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
