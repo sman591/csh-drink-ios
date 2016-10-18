@@ -17,18 +17,8 @@ public func timeAgoSince(_ date: Date, timestamp: String) -> String {
     let unitFlags: NSCalendar.Unit = [.second, .minute, .hour, .day, .weekOfYear, .month, .year]
     let components = (calendar as NSCalendar).components(unitFlags, from: date, to: now, options: [])
     
-    if let year = components.year, year >= 2 {
-        // return "\(year) years ago"
-        return timestamp
-    }
-    
-    if let year = components.year, year >= 1 {
-        // return "Last year"
-        return timestamp
-    }
     
     if let month = components.month, month >= 2 {
-        // return "\(month) months ago"
         return timestamp
     }
     
