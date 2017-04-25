@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.0.1)
-  - DeepLinkKit (1.2.1)
+  - DeepLinkKit (1.2.2)
   - Haneke (1.0.2)
   - KeychainAccess (3.0.0)
   - Mixpanel (3.0.4):
@@ -18,7 +18,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  DeepLinkKit: 4c3a713b7ecc6c6e25ba56c87d0c728f6035a9ef
+  DeepLinkKit: e8f59860e13714f7467b831499e052dc8da51924
   Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
   Mixpanel: 4a2330c26556109d2f42b01e36a05eb9e2caf25e
@@ -26,4 +26,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: da28e21b4aebe3178abe51f44da2720e20a8603f
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.2.1
