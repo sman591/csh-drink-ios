@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1700955E1EB0434D00E7C6B9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1700955D1EB0434D00E7C6B9 /* Launch Screen.storyboard */; };
 		170799C61AEF179A00E6CF4C /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */; };
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1700955D1EB0434D00E7C6B9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "CSH Drink/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		170799C51AEF179A00E6CF4C /* HistoryNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 		17178B461A6F348A00E67C3A /* CSH Drink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CSH Drink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17178B4A1A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				17178B511A6F348A00E67C3A /* Storyboard.storyboard */,
+				1700955D1EB0434D00E7C6B9 /* Launch Screen.storyboard */,
 				17178B481A6F348A00E67C3A /* CSH Drink */,
 				17178B601A6F348A00E67C3A /* CSH DrinkTests */,
 				17BF9D121CAAD7E300B67454 /* CSH DrinkTests */,
@@ -456,6 +459,7 @@
 				1728EC551A70A7C300339ABE /* CriqueGroteskDisplay-LightItalic.otf in Resources */,
 				1728EC531A70A7C300339ABE /* CriqueGroteskDisplay-Italic.otf in Resources */,
 				1728EC581A70A7C300339ABE /* CriqueGroteskDisplay-Regular.otf in Resources */,
+				1700955E1EB0434D00E7C6B9 /* Launch Screen.storyboard in Resources */,
 				1728EC4D1A70A7C300339ABE /* CriqueGroteskDisplay-Black.otf in Resources */,
 				1728EC401A70A7C300339ABE /* CriqueGrotesk-BoldItalic.otf in Resources */,
 				1728EC521A70A7C300339ABE /* CriqueGroteskDisplay-HeavyItalic.otf in Resources */,
