@@ -1,5 +1,5 @@
 //
-//  DropNavigationController.swift
+//  HistoryNavigationController.swift
 //  CSH Drink
 //
 //  Created by Stuart Olivera on 4/16/15.
