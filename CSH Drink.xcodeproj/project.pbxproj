@@ -611,7 +611,6 @@
 		17178B651A6F348A00E67C3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -659,7 +658,6 @@
 		17178B661A6F348A00E67C3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -701,7 +699,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2A215E47E2124ED89163C2E /* Pods-CSH Drink.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "CSH Drink/CSH Drink.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -727,7 +724,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9D5E3363966294E92B889DB /* Pods-CSH Drink.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "CSH Drink/CSH Drink.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
