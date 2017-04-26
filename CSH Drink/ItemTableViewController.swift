@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 import Haneke
 import Mixpanel
 
@@ -14,10 +16,31 @@ class ItemTableViewController: UITableViewController {
 
     let delayOptions = [10, 20, 30, 45, 60]
     
-    var items: [Item]!
+    var machines = [Machine]()
+    
+    @IBOutlet weak var creditsOutlet: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Machines"
+
+        if !CurrentUser.isLoggedIn() {
+            self.performSegue(withIdentifier: "goto_login", sender: self)
+        }
+        
+        CurrentUser.sharedInstance.credits.bindAndFire {
+            [unowned self] in
+            self.creditsOutlet.title = "\($0) " + ("credit".pluralize(count: $0))
+        }
+        
+        
+        updateMachines()
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: #selector(ItemTableViewController.refresh(_:)), for: UIControlEvents.valueChanged)
+        
+        Mixpanel.sharedInstance().track("Opened machine item list")
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,20 +51,30 @@ class ItemTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 1
+        return self.machines.count
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.machines[section].name
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.items.count
+        return self.machines[section].items.count
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarItem.image = UIImage(named: "drink-outline")
+        self.tabBarItem.selectedImage = UIImage(named: "drink")
+        super.viewDidAppear(animated)
     }
     
     override func tableView(_ tableView: UITableView?, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
         
-        let item = self.items[(indexPath as NSIndexPath).row]
+        let item = self.machines[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).row]
         
         cell.titleLabel.text = item.name
         cell.creditsLabel.text = item.humanPrice()
@@ -94,7 +127,7 @@ class ItemTableViewController: UITableViewController {
                 self.tableView.setEditing(false, animated: true)
                 self.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
                 self.confirmDrop(
-                    self.items[(indexPath as NSIndexPath).row],
+                    self.machines[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).row],
                     delay: delay,
                     dismiss: {
                         self.tableView.deselectRow(at: indexPath, animated: true)
@@ -111,7 +144,7 @@ class ItemTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         confirmDrop(
-            self.items[(indexPath as NSIndexPath).row],
+            self.machines[(indexPath as NSIndexPath).section].items[(indexPath as NSIndexPath).row],
             delay: 0,
             dismiss: {
                 self.tableView.deselectRow(at: indexPath, animated: true)
@@ -179,6 +212,42 @@ class ItemTableViewController: UITableViewController {
     func delay(_ delay:Double, closure:@escaping ()->()) {
         DispatchQueue.main.asyncAfter(
             deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+    }
+    
+    func refresh(_ sender: AnyObject) {
+        updateMachines()
+        CurrentUser.updateUser()
+    }
+    
+    func updateMachines() {
+        var machines = [Machine]()
+        DrinkAPI.getMachinesStock(completion: { data in
+            for (_, machine): (String, JSON) in data {
+                var items = [Item]()
+                for (_, item): (String, JSON) in machine {
+                    items.append(Item(
+                        name: item["item_name"].stringValue,
+                        price: item["item_price"].intValue,
+                        machine_id: item["machine_id"].intValue,
+                        slot_num: item["slot_num"].intValue,
+                        available: item["available"].intValue,
+                        item_id: item["item_id"].intValue,
+                        status: item["status"].stringValue
+                    ))
+                }
+                if items.count > 0 {
+                    items.sort(by: { $0.enabled() && !$1.enabled() })
+                    machines.append(Machine(name: machine[0]["display_name"].stringValue, items: items))
+                }
+            }
+            machines.sort(by: { $0.items.count < $1.items.count })
+            self.machines = machines
+            self.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }, failure: { error, message in
+            self.refreshControl?.endRefreshing()
+            DrinkAPI.genericApiError(self.view.window!.rootViewController!, message: message)
+        })
     }
     
 }

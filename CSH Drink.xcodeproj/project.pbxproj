@@ -11,7 +11,6 @@
 		17178B4C1A6F348A00E67C3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4B1A6F348A00E67C3A /* AppDelegate.swift */; };
 		17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178B4F1A6F348A00E67C3A /* HistoryTableViewController.swift */; };
 		17178B551A6F348A00E67C3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17178B541A6F348A00E67C3A /* Images.xcassets */; };
-		17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */; };
 		17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCB1A6F63B800E67C3A /* Machine.swift */; };
 		17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */; };
 		17178BD21A6F7CA900E67C3A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17178BD11A6F7CA900E67C3A /* Item.swift */; };
@@ -50,7 +49,6 @@
 		1728EC5C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */; };
 		1728EC5D1A70A7D000339ABE /* CriqueGrotesk-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1D1A70A7C300339ABE /* CriqueGrotesk-Black.otf */; };
 		1728EC5E1A70A7D300339ABE /* CriqueGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1728EC1F1A70A7C300339ABE /* CriqueGrotesk-Bold.otf */; };
-		1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */; };
 		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
 		172F8EB41B128BCB0010CA60 /* DrinkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */; };
 		17374AF01ADF89D400B3F1C2 /* DropNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */; };
@@ -91,7 +89,6 @@
 		17178B541A6F348A00E67C3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17178B621A6F348A00E67C3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17178B631A6F348A00E67C3A /* CSH_DrinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSH_DrinkTests.swift; sourceTree = "<group>"; };
-		17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewController.swift; sourceTree = "<group>"; };
 		17178BCB1A6F63B800E67C3A /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		17178BD11A6F7CA900E67C3A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		1728EC3A1A70A7C300339ABE /* CriqueGroteskDisplay-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-ThinItalic.otf"; sourceTree = "<group>"; };
 		1728EC3B1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLight.otf"; sourceTree = "<group>"; };
 		1728EC3C1A70A7C300339ABE /* CriqueGroteskDisplay-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CriqueGroteskDisplay-UltraLightItalic.otf"; sourceTree = "<group>"; };
-		1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
 		1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAlertView.swift; sourceTree = "<group>"; };
 		17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropNavigationController.swift; sourceTree = "<group>"; };
@@ -174,6 +170,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1700955C1EB03CDD00E7C6B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17178BCB1A6F63B800E67C3A /* Machine.swift */,
+				17178BD11A6F7CA900E67C3A /* Item.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		17178B3D1A6F348A00E67C3A = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +204,7 @@
 		17178B481A6F348A00E67C3A /* CSH Drink */ = {
 			isa = PBXGroup;
 			children = (
+				1700955C1EB03CDD00E7C6B9 /* Models */,
 				54FB93D81DB17E7F00E24CD3 /* CSH Drink.entitlements */,
 				17E15A431B88F4DD00FC6714 /* RouteHandlers */,
 				172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */,
@@ -208,8 +214,8 @@
 				174B31171A91B6FC0092CFF6 /* CurrentUser.swift */,
 				177EF27C1A82679C00DB417B /* ApiViewController.swift */,
 				174B31191A91B88D0092CFF6 /* DrinkAPI.swift */,
+				17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */,
 				1728EC611A70CDC100339ABE /* History */,
-				1728EC621A70CDE500339ABE /* Machines */,
 				1728EC631A70CDF300339ABE /* Items */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
 				17178B491A6F348A00E67C3A /* Supporting Files */,
@@ -300,21 +306,9 @@
 			name = History;
 			sourceTree = "<group>";
 		};
-		1728EC621A70CDE500339ABE /* Machines */ = {
-			isa = PBXGroup;
-			children = (
-				17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */,
-				17178BCB1A6F63B800E67C3A /* Machine.swift */,
-				1728EC5F1A70CB6A00339ABE /* MachineTableViewCell.swift */,
-				17178BC91A6F5A2300E67C3A /* MachineTableViewController.swift */,
-			);
-			name = Machines;
-			sourceTree = "<group>";
-		};
 		1728EC631A70CDF300339ABE /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				17178BD11A6F7CA900E67C3A /* Item.swift */,
 				1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */,
 				17178BCF1A6F7C0700E67C3A /* ItemTableViewController.swift */,
 			);
@@ -551,7 +545,6 @@
 				17178B501A6F348A00E67C3A /* HistoryTableViewController.swift in Sources */,
 				1728EBD71A709BD700339ABE /* ToolBarColorManager.swift in Sources */,
 				17374AF01ADF89D400B3F1C2 /* DropNavigationController.swift in Sources */,
-				1728EC601A70CB6A00339ABE /* MachineTableViewCell.swift in Sources */,
 				17178BCC1A6F63B800E67C3A /* Machine.swift in Sources */,
 				17E15A451B88F4F800FC6714 /* DPLProductRouteHandler.swift in Sources */,
 				1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */,
@@ -568,7 +561,6 @@
 				17FB3B381B141A3400232F6A /* AccountViewController.swift in Sources */,
 				17178BD01A6F7C0700E67C3A /* ItemTableViewController.swift in Sources */,
 				174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */,
-				17178BCA1A6F5A2300E67C3A /* MachineTableViewController.swift in Sources */,
 				54FB93D71DB1526100E24CD3 /* Punctual.swift in Sources */,
 				54FB93DA1DB18B7E00E24CD3 /* TimeAgo.swift in Sources */,
 				1728EB941A708CDA00339ABE /* DropTableViewCell.swift in Sources */,
