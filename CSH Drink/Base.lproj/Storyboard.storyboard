@@ -49,19 +49,19 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="CSH Drink for iOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V1i-w9-A0L">
-                                <rect key="frame" x="67" y="260" width="242.5" height="31"/>
+                                <rect key="frame" x="66.5" y="260.5" width="242.5" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk" family="Crique Grotesk" pointSize="31"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-1J-e7f">
-                                <rect key="frame" x="124.5" y="318" width="126" height="31"/>
+                                <rect key="frame" x="125" y="318.5" width="126" height="31"/>
                                 <fontDescription key="fontDescription" name="CriqueGrotesk-Medium" family="Crique Grotesk" pointSize="31"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hee-Xo-5bJ">
-                                <rect key="frame" x="130" y="376" width="115" height="29"/>
+                                <rect key="frame" x="130" y="376.5" width="115" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Open WebDrink »">
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="csh-drink-white" translatesAutoresizingMaskIntoConstraints="NO" id="Wll-BH-AyP">
-                                <rect key="frame" x="166.5" y="122" width="42" height="103"/>
+                                <rect key="frame" x="166.5" y="122.5" width="42" height="103"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="H3n-OH-cB9"/>
                                     <constraint firstAttribute="height" priority="50" constant="103" id="bZn-CB-CkP"/>
@@ -87,7 +87,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luu-s8-2Z8">
-                                <rect key="frame" x="120" y="408" width="135" height="29"/>
+                                <rect key="frame" x="120" y="408.5" width="135" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Open GitHub Repo »">
@@ -97,11 +97,10 @@
                                 <connections>
                                     <action selector="openGitHubAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="rIf-nE-41E"/>
                                     <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="bQJ-Qh-xos"/>
-                                    <action selector="signOutAction:" destination="aum-qc-Y3z" eventType="touchUpInside" id="D5m-1Q-tUJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd4-ug-Mbg">
-                                <rect key="frame" x="152.5" y="440" width="70" height="29"/>
+                                <rect key="frame" x="152.5" y="440.5" width="70" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Sign Out »">
@@ -168,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25j-fo-RRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2257" y="-1044"/>
+            <point key="canvasLocation" x="2233" y="-333"/>
         </scene>
         <!--History-->
         <scene sceneID="1Ux-e3-6k3">
@@ -217,7 +216,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx Credits" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-kd-W3R">
-                                            <rect key="frame" x="283" y="34" width="73" height="15"/>
+                                            <rect key="frame" x="283" y="33.5" width="73" height="15"/>
                                             <fontDescription key="fontDescription" name="CriqueGrotesk-Light" family="Crique Grotesk" pointSize="15"/>
                                             <color key="textColor" red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -310,7 +309,7 @@
                                     <color key="titleShadowColor" red="0.83591777146464641" green="0.13330812641633621" blue="0.39172677772478243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="openWebDrinkAction:" destination="6c4-fU-qZs" eventType="touchUpInside" id="6CC-5u-x6g"/>
+                                    <segue destination="wmH-Ab-xEP" kind="presentation" id="3s8-nd-vnc"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abcd1234efgh5678" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-ON-imZ">
@@ -382,6 +381,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="77g-Mg-UdO"/>
                     <connections>
                         <outlet property="activityIndicator" destination="US7-Ny-yfZ" id="I0P-uX-l5R"/>
                         <outlet property="apiFieldOutlet" destination="6UL-ON-imZ" id="0be-vp-Juv"/>
@@ -390,7 +390,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fp6-io-x01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="-689"/>
+            <point key="canvasLocation" x="2233" y="-1085"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B9b-mW-bxX">
+            <objects>
+                <navigationController id="wmH-Ab-xEP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Wdx-gi-v2y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92474844960000002" green="0.1474744137" blue="0.433354503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AIG-vF-S30" kind="relationship" relationship="rootViewController" id="Mol-Qe-RO5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Foz-g3-0Up" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948" y="-1085"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="qgM-lS-W1S">
+            <objects>
+                <viewController id="AIG-vF-S30" customClass="WebViewController" customModule="CSH_Drink" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="ApP-vz-99f">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" id="9cr-bK-mvZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Bo4-li-mMX">
+                            <connections>
+                                <action selector="cancelAction:" destination="AIG-vF-S30" id="G88-NX-7D2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navbar" destination="9cr-bK-mvZ" id="H5R-wj-k3z"/>
+                        <outlet property="spinner" destination="9tP-Dx-q8G" id="nYs-Zs-f1k"/>
+                        <outlet property="webView" destination="ApP-vz-99f" id="EZ9-Je-Web"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bA-N8-ph6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="9tP-Dx-q8G">
+                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+            </objects>
+            <point key="canvasLocation" x="3662" y="-1085"/>
         </scene>
         <!--Drop-->
         <scene sceneID="5NQ-QR-vkl">
@@ -554,7 +602,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-68" y="1"/>
         </scene>
     </scenes>
     <resources>
@@ -565,6 +613,6 @@
         <image name="history-tab-bar-empty" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bc4-EU-zqg"/>
+        <segue reference="9uF-eo-fRf"/>
     </inferredMetricsTieBreakers>
 </document>

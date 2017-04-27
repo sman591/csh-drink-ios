@@ -18,12 +18,7 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var apiFieldOutlet: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var backgroundImage: UIImageView!
-    
-    @IBAction func openWebDrinkAction(_ sender: UIButton) {
-        Mixpanel.sharedInstance().track("Opened WebDrink")
-        UIApplication.shared.openURL(URL(string: "https://webdrink.csh.rit.edu/mobileapp/index.php")!)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         apiFieldOutlet.becomeFirstResponder()
@@ -32,9 +27,8 @@ class ApiViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(ApiViewController.updateApiKey), name: NSNotification.Name.UIApplicationDidBecomeActive, object: UIApplication.shared)
+        NotificationCenter.default.addObserver(self, selector: #selector(ApiViewController.updateApiKey), name: deepLinkUpdateKey, object: nil)
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

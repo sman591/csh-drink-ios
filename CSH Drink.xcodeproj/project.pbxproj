@@ -53,6 +53,7 @@
 		1728EC651A70CE3900339ABE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */; };
 		172F8EB41B128BCB0010CA60 /* DrinkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */; };
 		17374AF01ADF89D400B3F1C2 /* DropNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */; };
+		173C12B01EB16A3C002F9278 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C12AF1EB16A3C002F9278 /* WebViewController.swift */; };
 		174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31171A91B6FC0092CFF6 /* CurrentUser.swift */; };
 		174B311A1A91B88D0092CFF6 /* DrinkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B31191A91B88D0092CFF6 /* DrinkAPI.swift */; };
 		174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B311B1A91C5C60092CFF6 /* Dynamic.swift */; };
@@ -132,6 +133,7 @@
 		1728EC641A70CE3900339ABE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		172F8EB31B128BCB0010CA60 /* DrinkAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAlertView.swift; sourceTree = "<group>"; };
 		17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropNavigationController.swift; sourceTree = "<group>"; };
+		173C12AF1EB16A3C002F9278 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		174B31171A91B6FC0092CFF6 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		174B31191A91B88D0092CFF6 /* DrinkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkAPI.swift; sourceTree = "<group>"; };
 		174B311B1A91C5C60092CFF6 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				177EF27C1A82679C00DB417B /* ApiViewController.swift */,
 				174B31191A91B88D0092CFF6 /* DrinkAPI.swift */,
 				17374AEF1ADF89D400B3F1C2 /* DropNavigationController.swift */,
+				173C12AF1EB16A3C002F9278 /* WebViewController.swift */,
 				1728EC611A70CDC100339ABE /* History */,
 				1728EC631A70CDF300339ABE /* Items */,
 				17178B541A6F348A00E67C3A /* Images.xcassets */,
@@ -559,6 +562,7 @@
 				1770E0521AAD30DF0077FA94 /* JSSAlertView.swift in Sources */,
 				174B31181A91B6FC0092CFF6 /* CurrentUser.swift in Sources */,
 				172F8EB41B128BCB0010CA60 /* DrinkAlertView.swift in Sources */,
+				173C12B01EB16A3C002F9278 /* WebViewController.swift in Sources */,
 				177EF27D1A82679C00DB417B /* ApiViewController.swift in Sources */,
 				177EF27A1A82677D00DB417B /* AuthenticationManager.swift in Sources */,
 				174B311C1A91C5C60092CFF6 /* Dynamic.swift in Sources */,
